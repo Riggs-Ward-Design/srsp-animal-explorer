@@ -1,0 +1,13 @@
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    user-select: none;
+
+    --color-light-blue: hsl(214, 22%, 81%);
+    --color-green: hsl(70, 48%, 26%);
+    --color-orange: hsl(33, 56%, 51%);
+    --color-white: hsl(0, 0%, 100%);
+}
