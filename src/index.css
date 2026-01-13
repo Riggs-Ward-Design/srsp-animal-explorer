@@ -11,3 +11,11 @@
     --color-orange: hsl(33, 56%, 51%);
     --color-white: hsl(0, 0%, 100%);
 }
+
+@font-face {
+    font-family: "Meursault";
+    src: url("./_assets/fonts/Meursault VF.otf") format("opentype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
