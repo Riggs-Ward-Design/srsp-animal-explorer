@@ -1,18 +1,28 @@
-.folder-button {
+.explorer-button {
 
     width: 220px;
     height: 140px;
     box-sizing: border-box;
-    padding: 50px;
+    overflow: hidden;
+    display: flex;
+
+    border-radius: 32px;
+}
+
+.explorer-button-contents {
+
+    flex: 1;
+
+    padding: 0 50px 0 50px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     background: var(--color-orange);
-    border-radius: 32px;
-
     color: var(--color-white);
+
     font-family: 'Meursault';
     text-transform: uppercase;
     text-align: center;
@@ -21,4 +31,10 @@
     font-weight: 500;
     letter-spacing: 0.08em;
     line-height: 1.5;
+}
+
+.explorer-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

@@ -44,7 +44,7 @@ next()
  */
 
 export type ExplorerEntry = {
-    label: string;
+    name: string;
     kind: "folder" | "item";
 };
 
@@ -66,10 +66,10 @@ export function useDataExplorer(ctx: DataContext) {
 
     const entries = useMemo<ExplorerEntry[]>(() => {
         if (Array.isArray(node)) {
-            return (node as Item[]).map(i => ({ label: i.name, kind: "item" }));
+            return (node as Item[]).map(i => ({ name: i.name, kind: "item" }));
         }
 
-        return Object.keys(node).map(k => ({ label: k, kind: "folder" }));
+        return Object.keys(node).map(k => ({ name: k, kind: "folder" }));
     }, [node]);
 
     const canUp = path.length > 0;

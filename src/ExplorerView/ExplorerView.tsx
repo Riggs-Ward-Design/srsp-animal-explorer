@@ -1,14 +1,20 @@
 import './ExplorerView.css';
 import NavBar from "../NavBar/NavBar.tsx";
-import FolderButton from "../FolderButton/FolderButton.tsx";
+import ExplorerButton from "../ExplorerButton/ExplorerButton.tsx";
 import contentCSV from "../_assets/srsp animal facts.csv?raw";
 import { useMemo } from "react";
 import { DataContext } from "../_lib/dataContext";
 import { useDataExplorer } from "../_lib/useDataExplorer";
+import { kebabCase } from "change-case"
 
 const ExplorerView = () => {
 
     const dataContext = useMemo(() => DataContext.fromCsv(contentCSV), []);
+
+    const images = import.meta.glob(
+        "../_assets/content-images/*",
+        { eager: true, import: "default" }
+    ) as Record<string, string>;
 
     const {
         path,
@@ -31,6 +37,11 @@ const ExplorerView = () => {
         return `${p[0]} ${p[p.length - 1]}`;
     };
 
+    const getImage = (name: string) => {
+        const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
+        return images[imageUrl];
+    }
+
     return (
         <div className='explorer-view'>
             <div className='explorer-content'>
@@ -45,13 +56,14 @@ const ExplorerView = () => {
                     gap: '16px'
                 }}>
                     {entries.map(e => (
-                        <FolderButton
-                            key={e.label}
-                            label={e.label}
+                        <ExplorerButton
+                            key={e.name}
+                            label={e.kind === "folder" ? e.name : !getImage(e.name) ? e.name : undefined}
+                            image={e.kind === "item" ? getImage(e.name) : undefined}
                             onClick={() => {
-                                if (e.kind === "folder") {
-                                    push(e.label);
-                                }
+                                e.kind === "folder"
+                                    ? push(e.name)
+                                    : console.log(e.name);
                             }}
                         />
                     ))}

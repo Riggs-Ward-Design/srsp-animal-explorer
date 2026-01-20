@@ -10,7 +10,9 @@ export type Item = {
 };
 
 export type Content = Record<string, Record<string, Item[]>>;
-export type Node = Record<string, Node> | Item[];
+
+export interface NodeMap { [key: string]: Node; }
+export type Node = NodeMap | Item[];
 
 export class DataContext {
     public readonly content: Content;
