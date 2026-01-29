@@ -1,8 +1,7 @@
 import "./ExplorerButton.css";
-import BitmapToCanvas from "../BitmapToCanvas/BitmapToCanvas.tsx";
 import { Node } from "../_lib/dataContext.ts";
 import { kebabCase } from "change-case";
-import { getBitmap, imageUrls } from "../_lib/assets.ts";
+import { imageUrls } from "../_lib/assets.ts";
 
 interface ExplorerButtonProps {
     node?: Node;
@@ -24,13 +23,12 @@ const ExplorerButton = ({node, onClick}: ExplorerButtonProps) => {
             return imageUrls[imageUrl];
         }
         const url = getImageUrl(node.item.commonName);
-        const bmp = getBitmap(url);
-        if (bmp) return (
+        if (url) return (
             <div
                 className="explorer-button rounded"
                 onClick={onClick}
             >
-                <BitmapToCanvas bitmap={bmp}/>
+                <img src={url} alt={node.item.commonName}/>
             </div>
         );
     }

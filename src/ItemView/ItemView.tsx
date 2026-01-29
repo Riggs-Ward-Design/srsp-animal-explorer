@@ -5,8 +5,7 @@
 import './ItemView.css';
 import {Item} from "../_lib/dataContext.ts";
 import {kebabCase} from "change-case";
-import {getBitmap, imageUrls} from "../_lib/assets.ts";
-import BitmapToCanvas from "../BitmapToCanvas/BitmapToCanvas.tsx";
+import { imageUrls } from "../_lib/assets.ts";
 
 interface ItemViewProps {
     item: Item;
@@ -19,13 +18,12 @@ const ItemView = ({item}: ItemViewProps) => {
         return imageUrls[imageUrl];
     }
     const url = getImageUrl(item.commonName);
-    const bmp = url ? getBitmap(url) : undefined;
 
     return (
         <div className="item-view rounded">
 
             <div className={'item-view-image rounded'}>
-                {bmp && <BitmapToCanvas bitmap={bmp}/>}
+                {url && <img src={url}/>}
             </div>
 
             <div className={'item-view-content'}>

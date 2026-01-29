@@ -5,6 +5,10 @@ const modules = import.meta.glob(
 
 const cache = new Map<string, ImageBitmap>();
 
+export const getAllUrls = () => {
+    return Object.values(modules);
+}
+
 export const preloadAllBitmaps = async (
     onProgress?: (loaded: number, total: number, lastUrl?: string) => void
 ) => {
