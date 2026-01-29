@@ -1,23 +1,39 @@
 export type Item = {
-    name: string;
-    scientificName?: string;
-    habitat?: string;
-    diet?: string;
-    funFact?: string;
+    commonName: string;
+    scientificName: string;
+    habitat: string;
+    diet: string;
+    funFact: string;
     localStatus: string;
     order: string;
     family?: string;
 };
 
-export type FolderNode = { nodeType: "folder"; children: Record<string, FolderNode>; items: Item[]; };
-export type ItemNode = { nodeType: "item"; item: Item; };
+export type FolderNode = {
+    nodeType: "folder";
+    name: string;
+    children: Record<string, Node>;
+};
+
+export type ItemNode = {
+    nodeType: "item";
+    name: string;
+    item: Item;
+};
+
 export type Node = FolderNode | ItemNode;
+
+const createRoot = (): FolderNode => ({
+    nodeType: "folder",
+    name: "__root__",
+    children: {},
+});
 
 export class DataContext {
     public readonly content: FolderNode;
 
     public static empty(): DataContext {
-        return new DataContext(JSON.stringify({ nodeType: "folder", children: {}, items: [] } as FolderNode));
+        return new DataContext(JSON.stringify(createRoot()));
     }
 
     public constructor(json: string) {
@@ -25,7 +41,6 @@ export class DataContext {
     }
 
     public static fromCsv(csv: string): DataContext {
-
         const rows = parseCsv(csv);
         if (rows.length === 0) return DataContext.empty();
 
@@ -35,7 +50,6 @@ export class DataContext {
             h.replace(/^\uFEFF/, "").trim().toLowerCase().replace(/[\s_]+/g, "-");
 
         const headers = rawHeaders.map(keyFor);
-
         const idx = (name: string) => headers.indexOf(name.toLowerCase());
 
         const iName = idx("common-name");
@@ -47,7 +61,7 @@ export class DataContext {
         const iOrder = idx("order");
         const iFamily = idx("family");
 
-        const root: FolderNode = { nodeType: "folder", children: {}, items: [] };
+        const root = createRoot();
 
         for (let r = 1; r < rows.length; r++) {
             const cells = rows[r];
@@ -56,10 +70,7 @@ export class DataContext {
 
             const get = (i: number) => {
                 if (i < 0) return "";
-
-                return (cells[i] ?? "")
-                    .trim()
-                    .replace("/", "/\u200B"); // wrappable after slash
+                return (cells[i] ?? "").trim().replace("/", "/\u200B");
             };
 
             const localStatus = get(iStatus);
@@ -68,46 +79,37 @@ export class DataContext {
             if (localStatus.length === 0 || order.length === 0 || name.length === 0) continue;
 
             const item: Item = {
-                name: name,
-                scientificName: get(iSci) || undefined,
-                habitat: get(iHab) || undefined,
-                diet: get(iDiet) || undefined,
-                funFact: get(iFact) || undefined,
-                localStatus: localStatus,
-                order: order,
+                commonName: name,
+                scientificName: get(iSci),
+                habitat: get(iHab),
+                diet: get(iDiet),
+                funFact: get(iFact),
+                localStatus,
+                order,
                 family: get(iFamily) || undefined
             };
 
             const path: string[] = [localStatus, order];
-            if (item.family !== undefined && item.family.length > 0) {
-                path.push(item.family);
-            }
+            if (item.family) path.push(item.family);
 
-            const node = ensureNodeAtPath(root, path);
-            node.items.push(item);
+            const folder = ensureFolderAtPath(root, path);
+            folder.children[item.commonName] = {
+                nodeType: "item",
+                name: item.commonName,
+                item
+            };
         }
 
         return new DataContext(JSON.stringify(root));
     }
 
     public getNode(path: readonly string[]): Node | undefined {
-        let n: FolderNode = this.content;
+        let n: Node = this.content;
 
-        for (let i = 0; i < path.length; i++) {
-            const seg = path[i];
-
-            const child = n.children[seg];
-            if (child) {
-                n = child;
-                continue;
-            }
-
-            const item = n.items.find(a => a.name === seg);
-            if (item && i === path.length - 1) {
-                return {nodeType: "item", item: item};
-            }
-
-            return undefined;
+        for (const seg of path) {
+            if (n.nodeType !== "folder") return undefined;
+            n = n.children[seg];
+            if (!n) return undefined;
         }
 
         return n;
@@ -152,17 +154,23 @@ export class DataContext {
 
     public getParentPath(p: readonly string[]): string[] {
         if (p.length === 0) return [...p];
-
         return p.slice(0, -1);
     }
 }
 
-function ensureNodeAtPath(root: FolderNode, path: readonly string[]): FolderNode {
+function ensureFolderAtPath(root: FolderNode, path: readonly string[]): FolderNode {
     let cur = root;
 
     for (const key of path) {
-        cur.children[key] ??= { nodeType: 'folder', children: {}, items: [] };
-        cur = cur.children[key];
+        const existing = cur.children[key];
+        if (existing?.nodeType === "folder") {
+            cur = existing;
+            continue;
+        }
+
+        const created: FolderNode = { nodeType: "folder", name: key, children: {} };
+        cur.children[key] = created;
+        cur = created;
     }
 
     return cur;

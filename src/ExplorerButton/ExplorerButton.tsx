@@ -1,33 +1,52 @@
 import "./ExplorerButton.css";
 import BitmapToCanvas from "../BitmapToCanvas/BitmapToCanvas.tsx";
+import { Node } from "../_lib/dataContext.ts";
+import { kebabCase } from "change-case";
+import { getBitmap, imageUrls } from "../_lib/assets.ts";
 
-interface FolderButtonProps {
-    label?: string;
-    bitmap?: ImageBitmap;
+interface ExplorerButtonProps {
+    node?: Node;
     onClick?: () => void;
 }
 
-const ExplorerButton = (props: FolderButtonProps) => {
-    let text: string | undefined = props.label;
-    if (text === "Native") text = `Year-Round Residents`;
-    if (text === "Non-Native") text = `Just Passing Through`;
-    if (text === "Invasive") text = `I Don't Belong Here`;
+const ExplorerButton = ({node, onClick}: ExplorerButtonProps) => {
 
-    if (props.bitmap) {
-        return (
-            <div className="explorer-button rounded" onClick={props.onClick}>
-                <BitmapToCanvas bitmap={props.bitmap} />
+    // Spacer only
+    if (!node) return <div
+        className="explorer-button rounded"
+        style={{ opacity: 0, pointerEvents: 'none' }}
+    />
+
+    if (node.nodeType === 'item') {
+
+        const getImageUrl = (name: string) => {
+            const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
+            return imageUrls[imageUrl];
+        }
+        const url = getImageUrl(node.item.commonName);
+        const bmp = getBitmap(url);
+        if (bmp) return (
+            <div
+                className="explorer-button rounded"
+                onClick={onClick}
+            >
+                <BitmapToCanvas bitmap={bmp}/>
             </div>
         );
     }
 
+    let text: string = node.name;
+    if (text === "Native") text = `Year-Round Residents`;
+    if (text === "Non-Native") text = `Just Passing Through`;
+    if (text === "Invasive") text = `I Don't Belong Here`;
+
     return (
         <div
             className="explorer-button rounded"
-            onClick={props.onClick}
+            onClick={onClick}
             style={{
-                opacity: props.onClick ? 1 : 0,
-                pointerEvents: props.onClick ? 'auto' : 'none'
+                opacity: onClick ? 1 : 0,
+                pointerEvents: onClick ? 'auto' : 'none'
             }}
         >
             <div className="explorer-button-contents">{text}</div>

@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
-import type {DataContext, Node, Item, FolderNode} from "./dataContext";
+import type { DataContext, Node } from "./dataContext";
 
 /*
 
@@ -43,39 +43,29 @@ next()
 
  */
 
-export type ExplorerEntry =
-    | { kind: "folder"; name: string }
-    | { kind: "item"; name: string; item: Item };
-
-function isFolderNode(node: Node): node is FolderNode {
-    return node.nodeType === "folder";
-}
-
 export function useDataContext(ctx: DataContext) {
     const [path, setPath] = useState<string[]>([]);
 
     const node = useMemo<Node>(() => ctx.getNode(path) ?? ctx.content, [ctx, path]);
 
-    const entries = useMemo<ExplorerEntry[]>(() => {
+    const entries = useMemo<Node[]>(() => {
+        const list = node.nodeType === "folder"
+            ? Object.values(node.children)
+            : [node];
 
-        if (!isFolderNode(node)) return [{kind: "item", name: node.item.name, item: node.item}];
+        const sortComparison = (a: Node, b: Node) => {
+            if (a.nodeType !== b.nodeType) {
+                return a.nodeType === "folder" ? -1 : 1;
+            }
 
-        const folderEntries = Object.keys(node.children).map((k) => ({
-            name: k,
-            kind: "folder" as const
-        }));
+            return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
+        };
 
-        const itemEntries = node.items.map((i) => ({
-            name: i.name,
-            kind: "item" as const,
-            item: i
-        }));
-
-        return [...folderEntries, ...itemEntries];
+        return [...list].sort(sortComparison);
     }, [node]);
 
     const push = useCallback((label: string) => {
-        if (isFolderNode(node)) setPath(p => [...p, label]);
+        if (node.nodeType === 'folder') setPath(p => [...p, label]);
     }, [node]);
 
     const canGoUp = path.length > 0;

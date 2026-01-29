@@ -4,14 +4,12 @@
 
 import './ExplorerButtonCarousel.css';
 import StandardIconButton from "../rwd-library/StandardIconButton/StandardIconButton.tsx";
-import {getBitmap, imageUrls} from "../_lib/assets.ts";
 import ExplorerButton from "../ExplorerButton/ExplorerButton.tsx";
+import type { Node } from "../_lib/dataContext";
 import {useEffect, useState} from "react";
-import {ExplorerEntry} from "../_lib/useDataContext.ts";
-import {kebabCase} from "change-case";
 
 interface ExplorerButtonCarouselProps {
-    entries: ExplorerEntry[];
+    entries: Node[];
     push: (label: string) => void
 }
 
@@ -23,11 +21,6 @@ const ExplorerButtonCarousel = ({entries, push}: ExplorerButtonCarouselProps) =>
 
     const canPageLeft = entries.length > 6 && currentButtonsPage > 0;
     const canPageRight = entries.length > 6 && currentButtonsPage < ((entries.length / 6) - 1);
-
-    const getImageUrl = (name: string) => {
-        const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
-        return imageUrls[imageUrl];
-    }
 
     const page = entries.slice((currentButtonsPage) * 6, (currentButtonsPage + 1) * 6);
 
@@ -42,18 +35,13 @@ const ExplorerButtonCarousel = ({entries, push}: ExplorerButtonCarouselProps) =>
             </div>
 
             <div className='carousel-page'>
-                {page.map(e => {
-                    const url = e.kind === "item" ? getImageUrl(e.name) : undefined;
-                    const bmp = url ? getBitmap(url) : undefined;
-                    return (
-                        <ExplorerButton
-                            key={e.name}
-                            label={e.kind === "folder" ? e.name : bmp ? undefined : e.name}
-                            bitmap={bmp}
-                            onClick={() => push(e.name)}
-                        />
-                    );
-                })}
+                {page.map(n =>
+                    <ExplorerButton
+                        key={n.name}
+                        node={n}
+                        onClick={() => push(n.name)}
+                    />
+                )}
 
                 {/* Spacing */}
                 {entries.length > 6 && Array.from({ length: (6 - (page.length % 6)) % 6 }).map(() => <ExplorerButton/>)}

@@ -18,7 +18,7 @@ const ItemView = ({item}: ItemViewProps) => {
         const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
         return imageUrls[imageUrl];
     }
-    const url = getImageUrl(item.name);
+    const url = getImageUrl(item.commonName);
     const bmp = url ? getBitmap(url) : undefined;
 
     return (
@@ -31,7 +31,7 @@ const ItemView = ({item}: ItemViewProps) => {
             <div className={'item-view-content'}>
 
                 <div className="name">
-                    <h1>{item.name}</h1>
+                    <h1>{item.commonName}</h1>
                     <span className="sci-name">{item.scientificName}</span>
                 </div>
 
