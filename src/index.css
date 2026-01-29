@@ -1,5 +1,4 @@
 :root {
-    font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -10,12 +9,44 @@
     --color-green: hsl(70, 48%, 26%);
     --color-orange: hsl(33, 56%, 51%);
     --color-white: hsl(0, 0%, 100%);
+
+    font-family: 'Franklin Gothic', sans-serif;
+}
+
+.rounded {
+    border-radius: 32px;
+    overflow: hidden;
+}
+@supports (corner-shape: squircle) {
+    .rounded {
+        border-radius: 64px;
+        corner-shape: squircle;
+    }
 }
 
 @font-face {
     font-family: "Meursault";
-    src: url("./_assets/fonts/Meursault VF.otf") format("opentype");
     font-weight: 100 900;
     font-style: normal;
-    font-display: swap;
+    src: url("./_assets/fonts/Meursault VF.otf") format("opentype");
+} @font-face {
+    font-family: "Meursault";
+    font-weight: 100 900;
+    font-style: oblique 5deg;
+    src: url("./_assets/fonts/Meursault VF.otf") format("opentype");
+}
+
+
+@font-face {
+    font-family: "Franklin Gothic"; font-weight: 400; font-style: normal;
+    src: url("/src/_assets/fonts/Franklin Gothic URW Book.otf") format("opentype");
+} @font-face {
+    font-family: "Franklin Gothic"; font-weight: 400; font-style: italic;
+    src: url("/src/_assets/fonts/Franklin Gothic URW Book Italic.otf") format("opentype");
+} @font-face {
+    font-family: "Franklin Gothic"; font-weight: 600; font-style: normal;
+    src: url("/src/_assets/fonts/Franklin Gothic URW Demi.otf") format("opentype");
+} @font-face {
+    font-family: "Franklin Gothic"; font-weight: 600; font-style: italic;
+    src: url("/src/_assets/fonts/Franklin Gothic URW Demi Italic.otf") format("opentype");
 }

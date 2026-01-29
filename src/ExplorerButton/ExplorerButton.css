@@ -3,10 +3,7 @@
     width: 220px;
     height: 140px;
     box-sizing: border-box;
-    overflow: hidden;
     display: flex;
-
-    border-radius: 32px;
 }
 
 .explorer-button-contents {
@@ -23,7 +20,7 @@
     background: var(--color-orange);
     color: var(--color-white);
 
-    font-family: 'Meursault';
+    font-family: 'Meursault', serif;
     text-transform: uppercase;
     text-align: center;
 
@@ -33,8 +30,8 @@
     line-height: 1.5;
 }
 
-.explorer-button img {
+.explorer-button canvas {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    display: block;
 }

@@ -1,0 +1,29 @@
+.carousel {
+
+    display: flex;
+    width: 100%;
+}
+
+.carousel-page {
+
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    gap: 16px;
+}
+
+.carousel-button-area {
+
+    width: 2rem;
+    height: 100%;
+    display: flex;
+    place-items: center;
+}
+
+.carousel .standard-icon-button {
+
+    width: 250%;
+    margin: -75%;
+    color: var(--color-green);
+}

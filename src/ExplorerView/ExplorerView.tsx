@@ -1,32 +1,24 @@
 import './ExplorerView.css';
 import NavBar from "../NavBar/NavBar.tsx";
-import ExplorerButton from "../ExplorerButton/ExplorerButton.tsx";
 import contentCSV from "../_assets/srsp animal facts.csv?raw";
 import { useMemo } from "react";
 import { DataContext } from "../_lib/dataContext";
-import { useDataExplorer } from "../_lib/useDataExplorer";
-import { kebabCase } from "change-case"
+import { useDataContext } from "../_lib/useDataContext.ts";
+import ExplorerButtonCarousel from "../ExplorerButtonCarousel/ExplorerButtonCarousel.tsx";
+import ItemView from "../ItemView/ItemView.tsx";
 
 const ExplorerView = () => {
 
     const dataContext = useMemo(() => DataContext.fromCsv(contentCSV), []);
 
-    const images = import.meta.glob(
-        "../_assets/content-images/*",
-        { eager: true, import: "default" }
-    ) as Record<string, string>;
-
     const {
         path,
+        node,
         entries,
-        canGoUp,
-        canGoToPrev,
-        canGoToNext,
         push,
-        up,
-        prev,
-        next
-    } = useDataExplorer(dataContext);
+        canGoUp, canGoToPrev, canGoToNext,
+        up, prev, next
+    } = useDataContext(dataContext);
 
     const getFolderLabel = (p: string[]) => {
         if (p.length === 0) return 'Who Lives Here?';
@@ -37,39 +29,25 @@ const ExplorerView = () => {
         return `${p[0]} ${p[p.length - 1]}`;
     };
 
-    const getImage = (name: string) => {
-        const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
-        return images[imageUrl];
-    }
-
     return (
         <div className='explorer-view'>
             <div className='explorer-content'>
 
-                <h1>{getFolderLabel(path)}</h1>
+                {(() => {
+                    switch (node.nodeType) {
 
-                <div style={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '16px'
-                }}>
-                    {entries.map(e => (
-                        <ExplorerButton
-                            key={e.name}
-                            label={e.kind === "folder" ? e.name : !getImage(e.name) ? e.name : undefined}
-                            image={e.kind === "item" ? getImage(e.name) : undefined}
-                            onClick={() => {
-                                e.kind === "folder"
-                                    ? push(e.name)
-                                    : console.log(e.name);
-                            }}
-                        />
-                    ))}
-                </div>
+                        case "folder":
+                            return <>
+                                <h1>{getFolderLabel(path)}</h1>
+                                <ExplorerButtonCarousel entries={entries} push={push} />
+                            </>;
+
+                        case "item":
+                            return <ItemView item={node.item} />;
+                    }
+                })()}
+
             </div>
-
             <NavBar
                 upLabel={canGoUp ? getFolderLabel(dataContext.getParentPath(path)) : undefined}
                 onMoveUp={canGoUp ? up : undefined}

@@ -13,3 +13,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 window.ipcRenderer.on('main-process-message', (_event, message) => {
   console.log(message)
 })
+
+console.log("Chrome:", window.versions.chrome)
