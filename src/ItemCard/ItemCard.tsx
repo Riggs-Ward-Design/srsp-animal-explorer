@@ -2,16 +2,16 @@
  * Created by Will on 1/28/2026
  */
 
-import './ItemView.css';
+import './ItemCard.css';
 import {Item} from "../_lib/dataContext.ts";
 import {kebabCase} from "change-case";
 import { imageUrls } from "../_lib/assets.ts";
 
-interface ItemViewProps {
+interface ItemCardProps {
     item: Item;
 }
 
-const ItemView = ({item}: ItemViewProps) => {
+const ItemCard = ({item}: ItemCardProps) => {
 
     const getImageUrl = (name: string) => {
         const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
@@ -20,13 +20,13 @@ const ItemView = ({item}: ItemViewProps) => {
     const url = getImageUrl(item.commonName);
 
     return (
-        <div className="item-view rounded">
+        <div className="item-card rounded">
 
-            <div className={'item-view-image rounded'}>
+            <div className={'item-card-image rounded'}>
                 {url && <img src={url}/>}
             </div>
 
-            <div className={'item-view-content'}>
+            <div className={'item-card-content'}>
 
                 <div className="name">
                     <h1>{item.commonName}</h1>
@@ -54,4 +54,4 @@ const ItemView = ({item}: ItemViewProps) => {
     );
 };
 
-export default ItemView;
+export default ItemCard;

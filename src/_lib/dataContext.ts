@@ -115,6 +115,20 @@ export class DataContext {
         return n;
     }
 
+    public getChildrenSorted(folder: FolderNode): Node[] {
+        const list = Object.values(folder.children);
+
+        list.sort((a, b) => {
+            if (a.nodeType !== b.nodeType) {
+                return a.nodeType === "folder" ? -1 : 1;
+            }
+
+            return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
+        });
+
+        return list;
+    }
+
     public isPathFirstSibling(p: readonly string[]): boolean {
         if (p.length === 0) return true;
 

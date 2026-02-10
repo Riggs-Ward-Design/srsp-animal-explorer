@@ -5,7 +5,7 @@ import { useMemo } from "react";
 import { DataContext } from "../_lib/dataContext";
 import { useDataContext } from "../_lib/useDataContext.ts";
 import ExplorerButtonCarousel from "../ExplorerButtonCarousel/ExplorerButtonCarousel.tsx";
-import ItemView from "../ItemView/ItemView.tsx";
+import ItemCard from "../ItemCard/ItemCard.tsx";
 
 const ExplorerView = () => {
 
@@ -14,7 +14,7 @@ const ExplorerView = () => {
     const {
         path,
         node,
-        entries,
+        parentNode,
         push,
         canGoUp, canGoToPrev, canGoToNext,
         up, prev, next
@@ -33,19 +33,13 @@ const ExplorerView = () => {
         <div className='explorer-view'>
             <div className='explorer-content'>
 
-                {(() => {
-                    switch (node.nodeType) {
+                <ExplorerButtonCarousel
+                    entries={dataContext.getChildrenSorted(node.nodeType === 'folder' ? node : parentNode)}
+                    title={getFolderLabel(node.nodeType == 'folder' ? path : dataContext.getParentPath(path))}
+                    push={push}
+                />
 
-                        case "folder":
-                            return <>
-                                <h1>{getFolderLabel(path)}</h1>
-                                <ExplorerButtonCarousel entries={entries} push={push} />
-                            </>;
-
-                        case "item":
-                            return <ItemView item={node.item} />;
-                    }
-                })()}
+                {node.nodeType === 'item' && <ItemCard item={node.item}/>}
 
             </div>
             <NavBar

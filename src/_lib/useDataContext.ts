@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
-import type { DataContext, Node } from "./dataContext";
+import type {DataContext, FolderNode, Node} from "./dataContext";
 
 /*
 
@@ -48,21 +48,19 @@ export function useDataContext(ctx: DataContext) {
 
     const node = useMemo<Node>(() => ctx.getNode(path) ?? ctx.content, [ctx, path]);
 
-    const entries = useMemo<Node[]>(() => {
-        const list = node.nodeType === "folder"
-            ? Object.values(node.children)
-            : [node];
+    const parentPath = useMemo(
+        () => (path.length === 0 ? [] : ctx.getParentPath(path)),
+        [ctx, path]
+    );
 
-        const sortComparison = (a: Node, b: Node) => {
-            if (a.nodeType !== b.nodeType) {
-                return a.nodeType === "folder" ? -1 : 1;
-            }
+    const parentNode = useMemo<FolderNode>(() => {
+        if (node.nodeType === "folder") return node;
 
-            return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
-        };
+        const parent = ctx.getNode(parentPath);
+        if (parent?.nodeType === "folder") return parent;
 
-        return [...list].sort(sortComparison);
-    }, [node]);
+        return ctx.content;
+    }, [ctx, node, parentPath]);
 
     const push = useCallback((label: string) => {
         if (node.nodeType === 'folder') setPath(p => [...p, label]);
@@ -79,7 +77,7 @@ export function useDataContext(ctx: DataContext) {
     return {
         path,
         node,
-        entries,
+        parentNode,
         setPath,
         push,
         canGoUp,

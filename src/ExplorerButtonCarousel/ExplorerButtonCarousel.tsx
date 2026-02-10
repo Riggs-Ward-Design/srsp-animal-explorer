@@ -11,9 +11,10 @@ import {useEffect, useState} from "react";
 interface ExplorerButtonCarouselProps {
     entries: Node[];
     push: (label: string) => void
+    title?: string;
 }
 
-const ExplorerButtonCarousel = ({entries, push}: ExplorerButtonCarouselProps) => {
+const ExplorerButtonCarousel = ({entries, push, title}: ExplorerButtonCarouselProps) => {
 
     const [currentButtonsPage, setCurrentButtonsPage] = useState<number>(0);
 
@@ -27,34 +28,40 @@ const ExplorerButtonCarousel = ({entries, push}: ExplorerButtonCarouselProps) =>
     return (
         <div className='carousel'>
 
-            <div className='carousel-button-area'>
-                {canPageLeft && <StandardIconButton
-                    onClick={() => setCurrentButtonsPage(p => p - 1)}
-                    iconName='left-chevron'
-                />}
+            {title && <h1>{title}</h1>}
+
+            <div style={{ display: 'flex', width: '100%' }}>
+
+                <div className='carousel-button-area'>
+                    {canPageLeft && <StandardIconButton
+                        onClick={() => setCurrentButtonsPage(p => p - 1)}
+                        iconName='left-chevron'
+                    />}
+                </div>
+
+                <div className='carousel-page'>
+                    {page.map(n =>
+                        <ExplorerButton
+                            key={n.name}
+                            node={n}
+                            onClick={() => push(n.name)}
+                        />
+                    )}
+
+                    {/* Spacing */}
+                    {entries.length > 6 && Array.from({length: (6 - (page.length % 6)) % 6}).map(() =>
+                        <ExplorerButton/>)}
+
+                </div>
+
+                <div className='carousel-button-area'>
+                    {canPageRight && <StandardIconButton
+                        onClick={() => setCurrentButtonsPage(p => p + 1)}
+                        iconName='right-chevron'
+                    />}
+                </div>
+
             </div>
-
-            <div className='carousel-page'>
-                {page.map(n =>
-                    <ExplorerButton
-                        key={n.name}
-                        node={n}
-                        onClick={() => push(n.name)}
-                    />
-                )}
-
-                {/* Spacing */}
-                {entries.length > 6 && Array.from({ length: (6 - (page.length % 6)) % 6 }).map(() => <ExplorerButton/>)}
-
-            </div>
-
-            <div className='carousel-button-area'>
-                {canPageRight && <StandardIconButton
-                    onClick={() => setCurrentButtonsPage(p => p + 1)}
-                    iconName='right-chevron'
-                />}
-            </div>
-
         </div>
     )
 };
