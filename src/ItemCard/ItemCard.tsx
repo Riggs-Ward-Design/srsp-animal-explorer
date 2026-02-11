@@ -1,9 +1,8 @@
-// file: src/ItemCard/ItemCard.tsx
 import './ItemCard.css';
 import { Item } from "../_lib/dataContext.ts";
 import { kebabCase } from "change-case";
 import { imageUrls } from "../_lib/assets.ts";
-import {CSSProperties, useEffect, useState} from "react";
+import {CSSProperties} from "react";
 import {AnimatePresence, motion} from "framer-motion";
 
 interface ItemCardProps {
@@ -24,6 +23,15 @@ const ItemCard = (props: ItemCardProps) => {
     const url = getImageUrl(props.item.commonName);
     const id = `item:${props.item.commonName}`;
 
+    const imageContent = (open: boolean) => (
+        <motion.div
+            layoutId={'image-' + id}
+            style={{ borderRadius: '32px', overflow: 'hidden', flexBasis: !open ? '100%' : '40%'}}
+        >
+            {url && <img src={url} alt={props.item.commonName} draggable={false}/>}
+        </motion.div>
+    );
+
     return (
         <motion.div
             className={props.className + " item-card"}
@@ -31,12 +39,8 @@ const ItemCard = (props: ItemCardProps) => {
             onClick={props.onClick}
             layoutId={id}
         >
-            <div
-                className="item-card-image"
-                style={{ flexBasis: props.isOpen ? '40%' : '100%' }}
-            >
-                {url && <img src={url} alt={props.item.commonName} draggable={false} />}
-            </div>
+            {!props.isOpen && imageContent(false)}
+            {props.isOpen && imageContent(true)}
 
             <AnimatePresence initial={false} mode="popLayout">
                 {props.isOpen && (

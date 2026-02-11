@@ -5,12 +5,13 @@
 import './ExplorerButtonCarousel.css';
 import StandardIconButton from "../rwd-library/StandardIconButton/StandardIconButton.tsx";
 import ExplorerButton from "../ExplorerButton/ExplorerButton.tsx";
-import type { Node, ItemNode } from "../_lib/dataContext";
+import type {Node, ItemNode, FolderNode} from "../_lib/dataContext";
 import { useEffect, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.tsx";
 
 interface ExplorerButtonCarouselProps {
     entries: Node[];
+    openFolderNode: FolderNode;
     openItemNode?: ItemNode;
     push: (label: string) => void
     title?: string;
@@ -20,25 +21,37 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
 
     const [currentButtonsPage, setCurrentButtonsPage] = useState<number>(0);
 
-    useEffect(() => setCurrentButtonsPage(0), [props.entries])
+    useEffect(() => setCurrentButtonsPage(0), [props.openFolderNode])
 
     const canPageLeft = props.entries.length > 6 && currentButtonsPage > 0;
     const canPageRight = props.entries.length > 6 && currentButtonsPage < ((props.entries.length / 6) - 1);
 
     const page = props.entries.slice((currentButtonsPage) * 6, (currentButtonsPage + 1) * 6);
 
-    return <>
-        <div
-            className='carousel'
-            style={{ opacity: !props.openItemNode ? 1 : 0.25, pointerEvents: !props.openItemNode ? 'auto' : 'none'}}>
+    const FADE_OPACITY = 0.25;
 
-            {props.title && <h1>{props.title}</h1>}
+    return <>
+        <div className='carousel'>
+
+            {props.title && (
+                <h1 style={{
+                    opacity: !props.openItemNode ? 1 : FADE_OPACITY,
+                    transition: 'opacity 500ms'
+                }}>
+                    {props.title}
+                </h1>
+            )}
 
             <div style={{display: 'flex', width: '100%'}}>
 
                 <div className='carousel-button-area'>
                     {canPageLeft && <StandardIconButton
                         onClick={() => setCurrentButtonsPage(p => p - 1)}
+                        style={{
+                            opacity:       !props.openItemNode ? 1 : FADE_OPACITY,
+                            pointerEvents: !props.openItemNode ? 'auto' : 'none',
+                            transition: 'opacity 500ms'
+                        }}
                         iconName='left-chevron'
                     />}
                 </div>
@@ -55,46 +68,47 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
                                 />
                             );
 
-                            // Spacer for open item
-                            if (props.openItemNode === n) return (
-                                <ExplorerButton className='carousel-button'/>
-                            );
-
-                            return (
+                        const isOpen = props.openItemNode === n;
+                        return (
+                            <>
                                 <ItemCard
+                                    key={n.name}
                                     item={n.item}
-                                    isOpen={false}
+                                    isOpen={isOpen}
                                     onClick={() => props.push(n.name)}
-                                    className='carousel-button'
+                                    className={`carousel-${isOpen ? "open-card" : "button"}`}
+                                    style={{
+                                        opacity:       isOpen || !props.openItemNode ? 1 : FADE_OPACITY,
+                                        pointerEvents: isOpen || !props.openItemNode ? 'auto' : 'none',
+                                        zIndex:        isOpen ? 10 : 0,
+                                        transition: 'opacity 500ms, z-index 500ms'
+                                    }}
                                 />
-                            );
+
+                                {isOpen && (
+                                    <div className="carousel-button placeholder" />
+                                )}
+                            </>
+                        );
                         }
                     )}
-
-                    {/* Spacing */}
-                    {props.entries.length > 6 && Array.from({length: (6 - (page.length % 6)) % 6}).map(() =>
-                        <ExplorerButton/>)}
 
                 </div>
 
                 <div className='carousel-button-area'>
                     {canPageRight && <StandardIconButton
                         onClick={() => setCurrentButtonsPage(p => p + 1)}
+                        style={{
+                            opacity:       !props.openItemNode ? 1 : FADE_OPACITY,
+                            pointerEvents: !props.openItemNode ? 'auto' : 'none',
+                            transition: 'opacity 500ms'
+                        }}
                         iconName='right-chevron'
                     />}
                 </div>
 
             </div>
         </div>
-
-        {/*Open item card in front */}
-        {props.openItemNode && (
-            <ItemCard
-                item={props.openItemNode.item}
-                className='carousel-open-card'
-                isOpen={true}
-            />
-        )}
     </>
 };
 
