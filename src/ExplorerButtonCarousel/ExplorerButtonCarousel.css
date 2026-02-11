@@ -26,6 +26,18 @@
     place-items: center;
 }
 
+.carousel-button {
+    width: 220px;
+    height: 140px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.carousel-open-card {
+    position: absolute;
+    inset: 15%;
+}
+
 .carousel .standard-icon-button {
 
     width: 250%;

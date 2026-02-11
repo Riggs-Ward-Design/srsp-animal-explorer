@@ -2,10 +2,9 @@ import './ExplorerView.css';
 import NavBar from "../NavBar/NavBar.tsx";
 import contentCSV from "../_assets/srsp animal facts.csv?raw";
 import { useMemo } from "react";
-import { DataContext } from "../_lib/dataContext";
+import {DataContext, ItemNode} from "../_lib/dataContext";
 import { useDataContext } from "../_lib/useDataContext.ts";
 import ExplorerButtonCarousel from "../ExplorerButtonCarousel/ExplorerButtonCarousel.tsx";
-import ItemCard from "../ItemCard/ItemCard.tsx";
 
 const ExplorerView = () => {
 
@@ -31,23 +30,23 @@ const ExplorerView = () => {
 
     return (
         <div className='explorer-view'>
-            <div className='explorer-content'>
 
+            <div className='explorer-content'>
                 <ExplorerButtonCarousel
                     entries={dataContext.getChildrenSorted(node.nodeType === 'folder' ? node : parentNode)}
+                    openItemNode={node.nodeType === 'item' ? node as ItemNode : undefined}
                     title={getFolderLabel(node.nodeType == 'folder' ? path : dataContext.getParentPath(path))}
                     push={push}
                 />
-
-                {node.nodeType === 'item' && <ItemCard item={node.item}/>}
-
             </div>
+
             <NavBar
                 upLabel={canGoUp ? getFolderLabel(dataContext.getParentPath(path)) : undefined}
                 onMoveUp={canGoUp ? up : undefined}
                 onMoveBack={canGoToPrev ? prev : undefined}
                 onMoveNext={canGoToNext ? next : undefined}
             />
+
         </div>
     );
 };

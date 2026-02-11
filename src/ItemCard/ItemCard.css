@@ -1,17 +1,10 @@
 .item-card {
-
-    position: absolute;
-    inset: 15%;
-
-    flex: 1;
     display: flex;
     background-color: #fffe;
 }
 
 .item-card-image {
     height: 100%;
-    width: 40%;
-    background-color: gray;
 }
 
 .item-card img {

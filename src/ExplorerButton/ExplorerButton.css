@@ -1,11 +1,3 @@
-.explorer-button {
-
-    width: 220px;
-    height: 140px;
-    box-sizing: border-box;
-    display: flex;
-}
-
 .explorer-button-contents {
 
     flex: 1;
