@@ -9,9 +9,26 @@
     align-items: center;
 }
 
-.carousel-page {
+.carousel-row {
+    display: flex;
+    width: 100%;
+}
 
+.carousel-viewport {
     flex: 1;
+}
+
+.carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 350ms ease;
+    will-change: transform;
+}
+
+.carousel-page {
+    position: relative;
+    flex: 0 0 100%;
     display: flex;
     flex-wrap: wrap;
     place-content: center;
@@ -35,7 +52,12 @@
 
 .carousel-open-card {
     position: absolute;
-    inset: 7%;
+    inset: -12% 2% 4% 2%;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.placeholder {
+    visibility: hidden;
 }
 
 .carousel .standard-icon-button {
@@ -43,4 +65,5 @@
     width: 250%;
     margin: -75%;
     color: var(--color-green);
+    z-index: 5;
 }

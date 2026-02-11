@@ -119,11 +119,11 @@ export class DataContext {
         const list = Object.values(folder.children);
 
         list.sort((a, b) => {
-            if (a.nodeType !== b.nodeType) {
-                return a.nodeType === "folder" ? -1 : 1;
+            if (a.nodeType === b.nodeType) {
+                return 0;
             }
 
-            return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
+            return a.nodeType === "folder" ? -1 : 1;
         });
 
         return list;
