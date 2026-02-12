@@ -1,8 +1,8 @@
 Common Name,Scientific Name,Habitat,Diet,Fun fact,Local Status,Order,Family
 American Beaver,Castor canadensis,Dams built in streams,"Herbs, bark, twigs","The beavers' dams are built not just for shelter, but also to store caches of food for the winter.",Native,Mammals,
 American Black Bear,Ursus americanus,Well-covered areas such as forests or swamps,"Small mammals, fish, insects, nuts, berries, etc.","An adult black bear will sometimes travel as far as 95 miles in a year, marking trees with their claws as they go.",Native,Mammals,
-Big Brown Bat,Eptesicus fuscus fuscus,"Caves or manmade structures (barns, churches)",Insects,Big brown bats can eat up to one third their body weight in insects on a single night.,Native,Mammals,
-Bobcat,Lynx rufus floridanus,"Forests, mountains, other areas with rugged terrain","Small animals, particularly rodents","It's rare, but not impossible, for a bobcat to kill and eat large animals such as livestock.",Native,Mammals,
+Big Brown Bat,Eptesicus fuscus fuscus,"Caves or manmade structures (barns, churches)",Insects,Big brown bats can eat up to one third their body weight in insects on a single night.,Non-Native,Mammals,
+Bobcat,Lynx rufus floridanus,"Forests, mountains, other areas with rugged terrain","Small animals, particularly rodents","It's rare, but not impossible, for a bobcat to kill and eat large animals such as livestock.",Invasive,Mammals,
 Common Gray Fox,Urocyon cinereoargenteus,"Upland woods, swamps",Small animals in winter/spring; insects and fruit in summer/fall,Gray foxes are adept climbers and will use trees in order to escape enemies.,Native,Mammals,Foxes
 Eastern Deer Mouse,Peromyscus maniculatus,Herbaceous vegetation,"Seeds, fruit, insects",A deer mouse's tail makes up more than half of its entire length and features a pencil-shaped tip.,Native,Mammals,
 Coyote,Canis latrans,"Hills, forests, brushy areas","Just about anything - mammals, insects, fruits, etc.",Coyotes are opportunistic feeders and can adapt to many different kinds of environment.,Native,Mammals,

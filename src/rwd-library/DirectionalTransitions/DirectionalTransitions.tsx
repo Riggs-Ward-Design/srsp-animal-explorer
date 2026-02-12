@@ -114,7 +114,7 @@ const DirectionalTransitions = ({children, currentPosition, options}: Directiona
     const transitionType = transitionTypeRef.current;
 
     return (
-        <AnimatePresence mode='popLayout' initial={false} custom={transitionType}>
+        <AnimatePresence mode='popLayout' custom={transitionType}>
             <motion.div
                 key={`panel-${pos.x},${pos.y},${pos.z}`}
                 style={{

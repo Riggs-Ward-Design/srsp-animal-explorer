@@ -14,7 +14,7 @@ interface MainViewProps {
 
 function MainView(props: MainViewProps) {
 
-    const [isActive, setIsActive] = useState(true);
+    const [isActive, setIsActive] = useState(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
     useIdleTimer({

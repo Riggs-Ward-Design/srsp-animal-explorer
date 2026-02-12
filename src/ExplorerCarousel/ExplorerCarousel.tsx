@@ -1,11 +1,11 @@
-import './ExplorerButtonCarousel.css';
+import './ExplorerCarousel.css';
 import StandardIconButton from "../rwd-library/StandardIconButton/StandardIconButton.tsx";
-import ExplorerButton from "../ExplorerButton/ExplorerButton.tsx";
+import FolderButton from "../FolderButton/FolderButton.tsx";
 import type { Node, ItemNode, FolderNode } from "../_lib/dataModel.ts";
 import { useEffect, useMemo, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.tsx";
 
-interface ExplorerButtonCarouselProps {
+interface ExplorerCarouselProps {
     entries: Node[];
     openFolderNode: FolderNode;
     openItemNode?: ItemNode;
@@ -23,7 +23,7 @@ const chunk = <T,>(arr: T[], size: number) => {
     return pages.length > 0 ? pages : [[]];
 };
 
-const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
+const ExplorerCarousel = (props: ExplorerCarouselProps) => {
     const [currentButtonsPage, setCurrentButtonsPage] = useState<number>(0);
 
     const pages = useMemo(() => chunk(props.entries, PAGE_SIZE), [props.entries]);
@@ -95,7 +95,7 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
 
                                     if (n.nodeType === 'folder') {
                                         return (
-                                            <ExplorerButton
+                                            <FolderButton
                                                 className='carousel-button'
                                                 key={`folder:${n.name}`}
                                                 node={n}
@@ -166,4 +166,4 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
     );
 };
 
-export default ExplorerButtonCarousel;
+export default ExplorerCarousel;

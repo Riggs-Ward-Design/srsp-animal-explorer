@@ -4,7 +4,7 @@ import contentCSV from "../_assets/srsp animal facts.csv?raw";
 import { useMemo } from "react";
 import { DataModel, FolderNode, ItemNode } from "../_lib/dataModel.ts";
 import { useDataModel } from "../_lib/useDataModel.ts";
-import ExplorerButtonCarousel from "../ExplorerButtonCarousel/ExplorerButtonCarousel.tsx";
+import ExplorerCarousel from "../ExplorerCarousel/ExplorerCarousel.tsx";
 import DirectionalTransitions from "../rwd-library/DirectionalTransitions/DirectionalTransitions.tsx";
 
 interface ExplorerViewProps {
@@ -40,7 +40,7 @@ const ExplorerView = (props: ExplorerViewProps) => {
 
             <div className='explorer-content'>
                 <DirectionalTransitions currentPosition={{ x: 0, y: 0, z: pathForCarousel.length }} options={{ duration: 0.35 }}>
-                    <ExplorerButtonCarousel
+                    <ExplorerCarousel
                         entries={dataModel.getChildren(node.nodeType === 'folder' ? node : parentNode)}
                         openFolderNode={dataModel.getNode(pathForCarousel) as FolderNode}
                         openItemNode={node.nodeType === 'item' ? node as ItemNode : undefined}
