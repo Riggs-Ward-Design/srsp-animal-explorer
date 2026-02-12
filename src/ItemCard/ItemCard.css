@@ -1,16 +1,11 @@
 .item-card {
     display: flex;
     background-color: #fffe;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .item-card-image {
     height: 100%;
-}
-
-.item-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .item-card-content {
