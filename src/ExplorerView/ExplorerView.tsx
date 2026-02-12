@@ -38,9 +38,9 @@ const ExplorerView = () => {
         <div className='explorer-view'>
 
             <div className='explorer-content'>
-                <DirectionalTransitions currentPosition={{ x: 0, y: 0, z: pathForCarousel.length }}>
+                <DirectionalTransitions currentPosition={{ x: 0, y: 0, z: pathForCarousel.length }} options={{ duration: 0.35 }}>
                     <ExplorerButtonCarousel
-                        entries={dataModel.getChildrenSorted(node.nodeType === 'folder' ? node : parentNode)}
+                        entries={dataModel.getChildren(node.nodeType === 'folder' ? node : parentNode)}
                         openFolderNode={dataModel.getNode(pathForCarousel) as FolderNode}
                         openItemNode={node.nodeType === 'item' ? node as ItemNode : undefined}
                         title={getFolderLabel(pathForCarousel)}

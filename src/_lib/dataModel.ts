@@ -29,6 +29,31 @@ const createRoot = (): FolderNode => ({
     children: {},
 });
 
+const compareNodes = (a: Node, b: Node) => {
+    if (a.nodeType !== b.nodeType) {
+        return a.nodeType === "folder" ? -1 : 1;
+    }
+
+    return a.name.localeCompare(b.name, undefined, { sensitivity: "base" });
+};
+
+const rebuildChildrenSorted = (children: Record<string, Node>) => {
+    const entries = Object.entries(children);
+    entries.sort(([, a], [, b]) => compareNodes(a, b));
+
+    const rebuilt: Record<string, Node> = {};
+    for (const [k, v] of entries) {
+        rebuilt[k] = v;
+    }
+
+    return rebuilt;
+};
+
+const setChildSorted = (parent: FolderNode, child: Node) => {
+    parent.children[child.name] = child;
+    parent.children = rebuildChildrenSorted(parent.children);
+};
+
 export class DataModel {
     public readonly content: FolderNode;
 
@@ -93,17 +118,21 @@ export class DataModel {
             if (item.family) path.push(item.family);
 
             const folder = ensureFolderAtPath(root, path);
-            folder.children[item.commonName] = {
+
+            setChildSorted(folder, {
                 nodeType: "item",
                 name: item.commonName,
                 item
-            };
+            });
         }
 
         return new DataModel(JSON.stringify(root));
     }
 
     public getNode(path: readonly string[]): Node | undefined {
+
+        if (!path) return undefined;
+
         let n: Node = this.content;
 
         for (const seg of path) {
@@ -115,55 +144,22 @@ export class DataModel {
         return n;
     }
 
-    public getChildrenSorted(folder: FolderNode): Node[] {
-        const list = Object.values(folder.children);
-
-        list.sort((a, b) => {
-            if (a.nodeType === b.nodeType) {
-                return 0;
-            }
-
-            return a.nodeType === "folder" ? -1 : 1;
-        });
-
-        return list;
+    public getChildren(folder: FolderNode): Node[] {
+        return Object.values(folder.children);
     }
 
-    private getPathSiblingInfo(p: readonly string[]): {index: number, count: number} {
-        if (p.length === 0) return {index: 0, count: 0};
-
-        const parent = this.getNode(this.getParentPath(p));
-        if (parent?.nodeType !== "folder") return {index: 0, count: 0};
-
-        const siblings = Object.keys(parent.children);
-        return {index: siblings.indexOf(p[p.length - 1]), count: siblings.length};
-    }
-
-    public getPathSiblingIndex(p: readonly string[]): number {
-        return this.getPathSiblingInfo(p).index;
-    }
-
-    public isPathFirstSibling(p: readonly string[]): boolean {
-        return this.getPathSiblingIndex(p) <= 0;
-    }
-
-    public isPathLastSibling(p: readonly string[]): boolean {
-        const info = this.getPathSiblingInfo(p);
-        return info.index === info.count - 1;
-    }
-
-    public getSiblingPath(p: readonly string[], dir: -1 | 1): string[] {
-        if (p.length === 0) return [...p];
+    public getSiblingPath(p: readonly string[], dir: -1 | 1): string[] | undefined {
+        if (p.length === 0) return undefined;
 
         const parentPath = this.getParentPath(p);
         const parent = this.getNode(parentPath);
-        if (parent?.nodeType !== "folder") return [...p];
+        if (parent?.nodeType !== "folder") return undefined;
 
         const siblings = Object.keys(parent.children);
         const index = siblings.indexOf(p[p.length - 1]);
         const nextIndex = index + dir;
 
-        if (nextIndex < 0 || nextIndex >= siblings.length) return [...p];
+        if (nextIndex < 0 || nextIndex >= siblings.length) return undefined;
 
         return [...parentPath, siblings[nextIndex]];
     }
@@ -185,7 +181,7 @@ function ensureFolderAtPath(root: FolderNode, path: readonly string[]): FolderNo
         }
 
         const created: FolderNode = { nodeType: "folder", name: key, children: {} };
-        cur.children[key] = created;
+        setChildSorted(cur, created);
         cur = created;
     }
 
