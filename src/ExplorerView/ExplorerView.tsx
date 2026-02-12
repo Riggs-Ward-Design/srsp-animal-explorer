@@ -1,13 +1,17 @@
 import './ExplorerView.css';
 import NavBar from "../NavBar/NavBar.tsx";
 import contentCSV from "../_assets/srsp animal facts.csv?raw";
-import {useEffect, useMemo, useRef} from "react";
-import {DataModel, FolderNode, ItemNode} from "../_lib/dataModel.ts";
+import { useMemo } from "react";
+import { DataModel, FolderNode, ItemNode } from "../_lib/dataModel.ts";
 import { useDataModel } from "../_lib/useDataModel.ts";
 import ExplorerButtonCarousel from "../ExplorerButtonCarousel/ExplorerButtonCarousel.tsx";
 import DirectionalTransitions from "../rwd-library/DirectionalTransitions/DirectionalTransitions.tsx";
 
-const ExplorerView = () => {
+interface ExplorerViewProps {
+    onReset?: () => void;
+}
+
+const ExplorerView = (props: ExplorerViewProps) => {
 
     const dataModel = useMemo(() => DataModel.fromCsv(contentCSV), []);
 
@@ -31,9 +35,6 @@ const ExplorerView = () => {
 
     const pathForCarousel = node.nodeType == 'folder' ? path : dataModel.getParentPath(path);
 
-    const prevPathRef = useRef<string[]>([]);
-    useEffect(() => { prevPathRef.current = path; }, [path]);
-
     return (
         <div className='explorer-view'>
 
@@ -54,6 +55,7 @@ const ExplorerView = () => {
                 onMoveUp={canGoUp ? up : undefined}
                 onMoveBack={canGoToPrev ? prev : undefined}
                 onMoveNext={canGoToNext ? next : undefined}
+                onReset={props.onReset}
             />
 
         </div>

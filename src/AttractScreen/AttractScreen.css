@@ -1,0 +1,33 @@
+.attract-screen {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    padding: 5%;
+
+    background-image: url("../_assets/srsp-animal-explorer-attract-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: "Meursault", serif;
+    color: var(--color-white);
+}
+
+.attract-screen h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.attract-screen h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
