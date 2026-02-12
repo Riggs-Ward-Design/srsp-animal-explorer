@@ -1,7 +1,7 @@
 import './ExplorerButtonCarousel.css';
 import StandardIconButton from "../rwd-library/StandardIconButton/StandardIconButton.tsx";
 import ExplorerButton from "../ExplorerButton/ExplorerButton.tsx";
-import type { Node, ItemNode, FolderNode } from "../_lib/dataContext";
+import type { Node, ItemNode, FolderNode } from "../_lib/dataModel.ts";
 import { useEffect, useMemo, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.tsx";
 
@@ -57,7 +57,7 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
     const FADE_OPACITY = 0.25;
 
     return (
-        <div className='carousel'>
+        <div key={`carousel-${props.openFolderNode.name}`} className='carousel'>
             {props.title && (
                 <h1 style={{
                     opacity: !props.openItemNode ? 1 : FADE_OPACITY,
@@ -85,7 +85,7 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
                 <div className='carousel-viewport'>
                     <div
                         className='carousel-track'
-                        style={{ transform: `translateX(${-currentButtonsPage * 100}%)` }}
+                        style={{transform: `translateX(${-currentButtonsPage * 100}%)`}}
                     >
                         {pages.map((page, pageIndex) => (
                             <div className='carousel-page' key={`page:${pageIndex}`}>
@@ -102,24 +102,29 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
                                     }
 
                                     const isOpen = props.openItemNode === n;
+                                    const isOnCurrentPage = pageIndex === currentButtonsPage
 
                                     return (
-                                        <div key={`itemwrap:${n.name}`} style={{ display: 'contents' }}>
+                                        <div key={`item-wrap:${n.name}`} style={{display: 'contents'}}>
                                             <ItemCard
                                                 item={n.item}
                                                 isOpen={isOpen}
                                                 onClick={() => props.push(n.name)}
                                                 className={`carousel-${isOpen ? "open-card" : "button"}`}
                                                 style={{
-                                                    opacity: isOpen || !props.openItemNode ? 1 : FADE_OPACITY,
-                                                    pointerEvents: isOpen || !props.openItemNode ? 'auto' : 'none',
+                                                    opacity: !isOnCurrentPage
+                                                        ? 0
+                                                        : (isOpen || !props.openItemNode ? 1 : FADE_OPACITY),
+                                                    pointerEvents: !isOnCurrentPage
+                                                        ? 'none'
+                                                        : (isOpen || !props.openItemNode ? 'auto' : 'none'),
                                                     zIndex: isOpen ? 10 : 0,
-                                                    transition: 'opacity 500ms, zIndex 500ms'
+                                                    transition: 'opacity 500ms, z-index 500ms'
                                                 }}
                                             />
 
                                             {isOpen && (
-                                                <div className="carousel-button placeholder" />
+                                                <div className="carousel-button placeholder"/>
                                             )}
                                         </div>
                                     );

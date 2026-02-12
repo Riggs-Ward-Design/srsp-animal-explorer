@@ -1,5 +1,5 @@
 import "./ExplorerButton.css";
-import { Node } from "../_lib/dataContext.ts";
+import { Node } from "../_lib/dataModel.ts";
 
 interface ExplorerButtonProps {
     node?: Node;

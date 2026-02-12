@@ -1,9 +1,8 @@
 import './ItemCard.css';
-import { Item } from "../_lib/dataContext.ts";
-import { kebabCase } from "change-case";
-import { imageUrls } from "../_lib/assets.ts";
-import {CSSProperties} from "react";
+import { Item } from "../_lib/dataModel.ts";
+import {CSSProperties, useEffect, useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
+import {findUrl, imageUrls, thumbUrls} from "../_lib/assets.ts";
 
 interface ItemCardProps {
     item: Item;
@@ -15,20 +14,34 @@ interface ItemCardProps {
 
 const ItemCard = (props: ItemCardProps) => {
 
-    const getImageUrl = (name: string) => {
-        const imageUrl = `../_assets/content-images/${kebabCase(name)}.jpeg`
-        return imageUrls[imageUrl];
-    }
-
-    const url = getImageUrl(props.item.commonName);
+    const thumbUrl = findUrl(thumbUrls, props.item.commonName);
+    const fullImageUrl = findUrl(imageUrls, props.item.commonName);
     const id = `item:${props.item.commonName}`;
+
+    const [fullLoaded, setFullLoaded] = useState(false);
+    const [animDone, setAnimDone] = useState(false);
+
+    useEffect(() => {
+        if (!props.isOpen || !fullImageUrl) return;
+        setFullLoaded(false);
+        setAnimDone(false);
+        const img = new Image();
+        img.src = fullImageUrl;
+        img.decode().then(() => setFullLoaded(true)).catch(() => {});
+    }, [props.isOpen, fullImageUrl]);
+
+    const showFull = props.isOpen && fullLoaded && animDone;
 
     const imageContent = (open: boolean) => (
         <motion.div
             layoutId={'image-' + id}
             style={{ borderRadius: '32px', overflow: 'hidden', flexBasis: !open ? '100%' : '40%'}}
         >
-            {url && <img src={url} alt={props.item.commonName} draggable={false}/>}
+            {fullImageUrl && <img
+                src={showFull ? fullImageUrl : thumbUrl}
+                alt={props.item.commonName}
+                draggable={false}
+            />}
         </motion.div>
     );
 
@@ -38,6 +51,7 @@ const ItemCard = (props: ItemCardProps) => {
             style={{ ...props.style, borderRadius: "32px", overflow: "hidden" }}
             onClick={props.onClick}
             layoutId={id}
+            onLayoutAnimationComplete={() => setAnimDone(true)}
         >
             {!props.isOpen && imageContent(false)}
             {props.isOpen && imageContent(true)}

@@ -1,38 +1,27 @@
-const modules = import.meta.glob(
+// file: src/_lib/assets.ts
+
+// Full-resolution images (for open/detail view)
+import {kebabCase} from "change-case";
+
+const fullModules = import.meta.glob(
     "../_assets/content-images/*.{png,jpg,jpeg,webp,gif}",
-    { eager: true, import: "default" }
+    { eager: true, import: "default" },
 ) as Record<string, string>;
 
-const cache = new Map<string, ImageBitmap>();
+// 220×140 thumbnails (for closed/button view)
+const thumbModules = import.meta.glob(
+    "../_assets/content-thumbnails/*.{png,jpg,jpeg,webp,gif}",
+    { eager: true, import: "default" },
+) as Record<string, string>;
 
-export const getAllUrls = () => {
-    return Object.values(modules);
-}
+/** All URLs (for preloading). */
+export const getAllFullUrls = () => Object.values(fullModules);
+export const getAllThumbUrls = () => Object.values(thumbModules);
 
-export const preloadAllBitmaps = async (
-    onProgress?: (loaded: number, total: number, lastUrl?: string) => void
-) => {
-    const urls = Object.values(modules);
-    const total = urls.length;
-    let loaded = 0;
+/** URL maps, keyed by relative glob path. */
+export const imageUrls = fullModules;
+export const thumbUrls = thumbModules;
 
-    for (const url of urls) {
-        if (!cache.has(url)) {
-            try {
-                const res = await fetch(url);
-                const blob = await res.blob();
-                const bmp = await createImageBitmap(blob);
-                cache.set(url, bmp);
-            } catch {
-                // ignore
-            }
-        }
-
-        loaded++;
-        onProgress?.(loaded, total, url);
-    }
+export const findUrl = (map: Record<string, string>, name: string) => {
+    return Object.entries(map).find(([k]) => k.includes(`/${kebabCase(name)}.`))?.[1];
 };
-
-
-export const getBitmap = (url: string) => cache.get(url);
-export const imageUrls = modules;

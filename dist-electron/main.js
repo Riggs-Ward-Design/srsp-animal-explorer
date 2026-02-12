@@ -18,7 +18,8 @@ function createWindow() {
     height: WINDOW_HEIGHT + 40,
     icon: path.join(process.env.VITE_PUBLIC, "electron-vite.svg"),
     webPreferences: {
-      preload: path.join(__dirname$1, "preload.mjs")
+      preload: path.join(__dirname$1, "preload.mjs"),
+      backgroundThrottling: false
     }
   });
   win.webContents.on("did-finish-load", () => {
