@@ -67,8 +67,8 @@ export function useDataModel(ctx: DataModel) {
     }, [node]);
 
     const canGoUp = path.length > 0;
-    const canGoToPrev = !ctx.isPathFirstSibling(path);
-    const canGoToNext = !ctx.isPathLastSibling(path);
+    const canGoToPrev = node.nodeType === 'item' && !ctx.isPathFirstSibling(path);
+    const canGoToNext = node.nodeType === 'item' && !ctx.isPathLastSibling(path);
 
     const up = useCallback(() => setPath(p => ctx.getParentPath(p)), [ctx]);
     const prev = useCallback(() => setPath(p => ctx.getSiblingPath(p, -1)), [ctx]);

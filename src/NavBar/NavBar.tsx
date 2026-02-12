@@ -15,24 +15,31 @@ const NavBar = (props: NavBarProps) => {
             
             <div 
                 className='nav-bar-button'
-                style={{ justifyContent: 'left', opacity: props.onMoveUp ? 1 : 0 }}
                 onClick={props.onMoveUp}
+                style={{
+                    justifyContent: 'left',
+                    opacity: props.onMoveUp ? 1 : 0
+                }}
             >
                 {`< ${props.upLabel?.replace('Learn About', '')}`}
             </div>
 
-            <div style={{ display: 'flex', gap: '48px', height: '100%' }}>
+            <div style={{ display: 'flex', gap: '48px', height: '100%', fontSize: '1.25rem' }}>
                 <div
                     className='nav-bar-button'
-                    style={{ fontSize: '1.25rem', opacity: props.onMoveBack ? 1 : 0 }}
                     onClick={props.onMoveBack}
+                    style={{
+                        opacity: props.onMoveBack ? 1 : 0
+                    }}
                 >
                     {`< Back`}
                 </div>
                 <div
                     className='nav-bar-button'
-                    style={{ fontSize: '1.25rem', opacity: props.onMoveNext ? 1 : 0 }}
                     onClick={props.onMoveNext}
+                    style={{
+                        opacity: props.onMoveNext ? 1 : 0
+                    }}
                 >
                     {'Next >'}
                 </div>
@@ -40,8 +47,10 @@ const NavBar = (props: NavBarProps) => {
 
             <div
                 className='nav-bar-button'
-                style={{ justifyContent: 'right' }}
                 onClick={props.onReset}
+                style={{
+                    justifyContent: 'right'
+                }}
             >
                 Reset
             </div>

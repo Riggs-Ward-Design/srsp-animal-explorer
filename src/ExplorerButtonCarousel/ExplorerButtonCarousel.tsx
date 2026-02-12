@@ -156,10 +156,10 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
             {/* Open card rendered at carousel level, outside the viewport */}
             {props.openItemNode && (
                 <ItemCard
+                    key={props.openItemNode.name}
                     item={props.openItemNode.item}
                     isOpen={true}
                     className="carousel-open-card"
-                    style={{ zIndex: 10 }}
                 />
             )}
         </div>

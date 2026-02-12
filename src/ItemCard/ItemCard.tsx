@@ -1,7 +1,7 @@
 import './ItemCard.css';
 import { Item } from "../_lib/dataModel.ts";
 import {CSSProperties, useEffect, useState} from "react";
-import {AnimatePresence, motion, Transition} from "framer-motion";
+import {AnimatePresence, motion} from "framer-motion";
 import {findUrl, imageUrls, thumbUrls} from "../_lib/assets.ts";
 
 interface ItemCardProps {
@@ -19,6 +19,17 @@ const ItemCard = (props: ItemCardProps) => {
     const id = `item:${props.item.commonName}`;
 
     const [fullLoaded, setFullLoaded] = useState(false);
+
+    const [elevated, setElevated] = useState(true);
+
+    useEffect(() => {
+        if (props.isOpen) {
+            setElevated(true);
+        } else {
+            const t = setTimeout(() => setElevated(false), 500);
+            return () => clearTimeout(t);
+        }
+    }, [props.isOpen]);
 
     useEffect(() => {
         if (!props.isOpen || !fullImageUrl) return;
@@ -45,9 +56,9 @@ const ItemCard = (props: ItemCardProps) => {
                 style={{
                     position: 'absolute',
                     inset: 0,
-                    backgroundImage: thumbUrl ? `url(${thumbUrl})` : undefined,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    backgroundImage: thumbUrl ? `url(${thumbUrl})` : undefined,
                 }}
             />
             {/* Full-res (fades in when ready) */}
@@ -55,9 +66,9 @@ const ItemCard = (props: ItemCardProps) => {
                 style={{
                     position: 'absolute',
                     inset: 0,
-                    backgroundImage: fullImageUrl ? `url(${fullImageUrl})` : undefined,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
+                    backgroundImage: fullImageUrl ? `url(${fullImageUrl})` : undefined,
                     opacity: showFull ? 1 : 0,
                     transition: 'opacity 0.25s ease',
                 }}
@@ -68,9 +79,14 @@ const ItemCard = (props: ItemCardProps) => {
     return (
         <motion.div
             layoutId={id}
-            className={props.className + " item-card"}
-            style={{ ...props.style, borderRadius: "32px", overflow: "hidden" }}
             onClick={props.onClick}
+            className={props.className + " item-card"}
+            style={{
+                ...props.style,
+                borderRadius: "32px",
+                overflow: "hidden",
+                zIndex: elevated ? 10 : 0,
+            }}
         >
             {!props.isOpen && imageContent(false)}
             {props.isOpen && imageContent(true)}
