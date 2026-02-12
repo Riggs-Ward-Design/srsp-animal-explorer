@@ -1,10 +1,12 @@
 import "./ExplorerButton.css";
 import { Node } from "../_lib/dataModel.ts";
+import {CSSProperties} from "react";
 
 interface ExplorerButtonProps {
     node?: Node;
     onClick?: () => void;
     className?: string;
+    style?: CSSProperties;
 }
 
 const ExplorerButton = (props: ExplorerButtonProps) => {
@@ -25,7 +27,8 @@ const ExplorerButton = (props: ExplorerButtonProps) => {
             className={props.className + ' rounded'}
             onClick={props.onClick}
             style={{
-                opacity: props.onClick ? 1 : 0,
+                ...props.style,
+                opacity: props.onClick ? props.style?.opacity : 0,
                 pointerEvents: props.onClick ? 'auto' : 'none'
             }}
         >

@@ -90,6 +90,9 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
                         {pages.map((page, pageIndex) => (
                             <div className='carousel-page' key={`page:${pageIndex}`}>
                                 {page.map((n) => {
+
+                                    const isOnCurrentPage = pageIndex === currentButtonsPage
+
                                     if (n.nodeType === 'folder') {
                                         return (
                                             <ExplorerButton
@@ -97,35 +100,36 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
                                                 key={`folder:${n.name}`}
                                                 node={n}
                                                 onClick={() => props.push(n.name)}
+                                                style={{
+                                                    opacity: isOnCurrentPage ? 1 : 0,
+                                                    pointerEvents: isOnCurrentPage ? 'auto' : 'none',
+                                                    transition: 'opacity 500ms'
+                                                }}
                                             />
                                         );
                                     }
 
                                     const isOpen = props.openItemNode === n;
-                                    const isOnCurrentPage = pageIndex === currentButtonsPage
 
                                     return (
                                         <div key={`item-wrap:${n.name}`} style={{display: 'contents'}}>
-                                            <ItemCard
-                                                item={n.item}
-                                                isOpen={isOpen}
-                                                onClick={() => props.push(n.name)}
-                                                className={`carousel-${isOpen ? "open-card" : "button"}`}
-                                                style={{
-                                                    opacity: !isOnCurrentPage
-                                                        ? 0
-                                                        : (isOpen || !props.openItemNode ? 1 : FADE_OPACITY),
-                                                    pointerEvents: !isOnCurrentPage
-                                                        ? 'none'
-                                                        : (isOpen || !props.openItemNode ? 'auto' : 'none'),
-                                                    zIndex: isOpen ? 10 : 0,
-                                                    transition: 'opacity 500ms, z-index 500ms'
-                                                }}
-                                            />
-
-                                            {isOpen && (
-                                                <div className="carousel-button placeholder"/>
+                                            {/* Always render the button version in-flow; hide it when open */}
+                                            {!isOpen && (
+                                                <ItemCard
+                                                    item={n.item}
+                                                    isOpen={false}
+                                                    onClick={() => props.push(n.name)}
+                                                    className="carousel-button"
+                                                    style={{
+                                                        opacity: isOnCurrentPage ? (!props.openItemNode ? 1 : FADE_OPACITY) : 0,
+                                                        pointerEvents: isOnCurrentPage ? (!props.openItemNode ? 'auto' : 'none') : 'none',
+                                                        transition: 'opacity 500ms'
+                                                    }}
+                                                />
                                             )}
+
+                                            {/* Placeholder to preserve grid space when open */}
+                                            {isOpen && <div className="carousel-button placeholder"/>}
                                         </div>
                                     );
                                 })}
@@ -148,6 +152,16 @@ const ExplorerButtonCarousel = (props: ExplorerButtonCarouselProps) => {
                     )}
                 </div>
             </div>
+
+            {/* Open card rendered at carousel level, outside the viewport */}
+            {props.openItemNode && (
+                <ItemCard
+                    item={props.openItemNode.item}
+                    isOpen={true}
+                    className="carousel-open-card"
+                    style={{ zIndex: 10 }}
+                />
+            )}
         </div>
     );
 };
