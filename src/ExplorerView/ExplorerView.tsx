@@ -8,6 +8,7 @@ import ExplorerCarousel from "../ExplorerCarousel/ExplorerCarousel.tsx";
 import DirectionalTransitions from "../rwd-library/DirectionalTransitions/DirectionalTransitions.tsx";
 
 interface ExplorerViewProps {
+    idleTimerPosition?: number;
     onReset?: () => void;
 }
 
@@ -56,6 +57,7 @@ const ExplorerView = (props: ExplorerViewProps) => {
                 onMoveBack={canGoToPrev ? prev : undefined}
                 onMoveNext={canGoToNext ? next : undefined}
                 onReset={props.onReset}
+                idleTimerPosition={props.idleTimerPosition}
             />
 
         </div>

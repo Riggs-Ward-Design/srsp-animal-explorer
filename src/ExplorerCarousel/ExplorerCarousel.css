@@ -59,6 +59,17 @@
     visibility: hidden;
 }
 
+.touch-prompt {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-family: 'Meursault', serif;
+    color: var(--color-green);
+    font-weight: 500;
+}
+
 .carousel .standard-icon-button {
 
     width: 250%;

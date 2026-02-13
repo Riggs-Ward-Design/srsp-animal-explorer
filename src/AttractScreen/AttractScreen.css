@@ -14,7 +14,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
 
+.attract-screen-titles-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Meursault", serif;
     color: var(--color-white);
 }

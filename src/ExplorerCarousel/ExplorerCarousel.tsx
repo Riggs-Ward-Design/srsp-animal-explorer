@@ -4,6 +4,7 @@ import FolderButton from "../FolderButton/FolderButton.tsx";
 import type { Node, ItemNode, FolderNode } from "../_lib/dataModel.ts";
 import { useEffect, useMemo, useState } from "react";
 import ItemCard from "../ItemCard/ItemCard.tsx";
+import { motion } from "framer-motion";
 
 interface ExplorerCarouselProps {
     entries: Node[];
@@ -136,6 +137,18 @@ const ExplorerCarousel = (props: ExplorerCarouselProps) => {
                             </div>
                         ))}
                     </div>
+
+                    {/*Prompt on page 1*/}
+                    {props.title === 'Who Lives Here?' && (
+                        <motion.div
+                            className='touch-prompt'
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1, transition: {delay: 4} }}
+                        >
+                            Touch any button to start exploring.
+                        </motion.div>
+                    )}
+
                 </div>
 
                 <div className='carousel-button-area'>

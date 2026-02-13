@@ -41,7 +41,7 @@ const FolderButton = (props: FolderButtonProps) => {
             className={props.className + ' rounded'}
             onClick={props.onClick}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: props.style?.opacity ?? 1 }}
             transition={{ delay: delayAppear * 0.75, duration: 0.5 }}
         >
             <div className="folder-button-contents">{text}</div>

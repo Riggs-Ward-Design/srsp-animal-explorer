@@ -22,3 +22,11 @@
     align-items: center;
     gap: 12px;
 }
+
+.idle-warning {
+    text-transform: none;
+    font-style: oblique;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
+}
