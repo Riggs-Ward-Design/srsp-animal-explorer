@@ -3,6 +3,13 @@ import { Node } from "../_lib/dataModel.ts";
 import {CSSProperties} from "react";
 import {motion} from "framer-motion";
 
+import iconFish from '../_assets/animal icons/animal icons_Fish.svg';
+import iconBirds from '../_assets/animal icons/animal icons_Bird.svg';
+import iconInsects from '../_assets/animal icons/animal icons_Insect.svg';
+import iconMammals from '../_assets/animal icons/animal icons_Mammal.svg';
+import iconReptiles from '../_assets/animal icons/animal icons_Reptile.svg';
+import iconAmphibians from '../_assets/animal icons/animal icons_Amphibian.svg';
+
 interface FolderButtonProps {
     node?: Node;
     onClick?: () => void;
@@ -36,6 +43,14 @@ const FolderButton = (props: FolderButtonProps) => {
         delayAppear = 3;
     }
 
+    let animalIcon = '';
+         if (text === "Fish") animalIcon = iconFish;
+    else if (text === "Birds") animalIcon = iconBirds;
+    else if (text === "Insects") animalIcon = iconInsects;
+    else if (text === "Mammals") animalIcon = iconMammals;
+    else if (text === "Reptiles") animalIcon = iconReptiles;
+    else if (text === "Amphibians") animalIcon = iconAmphibians;
+
     return (
         <motion.div
             className={props.className + ' rounded'}
@@ -44,7 +59,10 @@ const FolderButton = (props: FolderButtonProps) => {
             animate={{ opacity: props.style?.opacity ?? 1 }}
             transition={{ delay: delayAppear * 0.75, duration: 0.5 }}
         >
-            <div className="folder-button-contents">{text}</div>
+            <div className="folder-button-contents">
+                {animalIcon !== '' && <img src={animalIcon}/>}
+                {text}
+            </div>
         </motion.div>
     );
 };
