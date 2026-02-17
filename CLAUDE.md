@@ -48,7 +48,7 @@ The app runs in **quad mode** by default: four independent `MainView` instances 
 
 - **Image filenames** must be kebab-case versions of the animal's common name (e.g., `bald-eagle.jpg`). The `findUrl` helper handles the conversion via `change-case` `kebabCase`.
 - **CSV columns** are header-mapped by normalized key (lowercase, spaces→hyphens). Column order does not matter. Text content uses open-ended `Text N Heading` / `Text N Body` pairs (N = 1, 2, 3, …) so headings like "Habitat", "Diet", and "Fun Fact" are data-driven, not hardcoded.
-- **Tree hierarchy**: `Local Status` → `Order` → `Family` (optional) → `Item`. Items with missing `Local Status`, `Order`, or `Common Name` are skipped.
+- **Tree hierarchy**: `Local Status` → `Order` (optional) → `Family` (optional) → `Item`. Items with a missing `Order` fall directly under their `Local Status` folder. Items missing `Local Status` or `Common Name` are skipped.
 - **Quad layout**: `flipped` prop on `MainView` applies `rotate: 180deg` so two instances read correctly from the other side of the kiosk.
 - **Prev/Next navigation** only works at the item level (between sibling items within the same parent folder), not between folders.
 

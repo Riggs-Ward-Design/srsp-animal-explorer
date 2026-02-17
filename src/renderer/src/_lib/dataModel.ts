@@ -8,7 +8,7 @@ export type Item = {
   scientificName: string
   texts: TextEntry[]
   localStatus: string
-  order: string
+  order?: string
   family?: string
 }
 
@@ -37,7 +37,7 @@ const compareNodes = (a: Node, b: Node) => {
     return a.nodeType === 'folder' ? -1 : 1
   }
 
-  return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+  return 0
 }
 
 const rebuildChildrenSorted = (children: Record<string, Node>) => {
@@ -114,7 +114,7 @@ export class DataModel {
       const localStatus = get(iStatus)
       const order = get(iOrder)
       const name = get(iName)
-      if (localStatus.length === 0 || order.length === 0 || name.length === 0) continue
+      if (localStatus.length === 0 || name.length === 0) continue
 
       const texts = textPairs
         .map(({ iHeading, iBody }) => ({ heading: get(iHeading), body: get(iBody) }))
@@ -129,7 +129,8 @@ export class DataModel {
         family: get(iFamily) || undefined
       }
 
-      const path: string[] = [localStatus, order]
+      const path: string[] = [localStatus]
+      if (order) path.push(order)
       if (item.family) path.push(item.family)
 
       const folder = ensureFolderAtPath(root, path)
