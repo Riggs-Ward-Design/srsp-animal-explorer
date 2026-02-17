@@ -108,20 +108,12 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
               <span className="sci-name">{props.item.scientificName}</span>
             </div>
 
-            <section className="habitat">
-              <h2>Habitat:</h2>
-              <p>{props.item.habitat}</p>
-            </section>
-
-            <section className="diet">
-              <h2>Diet:</h2>
-              <p>{props.item.diet}</p>
-            </section>
-
-            <section className="fun">
-              <h2>Fun Fact:</h2>
-              <p>{props.item.funFact}</p>
-            </section>
+            {props.item.texts.map(({ heading, body }, i) => (
+              <section key={i} style={{ gridArea: ['habitat', 'diet', 'fun'][i] }}>
+                <h2>{heading}:</h2>
+                <p>{body}</p>
+              </section>
+            ))}
           </motion.div>
         )}
       </AnimatePresence>

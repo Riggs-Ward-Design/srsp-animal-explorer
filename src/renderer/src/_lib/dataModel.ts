@@ -1,9 +1,12 @@
+export type TextEntry = {
+  heading: string
+  body: string
+}
+
 export type Item = {
   commonName: string
   scientificName: string
-  habitat: string
-  diet: string
-  funFact: string
+  texts: TextEntry[]
   localStatus: string
   order: string
   family?: string
@@ -83,12 +86,18 @@ export class DataModel {
 
     const iName = idx('common-name')
     const iSci = idx('scientific-name')
-    const iHab = idx('habitat')
-    const iDiet = idx('diet')
-    const iFact = idx('fun-fact')
     const iStatus = idx('local-status')
     const iOrder = idx('order')
     const iFamily = idx('family')
+
+    // Collect all "Text N Heading" / "Text N Body" column index pairs (N = 1, 2, 3, …)
+    const textPairs: { iHeading: number; iBody: number }[] = []
+    for (let n = 1; ; n++) {
+      const iHeading = idx(`text-${n}-heading`)
+      const iBody = idx(`text-${n}-body`)
+      if (iHeading === -1 && iBody === -1) break
+      textPairs.push({ iHeading, iBody })
+    }
 
     const root = createRoot()
 
@@ -107,12 +116,14 @@ export class DataModel {
       const name = get(iName)
       if (localStatus.length === 0 || order.length === 0 || name.length === 0) continue
 
+      const texts = textPairs
+        .map(({ iHeading, iBody }) => ({ heading: get(iHeading), body: get(iBody) }))
+        .filter(({ heading, body }) => heading.length > 0 || body.length > 0)
+
       const item: Item = {
         commonName: name,
         scientificName: get(iSci),
-        habitat: get(iHab),
-        diet: get(iDiet),
-        funFact: get(iFact),
+        texts,
         localStatus,
         order,
         family: get(iFamily) || undefined
