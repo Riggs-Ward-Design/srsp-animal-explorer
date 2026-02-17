@@ -10,6 +10,7 @@ export type Item = {
   localStatus: string
   order?: string
   family?: string
+  align?: number
 }
 
 export type FolderNode = {
@@ -89,6 +90,7 @@ export class DataModel {
     const iStatus = idx('local-status')
     const iOrder = idx('order')
     const iFamily = idx('family')
+    const iAlign = idx('align')
 
     // Collect all "Text N Heading" / "Text N Body" column index pairs (N = 1, 2, 3, …)
     const textPairs: { iHeading: number; iBody: number }[] = []
@@ -120,13 +122,17 @@ export class DataModel {
         .map(({ iHeading, iBody }) => ({ heading: get(iHeading), body: get(iBody) }))
         .filter(({ heading, body }) => heading.length > 0 || body.length > 0)
 
+      const rawAlign = parseFloat(get(iAlign))
+      const align = isNaN(rawAlign) ? undefined : Math.max(0, Math.min(1, rawAlign))
+
       const item: Item = {
         commonName: name,
         scientificName: get(iSci),
         texts,
         localStatus,
         order,
-        family: get(iFamily) || undefined
+        family: get(iFamily) || undefined,
+        align
       }
 
       const path: string[] = [localStatus]

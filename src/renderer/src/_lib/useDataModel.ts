@@ -45,6 +45,7 @@ next()
 
 export function useDataModel(ctx: DataModel) {
   const [path, setPath] = useState<string[]>([])
+  const [lastChildName, setLastChildName] = useState<string | undefined>(undefined)
 
   const node = useMemo<Node>(() => ctx.getNode(path) ?? ctx.content, [ctx, path])
 
@@ -61,7 +62,10 @@ export function useDataModel(ctx: DataModel) {
 
   const push = useCallback(
     (label: string) => {
-      if (node.nodeType === 'folder') setPath((p) => [...p, label])
+      if (node.nodeType === 'folder') {
+        setLastChildName(undefined)
+        setPath((p) => [...p, label])
+      }
     },
     [node]
   )
@@ -72,7 +76,12 @@ export function useDataModel(ctx: DataModel) {
   const canGoToNext =
     node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, 1)!)?.nodeType === 'item'
 
-  const up = useCallback(() => setPath((p) => ctx.getParentPath(p)), [ctx])
+  const up = useCallback(() => {
+    setPath((p) => {
+      setLastChildName(p[p.length - 1])
+      return ctx.getParentPath(p)
+    })
+  }, [ctx])
   const prev = useCallback(() => setPath((p) => ctx.getSiblingPath(p, -1) ?? p), [ctx])
   const next = useCallback(() => setPath((p) => ctx.getSiblingPath(p, 1) ?? p), [ctx])
 
@@ -80,6 +89,7 @@ export function useDataModel(ctx: DataModel) {
     path,
     node,
     parentNode,
+    lastChildName,
     setPath,
     push,
     canGoUp,

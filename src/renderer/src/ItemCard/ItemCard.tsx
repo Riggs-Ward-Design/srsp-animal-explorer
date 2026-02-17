@@ -16,6 +16,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
   //
   const thumbUrl = findUrl(thumbUrls, props.item.commonName)
   const fullImageUrl = findUrl(imageUrls, props.item.commonName)
+  const bgPosition = `${(props.item.align ?? 0.5) * 100}% center`
   const id = `item:${props.item.commonName}`
 
   const [elevated, setElevated] = useState(true)
@@ -61,7 +62,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
           position: 'absolute',
           inset: 0,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: bgPosition,
           backgroundImage: thumbUrl ? `url(${thumbUrl})` : undefined
         }}
       />
@@ -70,7 +71,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
           position: 'absolute',
           inset: 0,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: bgPosition,
           backgroundImage: fullImageUrl ? `url(${fullImageUrl})` : undefined,
           opacity: showFull ? 1 : 0,
           transition: 'opacity 0.25s ease'

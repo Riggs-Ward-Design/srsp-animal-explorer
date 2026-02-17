@@ -14,7 +14,7 @@ interface ExplorerViewProps {
 
 const ExplorerView = (props: ExplorerViewProps): ReactElement => {
   //
-  const { path, node, parentNode, push, canGoUp, canGoToPrev, canGoToNext, up, prev, next } =
+  const { path, node, parentNode, lastChildName, push, canGoUp, canGoToPrev, canGoToNext, up, prev, next } =
     useDataModel(props.dataModel)
 
   const getFolderLabel = (p: string[]): string => {
@@ -39,6 +39,7 @@ const ExplorerView = (props: ExplorerViewProps): ReactElement => {
             entries={props.dataModel.getChildren(node.nodeType === 'folder' ? node : parentNode)}
             openFolderNode={props.dataModel.getNode(pathForCarousel) as FolderNode}
             openItemNode={node.nodeType === 'item' ? (node as ItemNode) : undefined}
+            focusedChildName={lastChildName}
             title={getFolderLabel(pathForCarousel)}
             push={push}
           />

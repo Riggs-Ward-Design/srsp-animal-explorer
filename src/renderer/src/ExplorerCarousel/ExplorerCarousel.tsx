@@ -10,6 +10,7 @@ interface ExplorerCarouselProps {
   entries: Node[]
   openFolderNode: FolderNode
   openItemNode?: ItemNode
+  focusedChildName?: string
   push: (label: string) => void
   title?: string
 }
@@ -26,9 +27,17 @@ const chunk = <T,>(arr: T[], size: number): T[][] => {
 
 const FADE_OPACITY = 0.25
 
+const initialPage = (entries: Node[], focusedChildName?: string): number => {
+  if (!focusedChildName) return 0
+  const index = entries.findIndex((n) => n.name === focusedChildName)
+  return index >= 0 ? Math.floor(index / PAGE_SIZE) : 0
+}
+
 const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
   //
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState(() =>
+    initialPage(props.entries, props.focusedChildName)
+  )
   const [prevFolderName, setPrevFolderName] = useState(props.openFolderNode.name)
   const [lastOpenItem, setLastOpenItem] = useState(props.openItemNode)
 
@@ -42,7 +51,12 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
 
   if (prevFolderName !== props.openFolderNode.name) {
     setPrevFolderName(props.openFolderNode.name)
-    setCurrentPage(0)
+    if (props.focusedChildName) {
+      const index = props.entries.findIndex((n) => n.name === props.focusedChildName)
+      setCurrentPage(index >= 0 ? Math.floor(index / PAGE_SIZE) : 0)
+    } else {
+      setCurrentPage(0)
+    }
   }
 
   const pages = useMemo(() => chunk(props.entries, PAGE_SIZE), [props.entries])
