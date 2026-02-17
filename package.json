@@ -1,7 +1,9 @@
 {
   "name": "srsp-animal-explorer",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "SRSP Animal Explorer Kiosk",
+  "author": "Riggs Ward Design",
   "type": "module",
   "scripts": {
     "dev": "vite",

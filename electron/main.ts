@@ -1,13 +1,8 @@
 import {app, BrowserWindow} from 'electron'
-import {createRequire} from 'node:module'
-import {fileURLToPath} from 'node:url'
+import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 
-const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-
-const WINDOW_WIDTH = 960;
-const WINDOW_HEIGHT = 540;
 
 // The built directory structure
 //
@@ -29,16 +24,24 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(process.env.APP_ROOT, 
 
 let win: BrowserWindow | null
 
+function quitOnEscapeInput(_: Electron.Event, input: Electron.Input) {
+    if (input.key === 'Escape') app.quit();
+}
+
 function createWindow() {
+
     win = new BrowserWindow({
-        width: WINDOW_WIDTH,
-        height: WINDOW_HEIGHT + 40,
+        width: 1920,
+        height: 1080,
         icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+        fullscreen: !VITE_DEV_SERVER_URL, // windowed in dev, fullscreen in build
         webPreferences: {
-            preload: path.join(__dirname, 'preload.mjs'),
-            backgroundThrottling: false
-        },
-    })
+            preload: path.join(__dirname, '../preload.mjs'),
+            backgroundThrottling: false,
+        }
+    });
+
+    win.webContents.on('before-input-event', quitOnEscapeInput);
 
     // Test active push message to Renderer-process.
     win.webContents.on('did-finish-load', () => {
@@ -46,10 +49,10 @@ function createWindow() {
     })
 
     if (VITE_DEV_SERVER_URL) {
-        win.loadURL(VITE_DEV_SERVER_URL)
+        win.loadURL(VITE_DEV_SERVER_URL).then()
+        // win.webContents.openDevTools({ mode: 'right' });
     } else {
-        // win.loadFile('dist/index.html')
-        win.loadFile(path.join(RENDERER_DIST, 'index.html'))
+        win.loadFile(path.join(RENDERER_DIST, 'index.html')).then()
     }
 }
 

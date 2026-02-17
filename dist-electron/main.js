@@ -1,50 +1,38 @@
-import { app, BrowserWindow } from "electron";
-import { createRequire } from "node:module";
-import { fileURLToPath } from "node:url";
-import path from "node:path";
-createRequire(import.meta.url);
-const __dirname$1 = path.dirname(fileURLToPath(import.meta.url));
-const WINDOW_WIDTH = 960;
-const WINDOW_HEIGHT = 540;
-process.env.APP_ROOT = path.join(__dirname$1, "..");
-const VITE_DEV_SERVER_URL = process.env["VITE_DEV_SERVER_URL"];
-const MAIN_DIST = path.join(process.env.APP_ROOT, "dist-electron");
-const RENDERER_DIST = path.join(process.env.APP_ROOT, "dist");
-process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(process.env.APP_ROOT, "public") : RENDERER_DIST;
-let win;
-function createWindow() {
-  win = new BrowserWindow({
-    width: WINDOW_WIDTH,
-    height: WINDOW_HEIGHT + 40,
-    icon: path.join(process.env.VITE_PUBLIC, "electron-vite.svg"),
-    webPreferences: {
-      preload: path.join(__dirname$1, "preload.mjs"),
-      backgroundThrottling: false
-    }
-  });
-  win.webContents.on("did-finish-load", () => {
-    win == null ? void 0 : win.webContents.send("main-process-message", (/* @__PURE__ */ new Date()).toLocaleString());
-  });
-  if (VITE_DEV_SERVER_URL) {
-    win.loadURL(VITE_DEV_SERVER_URL);
-  } else {
-    win.loadFile(path.join(RENDERER_DIST, "index.html"));
-  }
+import { app as o, BrowserWindow as i } from "electron";
+import { fileURLToPath as a } from "node:url";
+import n from "node:path";
+const s = n.dirname(a(import.meta.url));
+process.env.APP_ROOT = n.join(s, "..");
+const t = process.env.VITE_DEV_SERVER_URL, m = n.join(process.env.APP_ROOT, "dist-electron"), r = n.join(process.env.APP_ROOT, "dist");
+process.env.VITE_PUBLIC = t ? n.join(process.env.APP_ROOT, "public") : r;
+let e;
+function p(d, l) {
+  l.key === "Escape" && o.quit();
 }
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit();
-    win = null;
-  }
+function c() {
+  e = new i({
+    width: 1920,
+    height: 1080,
+    icon: n.join(process.env.VITE_PUBLIC, "electron-vite.svg"),
+    fullscreen: !t,
+    // windowed in dev, fullscreen in build
+    webPreferences: {
+      preload: n.join(s, "../preload.mjs"),
+      backgroundThrottling: !1
+    }
+  }), e.webContents.on("before-input-event", p), e.webContents.on("did-finish-load", () => {
+    e == null || e.webContents.send("main-process-message", (/* @__PURE__ */ new Date()).toLocaleString());
+  }), t ? e.loadURL(t).then() : e.loadFile(n.join(r, "index.html")).then();
+}
+o.on("window-all-closed", () => {
+  process.platform !== "darwin" && (o.quit(), e = null);
 });
-app.on("activate", () => {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    createWindow();
-  }
+o.on("activate", () => {
+  i.getAllWindows().length === 0 && c();
 });
-app.whenReady().then(createWindow);
+o.whenReady().then(c);
 export {
-  MAIN_DIST,
-  RENDERER_DIST,
-  VITE_DEV_SERVER_URL
+  m as MAIN_DIST,
+  r as RENDERER_DIST,
+  t as VITE_DEV_SERVER_URL
 };

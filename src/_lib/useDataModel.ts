@@ -67,12 +67,12 @@ export function useDataModel(ctx: DataModel) {
     }, [node]);
 
     const canGoUp = path.length > 0;
-    const canGoToPrev = node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, -1))?.nodeType === 'item';
-    const canGoToNext = node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, 1))?.nodeType === 'item';
+    const canGoToPrev = node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, -1)!)?.nodeType === 'item';
+    const canGoToNext = node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, 1)!)?.nodeType === 'item';
 
     const up = useCallback(() => setPath(p => ctx.getParentPath(p)), [ctx]);
-    const prev = useCallback(() => setPath(p => ctx.getSiblingPath(p, -1)), [ctx]);
-    const next = useCallback(() => setPath(p => ctx.getSiblingPath(p, 1)), [ctx]);
+    const prev = useCallback(() => setPath(p => ctx.getSiblingPath(p, -1) ?? p), [ctx]);
+    const next = useCallback(() => setPath(p => ctx.getSiblingPath(p, 1) ?? p), [ctx]);
 
     return {
         path,
