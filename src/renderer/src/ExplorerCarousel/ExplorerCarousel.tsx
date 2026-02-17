@@ -172,6 +172,25 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
             />
           )}
         </div>
+
+        {pages.length > 1 && (
+          <div
+            className="carousel-dots"
+            style={{
+              opacity: !props.openItemNode ? 1 : FADE_OPACITY,
+              pointerEvents: !props.openItemNode ? 'auto' : 'none',
+              transition: 'opacity 500ms'
+            }}
+          >
+            {pages.map((_, i) => (
+              <button
+                key={i}
+                className={`carousel-dot${i === currentButtonsPage ? ' active' : ''}`}
+                onClick={() => setCurrentPage(i)}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {props.openItemNode && (

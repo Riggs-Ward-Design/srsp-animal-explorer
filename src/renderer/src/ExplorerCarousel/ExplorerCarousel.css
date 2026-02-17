@@ -9,6 +9,7 @@
 }
 
 .carousel-row {
+  position: relative;
   display: flex;
   width: 100%;
 }
@@ -73,4 +74,29 @@
   margin: -75%;
   color: var(--color-green);
   z-index: 5;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 1.5rem);
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.carousel-dot {
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: var(--color-green);
+  opacity: 0.3;
+  transition: opacity 300ms;
+}
+
+.carousel-dot.active {
+  opacity: 1;
 }
