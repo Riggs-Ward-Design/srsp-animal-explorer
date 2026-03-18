@@ -1,0 +1,2032 @@
+- Common Name: American Beaver
+  Align: ''
+  Scientific Name: Castor canadensis
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Dams built in streams
+  Text 2 Heading: Diet
+  Text 2 Body: 'Herbs, bark, twigs'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The beavers' dams are built not just for shelter, but also to store caches
+    of food for the winter.
+- Common Name: American Black Bear
+  Align: ''
+  Scientific Name: Ursus americanus
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Well-covered areas such as forests or swamps
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small mammals, fish, insects, nuts, berries, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    An adult black bear will sometimes travel as far as 95 miles in a year,
+    marking trees with their claws as they go.
+- Common Name: Big Brown Bat
+  Align: '0.3'
+  Scientific Name: Eptesicus fuscus fuscus
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Caves or manmade structures (barns, churches)'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Big brown bats can eat up to one third their body weight in insects on a
+    single night.
+- Common Name: Bobcat
+  Align: ''
+  Scientific Name: Lynx rufus floridanus
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, mountains, other areas with rugged terrain'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small animals, particularly rodents'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    It's rare, but not impossible, for a bobcat to kill and eat large animals
+    such as livestock.
+- Common Name: Common Gray Fox
+  Align: '0.8'
+  Scientific Name: Urocyon cinereoargenteus
+  Local Status: Native
+  Order: Mammals
+  Family: Foxes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Upland woods, swamps'
+  Text 2 Heading: Diet
+  Text 2 Body: Small animals in winter/spring; insects and fruit in summer/fall
+  Text 3 Heading: Fun Fact
+  Text 3 Body: Gray foxes are adept climbers and will use trees in order to escape enemies.
+- Common Name: Eastern Deer Mouse
+  Align: '0.6'
+  Scientific Name: Peromyscus maniculatus
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Herbaceous vegetation
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, fruit, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A deer mouse's tail makes up more than half of its entire length and
+    features a pencil-shaped tip.
+- Common Name: Coyote
+  Align: ''
+  Scientific Name: Canis latrans
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Hills, forests, brushy areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Just about anything - mammals, insects, fruits, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Coyotes are opportunistic feeders and can adapt to many different kinds of
+    environment.
+- Common Name: Eastern Chipmunk
+  Align: '0.2'
+  Scientific Name: Tamias striatus fisheri
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, brushlands, logs, stone walls'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, fruit, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Eastern chipmunks hibernate through the cold season, going underground in
+    mid-November and emerging early February.
+- Common Name: Eastern Gray Squirrel
+  Align: '0.3'
+  Scientific Name: Sciurus carolinensis carolinensis
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, parks, backyards'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, fruit, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Gray squirrels have many different calls to communicate and can live for up
+    to 6 years In the wild.
+- Common Name: Northern Raccoon
+  Align: ''
+  Scientific Name: Procyon lotor lotor
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, cities, parks'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Extremely omnivorous: invertebrates, vertebrates, plants'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Raccoons are highly intelligent animals and can remember solutions to tasks
+    for at least three years.
+- Common Name: Northern River Otter
+  Align: ''
+  Scientific Name: Lontra canadensis lataxina
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Inland waterways and coasts
+  Text 2 Heading: Diet
+  Text 2 Body: Fish and other small aquatic animals
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    An otter's den will have multiple tunnel openings and allow access to both
+    land and water.
+- Common Name: Red Fox
+  Align: ''
+  Scientific Name: Vulpes vulpes
+  Local Status: Native
+  Order: Mammals
+  Family: Foxes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, farms, urban edges'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Mostly rabbits and mice, plus fruits and insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Red foxes will occasionally capture moles and give them to their pups as
+    playthings.
+- Common Name: Southern Flying Squirrel
+  Align: '0.4'
+  Scientific Name: Glaucomys volans saturatus
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Heavily wooded areas near water
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fruit, nuts, insects, bird eggs'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Southern flying squirrels can find their way back to their nests from up to
+    a kilometer away.
+- Common Name: Striped Skunk
+  Align: ''
+  Scientific Name: Mephitis mephitis mephitis
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, forest edges'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, small animals, fruit'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Striped skunks use a powerful, smelly spray from scent glands to defend
+    themselves. The glands then take two weeks to refill.
+- Common Name: Virginia Opossum
+  Align: ''
+  Scientific Name: Didelphis virginiana virginiana
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Wooded areas near water
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fruit, grain, plants, carrion'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Opossums are famous for "playing possum", i.e. playing dead in order to
+    deter predators.
+- Common Name: White-tailed Deer
+  Align: '0.9'
+  Scientific Name: Odocoileus virginianus
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Leaves, twigs, nuts'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    When white-tailed deer run away from danger, the visible white of their
+    tails acts as an alert to other deer.
+- Common Name: Woodchuck or Groundhog
+  Align: '0.3'
+  Scientific Name: Marmota monax
+  Local Status: Native
+  Order: Mammals
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Open woods, fields, brush'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Wild grass, vegetation'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    You wouldn't know it from looking at them, but woodchucks/groundhogs are
+    actually excellent swimmers and decent climbers.
+- Common Name: North American Bullfrog
+  Align: ''
+  Scientific Name: (Lithobates catesbeianus)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Ponds, swamps, lakes'
+  Text 2 Heading: Diet
+  Text 2 Body: Aquatic animals (including tadpoles) and insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their name comes from the deep, bull-like call that they make during
+    breeding season.
+- Common Name: Barking Treefrog
+  Align: ''
+  Scientific Name: (Dryophytes gratiosus)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Trees, bushes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, beetles, anything they can swallow'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'During breeding season, groups of males often "bark" together in unison.'
+- Common Name: Cope's Gray Treefrog
+  Align: '0.3'
+  Scientific Name: (Dryophytes chrysoscelis)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: Wooded areas near wetlands
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, snails'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Cope's gray treefrogs are highly freeze tolerant, able to survive
+    temperatures as low as 18°F (-8 °C).
+- Common Name: Eastern American Toad
+  Align: ''
+  Scientific Name: (Anaxyrus americanus americanus)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Woods, grasslands, yards'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, worms, snails'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'One American toad can eat up to 1,000 insects every day.'
+- Common Name: Eastern Cricket Frog
+  Align: '0.7'
+  Scientific Name: (Acris crepitans)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Pond edges, wetlands'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    An Eastern cricket frog can leap up to 3 feet in a single jump to evade
+    predators.
+- Common Name: Eastern Narrow-mouthed Toad
+  Align: '0.4'
+  Scientific Name: (Gastrophryne carolinensis)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Woods, marshes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, mostly ants'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Don't touch your face after handling one - their skin secretion causes a
+    violent burning sensation in the eyes.
+- Common Name: Eastern Spadefoot
+  Align: ''
+  Scientific Name: (Scaphiopus holbrookii)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests and other areas with loose soil
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their name comes from the spade-shaped appendages protruding from their hind
+    feet, which are useful for burrowing.
+- Common Name: Fowler's Toad
+  Align: '0.4'
+  Scientific Name: (Anaxyrus fowleri)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, wetlands'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The male Fowler's toad's mating call happens to also attract other males.
+    Males also have a special "release call" for when another male tries to mate
+    by mistake.
+- Common Name: Green Treefrog
+  Align: '0.6'
+  Scientific Name: (Dryophytes cinereus)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: Bodies of water near vegetation
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    During mating season, males will eavesdrop on each other's mating calls in
+    order to get a head start on approaching females.
+- Common Name: Gray Treefrog
+  Align: ''
+  Scientific Name: (Dryophytes versicolor)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Trees, mossy fences'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Roaches, earthworms, and other invertebrates'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Gray treefrogs will sometimes congregate around windows and porch lights, a
+    perfect place to catch bugs attracted to the glow.
+- Common Name: Coastal Plains Leopard Frog
+  Align: '0.7'
+  Scientific Name: (Lithobates sphenocephalus utricularius)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Ponds, swamps, ditches'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, crayfish, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This species mates nearly year-round, breeding in all months except
+    September.
+- Common Name: Pickerel Frog
+  Align: ''
+  Scientific Name: (Lithobates palustris)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Cold, clear streams'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their skin secretions are lethal to other frogs and predators, making this
+    the only poisonous frog species native to the United States.
+- Common Name: Southern Cricket Frog
+  Align: ''
+  Scientific Name: (Acris gryllus)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: Sunny ponds and swamps
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This species is able to navigate during migration using the moon and stellar
+    patterns.
+- Common Name: Spring Peeper
+  Align: ''
+  Scientific Name: (Pseudacris crucifer)
+  Local Status: Native
+  Order: Amphibians
+  Family: Frogs
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Lowland marshes, wetlands'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The Latin name, "crucifer", means "cross-bearing" and refers to the
+    cross-shaped pattern on its back.
+- Common Name: Marbled Salamander
+  Align: '0.7'
+  Scientific Name: (Ambystoma opacum)
+  Local Status: Native
+  Order: Amphibians
+  Family: Salamanders
+  Text 1 Heading: Habitat
+  Text 1 Body: Mature deciduous forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Millipedes, centipedes, insects, spiders, snails'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Mothers of this species will wrap their bodies around their egg cluster,
+    collecting a pool of water for the eggs to hatch in.
+- Common Name: Red-spotted Newt
+  Align: '0.4'
+  Scientific Name: (Notophthalmus viridescens viridescens)
+  Local Status: Native
+  Order: Amphibians
+  Family: Salamanders
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Pools, wetlands, quiet streams'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, crustaceans, young amphibians, frog eggs'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their bright coloring serves as a warning to predators of the poisonous
+    tetrodotoxin secreted through their skin.
+- Common Name: Spotted Salamander
+  Align: '0.4'
+  Scientific Name: (Ambystoma maculatum)
+  Local Status: Native
+  Order: Amphibians
+  Family: Salamanders
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests with ponds
+  Text 2 Heading: Diet
+  Text 2 Body: 'Earthworms, slugs, insects, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These salamanders have a long lifespan, with many living for 20 years and
+    some even living for 30.
+- Common Name: Three-lined Salamander
+  Align: '0.2'
+  Scientific Name: (Eurycea guttolineata)
+  Local Status: Native
+  Order: Amphibians
+  Family: Salamanders
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forested floodplains, ditches'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Snails, snail eggs, insects, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    When threatened, they respond by curling up their body, tucking their head,
+    and waving their tail.
+- Common Name: White-spotted Slimy Salamander
+  Align: '0.8'
+  Scientific Name: (Plethodon cylindraceus)
+  Local Status: Native
+  Order: Amphibians
+  Family: Salamanders
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Ants, centipedes, slugs, earthworms'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This species of salamander is unique in that it lays its eggs on land,
+    skipping the typical aquatic larval stage that most amphibians share.
+- Common Name: Common Five-lined Skink
+  Align: '0.4'
+  Scientific Name: (Plestiodon fasciatus)
+  Local Status: Native
+  Order: Reptiles
+  Family: Lizards
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests near fresh water
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    When caught by a predator, a skink is able to disconnect its entire tail in
+    order to escape.
+- Common Name: Broad-headed Skink
+  Align: '0.1'
+  Scientific Name: (Plestiodon laticeps)
+  Local Status: Native
+  Order: Reptiles
+  Family: Lizards
+  Text 1 Heading: Habitat
+  Text 1 Body: Open forested areas
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, insect larvae, gastropods, spiders'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    During mating season, females will emit a pheromone from their tail that
+    males can track by flicking their tongue.
+- Common Name: Eastern Fence Lizard
+  Align: '0.0'
+  Scientific Name: (Sceloporus undulatus)
+  Local Status: Native
+  Order: Reptiles
+  Family: Lizards
+  Text 1 Heading: Habitat
+  Text 1 Body: Open pine woods
+  Text 2 Heading: Diet
+  Text 2 Body: 'Ants, grasshoppers, other insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These lizards exhibit a behavior called "jiggling" - a short series of head
+    bobs that generally indicates arousal.
+- Common Name: Eastern Six-lined Racerunner
+  Align: '0.7'
+  Scientific Name: (Aspidoscelis sexlineata sexlineata)
+  Local Status: Native
+  Order: Reptiles
+  Family: Lizards
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Grasslands, woodlands, floodplains'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, especially termites'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They're shy and extremely quick - able to dart away at speeds up to 18 mph
+    (29 kmh).
+- Common Name: Eastern Copperhead
+  Align: '0.3'
+  Scientific Name: (Agkistrodon contortrix)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: Deciduous forest and mixed woodlands
+  Text 2 Heading: Diet
+  Text 2 Body: 'Cicadas, caterpillars, lizards, voles, mice, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This snake can vibrate its tail more than 40 times a second, more than
+    almost any other non-rattlesnake species.
+- Common Name: Eastern Gartersnake
+  Align: '0.2'
+  Scientific Name: (Thamnophis sirtalis sirtalis)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, grasslands, with moisture nearby'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Earthworms, frogs, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Juveniles can strike at predators with so much force that their entire body
+    leaves the ground.
+- Common Name: Eastern Hog-nosed Snake
+  Align: ''
+  Scientific Name: (Heterodon platirhinos)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests and fields with sandy soil
+  Text 2 Heading: Diet
+  Text 2 Body: Toads
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Generally docile, this snake will elaborately feign its own death if
+    provoked.
+- Common Name: Eastern Kingsnake
+  Align: '0.7'
+  Scientific Name: (Lampropeltis getula)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, fields, swamps, marshes, creeks'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Snakes, lizards'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    You read the Diet section correctly - these snakes are known for hunting and
+    killing other snakes, including venemous ones.
+- Common Name: Central Ratsnake
+  Align: ''
+  Scientific Name: (Pantherophis alleghaniensis)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, wetlands, urban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Rodents, birds, eggs'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The most commonly-observed snake in Virginia. They are often seen climbing
+    trees to get to bird nests.
+- Common Name: Northern Watersnake
+  Align: '0.4'
+  Scientific Name: (Nerodia sipedon sipedon)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Lakes, ponds, rivers, etc'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fish, amphibians'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Often killed by humans misidentifying it as a cottonmouth; these have a thin
+    body and round pupils, whereas they have a fat body and cat-like pupils.
+- Common Name: Eastern Wormsnake
+  Align: ''
+  Scientific Name: (Carphophis amoenus amoenus)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests and wooded habitats with soft soil
+  Text 2 Heading: Diet
+  Text 2 Body: Worms
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'When held, this snake will attempt to "burrow" between your fingers.'
+- Common Name: Northern Black Racer
+  Align: '0.7'
+  Scientific Name: (Coluber constrictor constrictor)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Dry, grassy areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, lizards, frogs, other snakes, small mammals, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Despite the word "constrictor" in their Latin name, these snakes kill prey
+    by pinning them down and swallowing them alive.
+- Common Name: Northern Ring-necked Snake
+  Align: '0.4'
+  Scientific Name: (Diadophis punctatus edwardsii)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, urban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Worms, salamanders, lizards'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'Instead of biting, these snakes release foul-smelling feces when caught.'
+- Common Name: Northern Rough Greensnake
+  Align: '0.8'
+  Scientific Name: (Opheodrys aestivus)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Trees, shrubs lining ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'At night, these snakes are found sleeping coiled in the branches of trees.'
+- Common Name: Red Cornsnake
+  Align: '0.4'
+  Scientific Name: (Pantherophis guttatus)
+  Local Status: Native
+  Order: Reptiles
+  Family: Snakes
+  Text 1 Heading: Habitat
+  Text 1 Body: Hardwood forests
+  Text 2 Heading: Diet
+  Text 2 Body: Rodents
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These snakes are seldom seen, often using rodent burrows and tree roots for
+    shelter.
+- Common Name: Eastern Musk Turtle
+  Align: '0.6'
+  Scientific Name: (Sternotherus odoratus)
+  Local Status: Native
+  Order: Reptiles
+  Family: Turtles
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Ponds, lakes, swamps, rivers, marshes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, insects, crayfish, snails'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Also called "stinkpots", these turtles discharge a foul-smelling odor when
+    disturbed.
+- Common Name: Eastern Painted Turtle
+  Align: '0.4'
+  Scientific Name: (Chrysemys picta picta)
+  Local Status: Native
+  Order: Reptiles
+  Family: Turtles
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Ponds, lakes, swamps, rivers, marshes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, fish, algae, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A two-headed Eastern Painted Turtle was fonud in Chesterfield County in
+    1973.
+- Common Name: Eastern River Cooter
+  Align: ''
+  Scientific Name: (Pseudemys concinna concinna)
+  Local Status: Native
+  Order: Reptiles
+  Family: Turtles
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Rivers; occasionally lakes, ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: ' Aquatic plants, algae'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The shape of the Eastern River Cooter's nasal area allows it to breathe
+    while totally submerged.
+- Common Name: North American Snapping Turtle
+  Align: '0.6'
+  Scientific Name: (Chelydra serpentina)
+  Local Status: Native
+  Order: Reptiles
+  Family: Turtles
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Ponds, lakes, swamps, rivers, marshes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, fish, amphibians, reptiles, birds, small mammals'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Despite the popular conception, common snapping turtles are actually quite
+    docile and prefer to avoid confrontation.
+- Common Name: Southeastern Mud Turtle
+  Align: ''
+  Scientific Name: (Kinosternon subrubrum subrubrum)
+  Local Status: Native
+  Order: Reptiles
+  Family: Turtles
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Ponds, lakes, swamps, rivers, marshes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, snails, crustaceans, frogs, aquatic plants'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: These turtles hide in substrate or mulkrat burrows over the winter.
+- Common Name: Woodland Box Turtle
+  Align: '0.3'
+  Scientific Name: (Terrapene carolina carolina)
+  Local Status: Native
+  Order: Reptiles
+  Family: Turtles
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, swamps'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Worms, snails, insects, fruit, berries, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'In captivity, box turtles have been known to live for over 100 years.'
+- Common Name: Great Blue Heron
+  Align: '0.6'
+  Scientific Name: Ardea herodias
+  Local Status: Native
+  Order: Birds
+  Family: Wading Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Freshwater and coastal wetlands, marshes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fish; sometimes amphibians, reptiles, small mammals'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'They have excellent photoreceptors, allowing them to hunt at nighttime.'
+- Common Name: Great Egret
+  Align: '0.6'
+  Scientific Name: Ardea alba
+  Local Status: Native
+  Order: Birds
+  Family: Wading Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Marshes, tidal flats, shallow wetlands'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fish; sometimes frogs, insects, crustaceans'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their large wings, flapping twice per second, can propel them at around 25
+    mph (40 kmh).
+- Common Name: Yellow-crowned Night Heron
+  Align: '0.2'
+  Scientific Name: Nyctanassa violacea
+  Local Status: Native
+  Order: Birds
+  Family: Wading Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Coastal wetlands, mangroves, swamps'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Crustaceans; sometimes fish, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These herons don't mind human company and can often be found nesting on
+    neighborhood rooftops.
+- Common Name: Green Heron
+  Align: '0.2'
+  Scientific Name: Butorides virescens
+  Local Status: Native
+  Order: Birds
+  Family: Wading Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Coastal and inland wetlands, ponds, lakes'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fish; sometimes frogs, aquatic insects, worms, rodents'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Green Herons can actually use tools, turning bread crusts and insects into
+    fishing lures.
+- Common Name: Double-crested Cormorant
+  Align: '0.3'
+  Scientific Name: Nannopterum auritum
+  Local Status: Native
+  Order: Birds
+  Family: Cormorants
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Lakes, rivers, ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: Fish
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Mother cormorants will collect water in their mouths to bring home to their
+    chicks.
+- Common Name: Ruby-throated Hummingbird
+  Align: '0.7'
+  Scientific Name: Archilochus colubris
+  Local Status: Native
+  Order: Birds
+  Family: Hummingbirds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Deciduous woodlands, meadows, backyards'
+  Text 2 Heading: Diet
+  Text 2 Body: Flower nectar; sometimes small insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: Their wings beat over 50 times per second.
+- Common Name: Mourning Dove
+  Align: '0.4'
+  Scientific Name: Zenaida macroura
+  Local Status: Native
+  Order: Birds
+  Family: Pigeons and Doves
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, forest edges'
+  Text 2 Heading: Diet
+  Text 2 Body: Seeds
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They feed by searching the ground for seeds, typically collecting them in a
+    pocket of the esophagus to be eaten later.
+- Common Name: Eurasian Collared-Dove
+  Align: '0.3'
+  Scientific Name: Streptopelia decaocto
+  Local Status: Native
+  Order: Birds
+  Family: Pigeons and Doves
+  Text 1 Heading: Habitat
+  Text 1 Body: Cities and suburbs
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, grain'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    One of the few bird species that can use their beaks as a straw to drink
+    water.
+- Common Name: Canada Goose
+  Align: '0.3'
+  Scientific Name: Branta canadensis
+  Local Status: Native
+  Order: Birds
+  Family: Ducks and Geese
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Parks, lawns, golf courses'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Grass, seeds and berries'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Famous for their migration patterns, Canada geese sometimes fly as far as
+    900 miles (1500 km) northward to molt.
+- Common Name: Wood Duck
+  Align: '0.9'
+  Scientific Name: Aix sponsa
+  Local Status: Native
+  Order: Birds
+  Family: Ducks and Geese
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, marshes, rivers, beaver ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, fruit; sometimes insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A rare duck species with strong claws, mainly used to grip and perch on tree
+    branches.
+- Common Name: Northern Shoveler
+  Align: '0.6'
+  Scientific Name: Spatula clypeata
+  Local Status: Native
+  Order: Birds
+  Family: Ducks and Geese
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Marshes, lakes, estuaries'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small crustaceans, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The comb-like nature of their bills allows them to scoop water and filter
+    out crustaceans and seeds to eat.
+- Common Name: Mallard
+  Align: ''
+  Scientific Name: Anas platyrhynchos
+  Local Status: Native
+  Order: Birds
+  Family: Ducks and Geese
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Lakes, ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, aquatic vegetation'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: Only female mallards quack loudly; males just make a small rasping sound.
+- Common Name: Hooded Merganser
+  Align: '0.2'
+  Scientific Name: Lophodytes cucullatus
+  Local Status: Native
+  Order: Birds
+  Family: Ducks and Geese
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Lakes, ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fish, aquatic plants and insects, crayfish, amphibians'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They can see underwater to hunt; their eyes can refract light differently
+    underwater, and they have an extra set of clear goggle-like eyelids.
+- Common Name: Peregrine Falcon
+  Align: '0.3'
+  Scientific Name: Falco peregrinus
+  Local Status: Native
+  Order: Birds
+  Family: Falcons
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Cliffs, mountains, shorelines'
+  Text 2 Heading: Diet
+  Text 2 Body: Smaller birds
+  Text 3 Heading: Fun Fact
+  Text 3 Body: They can fly up to 69 mph (112 km/h) when hunting prey.
+- Common Name: American Kestrel
+  Align: '0.6'
+  Scientific Name: Falco sparverius
+  Local Status: Native
+  Order: Birds
+  Family: Falcons
+  Text 1 Heading: Habitat
+  Text 1 Body: Open grassland and urban areas
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, rodents, smaller birds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    One of the smallest birds of prey; they themselves are also prey for larger
+    hawks and owls.
+- Common Name: Eastern Wood-Pewee
+  Align: '0.2'
+  Scientific Name: Contopus virens
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: Forest edges
+  Text 2 Heading: Diet
+  Text 2 Body: Small insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Known for their distinctive "pee-a-weee!" song, which they sing at all times
+    of day.
+- Common Name: White-eyed Vireo
+  Align: '0.6'
+  Scientific Name: Vireo griseus
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Scrub, overgrown pastures, forest'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects and other arthropods
+  Text 3 Heading: Fun Fact
+  Text 3 Body: They bathe by rubbing their body against dewy plants in the morning.
+- Common Name: Blue Jay
+  Align: '0.4'
+  Scientific Name: Cyanocitta cristata
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, especially oak'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, nuts, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Highly intelligent birds, they have been known to mimic the call of the
+    Red-Shouldered Hawk as either a warning or a deception tactic.
+- Common Name: American Crow
+  Align: '0.7'
+  Scientific Name: Corvus brachyrhynchos
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Woodlands, farms, urban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Grain, nuts, seeds, small animals'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Noted for their intelligence; studies have shown that they can remember
+    people and identify them based on appearance.
+- Common Name: Carolina Chickadee
+  Align: '0.7'
+  Scientific Name: Poecile carolinensis
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, swamps, urban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, spiders, plants in wintertime'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They are territorial in the winter, living in flocks of 2-8 and defending
+    their areas against other flocks.
+- Common Name: Tufted Titmouse
+  Align: '0.7'
+  Scientific Name: Baeolophus bicolor
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, parks'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Known to incorporate animal hair into their nests, sourced from living
+    animals such as squirrels, raccoons, and even humans.
+- Common Name: Tree Swallow
+  Align: ''
+  Scientific Name: Tachycineta bicolor
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, swamps, ponds'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects; sometimes plants
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    In the evening time, hundreds of thousands of tree swallows will sometimes
+    converge into a giant swirling flock in the sky.
+- Common Name: Purple Martin
+  Align: '0.7'
+  Scientific Name: Progne subis
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Towns, parks, fields, meadows'
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: Able to eat flying insects at more than 500 feet from the ground.
+- Common Name: White-breasted Nuthatch
+  Align: '0.4'
+  Scientific Name: Sitta carolinensis
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, usually deciduous'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects; sometimes nuts, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: Known to hoard seeds for the winter by stuffing them into gaps in tree bark.
+- Common Name: Brown Creeper
+  Align: '0.3'
+  Scientific Name: Certhia americana
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, insect larvae'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: Their bills are specially shaped for picking apart loose tree bark.
+- Common Name: Carolina Wren
+  Align: '0.4'
+  Scientific Name: Thryothorus ludovicianus
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Thickets, swamps, woods'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, spiders; sometimes snakes, frogs'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'For their small size, they produce a startlingly loud song.'
+- Common Name: Eastern Bluebird
+  Align: '0.7'
+  Scientific Name: Sialia sialis
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: Open areas with trees
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects in summer, fruit in winter'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Male bluebirds will bring material to make a nest, but females are typically
+    responsible for building the nest and tending to the eggs.
+- Common Name: American Robin
+  Align: ''
+  Scientific Name: Turdus migratorius
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, forests, parks, etc.'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Worms, insects, snails, fruit'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A study has suggested that robins will choose to eat bug-infested fruit in
+    order to round out their diet.
+- Common Name: Cedar Waxwing
+  Align: ''
+  Scientific Name: Bombycilla cedrorum
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Woodlands, especially near water'
+  Text 2 Heading: Diet
+  Text 2 Body: Fruit; sometimes insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    If a waxwing eats enough honeysuckle berries while growing a tail feather,
+    it will grow out orange instead of the usual yellow.
+- Common Name: Pine Warbler
+  Align: ''
+  Scientific Name: Setophaga pinus
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: Pine forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Caterpillars, insects; sometimes fruit, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    In order to lure predators away from the nest, a warbler will perform a
+    "broken wing display", pretending to be injured and therefore an easy meal.
+- Common Name: Northern Cardinal
+  Align: '0.4'
+  Scientific Name: Cardinalis cardinalis
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, forest edges'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, fruit; sometimes insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Fiercely territorial, cardinals may be seen attacking their reflection in
+    windows and mirrors during springtime.
+- Common Name: Indigo Bunting
+  Align: '0.3'
+  Scientific Name: Passerina cyanea
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Brush, forest edges'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, berries, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These birds actually have no blue pigment; instead, tiny structures in their
+    feathers reflect blue light. They appear dark brown when not lit.
+- Common Name: Scarlet Tanager
+  Align: '0.3'
+  Scientific Name: Piranga olivacea
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, fruit, flower buds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Brown-headed Cowbirds sometimes insert their own eggs into Scarlet Tanager
+    nests; the tanagers will raise the cowbird as one of their own.
+- Common Name: Summer Tanager
+  Align: '0.3'
+  Scientific Name: Piranga rubra
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Bees, wasps; sometimes other insects, fruit'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Before eating a bee or wasp, a Summer Tanager will rub its body against a
+    branch to remove the stinger.
+- Common Name: Northern Mockingbird
+  Align: ''
+  Scientific Name: Mimus polyglottos
+  Local Status: Native
+  Order: Birds
+  Family: Song Birds
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Hedges, thickets, suburban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects in summer, fruit in winter'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Mockingbirds mimic the sounds of other birds; a male mockingbird can learn
+    up to 200 different songs.
+- Common Name: Eastern Whip-poor-will
+  Align: '0.3'
+  Scientific Name: Antrostomus vociferus
+  Local Status: Native
+  Order: Birds
+  Family: Nightjars
+  Text 1 Heading: Habitat
+  Text 1 Body: Forest edges
+  Text 2 Heading: Diet
+  Text 2 Body: Insects
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These birds time their egg hatching to occur before a full moon; during this
+    time, they can hunt at night to better feed their little ones.
+- Common Name: Wild Turkey
+  Align: '0.6'
+  Scientific Name: Meleagris gallopavo
+  Local Status: Native
+  Order: Birds
+  Family: Quail and Pheasants
+  Text 1 Heading: Habitat
+  Text 1 Body: Open forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Nuts, seeds, plants'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Originally from Mexico, this prized game bird's rich flavor comes from its
+    wild nutty diet.
+- Common Name: Northern Bobwhite
+  Align: '0.4'
+  Scientific Name: Colinus virginianus
+  Local Status: Native
+  Order: Birds
+  Family: Quail and Pheasants
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, grasslands, forests'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Seeds, leaves; sometimes insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Hunting and agriculture have reduced Bobwhite population by 81% since the
+    1960s. They are now an important target for conservation efforts.
+- Common Name: Turkey Vulture
+  Align: '0.4'
+  Scientific Name: Cathartes aura
+  Local Status: Native
+  Order: Birds
+  Family: Vultures
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Farmland, forests, roadsides'
+  Text 2 Heading: Diet
+  Text 2 Body: Carrion (already-dead animals)
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The Turkey Vulture's keen sense of smell allows it to locate carrion from
+    far away, even from above a forest canopy.
+- Common Name: Black Vulture
+  Align: '0.7'
+  Scientific Name: Coragyps atratus
+  Local Status: Native
+  Order: Birds
+  Family: Vultures
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, roadsides'
+  Text 2 Heading: Diet
+  Text 2 Body: Carrion (already-dead animals)
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Lacking a strong sense of smell, they mostly find carrion by following and
+    overpowering the Turkey Vultures.
+- Common Name: Osprey
+  Align: ''
+  Scientific Name: Pandion haliaetus
+  Local Status: Native
+  Order: Birds
+  Family: Eagles and Hawks
+  Text 1 Heading: Habitat
+  Text 1 Body: Shorelines
+  Text 2 Heading: Diet
+  Text 2 Body: Fish
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These particular hawks are specially-evolved to hunt fish; their reversible
+    outer toes are perfect for gripping wet scales.
+- Common Name: Golden Eagle
+  Align: '0.8'
+  Scientific Name: Aquila chrysaetos
+  Local Status: Native
+  Order: Birds
+  Family: Eagles and Hawks
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Open country, mountains'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Rabbits, squirrels, and other small mammals; sometimes larger ones'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Famed hunters, these eagles have even been seen fighting off bears and
+    coyotes.
+- Common Name: Bald Eagle
+  Align: ''
+  Scientific Name: Haliaeetus leucocephalus
+  Local Status: Native
+  Order: Birds
+  Family: Eagles and Hawks
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests near water
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fish; sometimes birds, reptiles, amphibians, crabs, mammals'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their association with American integrity is a bit ironic - Bald Eagles
+    often steal their meals from ospreys and fish-eating mammals.
+- Common Name: Red-shouldered Hawk
+  Align: ''
+  Scientific Name: Buteo lineatus
+  Local Status: Native
+  Order: Birds
+  Family: Eagles and Hawks
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, swamps'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small mammals, reptiles, amphibians'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Males show off to females through a "sky dance" - calling while soaring and
+    diving repeatedly through the air.
+- Common Name: Red-tailed Hawk
+  Align: '0.6'
+  Scientific Name: Buteo jamaicensis
+  Local Status: Native
+  Order: Birds
+  Family: Eagles and Hawks
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Fields, grasslands, desert, scrub, parks, etc'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small mammals; sometimes birds, reptiles'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    If you've ever heard a magestic eagle scream in a movie or TV show, you've
+    actually heard the call of the Red-Tailed Hawk.
+- Common Name: American Barn Owl
+  Align: ''
+  Scientific Name: Tyto furcata
+  Local Status: Native
+  Order: Birds
+  Family: Owls
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Grasslands, deserts, fields, suburban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small mammals, particularly rodents'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Owls swallow their prey whole, then cough up "pellets" of skin, bones, and
+    other undigestible material.
+- Common Name: Eastern Screech-Owl
+  Align: '0.2'
+  Scientific Name: Megascops asio
+  Local Status: Native
+  Order: Birds
+  Family: Owls
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small mammals, birds, insects, worms, amphibians, reptiles'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These owls dive for prey in a classic U shape: straight down, forward,
+    straight up.
+- Common Name: Great Horned Owl
+  Align: '0.6'
+  Scientific Name: Bubo virginianus
+  Local Status: Native
+  Order: Birds
+  Family: Owls
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, swamps, farmland'
+  Text 2 Heading: Diet
+  Text 2 Body: 'A large variety of mammals, birds, reptiles, amphibians, fish, etc'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A Great Horned Owl's hearing is amplified by facial disc feathers that catch
+    sound and direct it to the ears.
+- Common Name: Barred Owl
+  Align: '0.4'
+  Scientific Name: Strix varia
+  Local Status: Native
+  Order: Birds
+  Family: Owls
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests near water
+  Text 2 Heading: Diet
+  Text 2 Body: 'A large variety of mammals, birds, reptiles, amphibians, fish, etc'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This owl has a very recognizable call; it sounds like "who cooks for you?
+    Who cooks for you?"
+- Common Name: Northern Saw-whet Owl
+  Align: '0.7'
+  Scientific Name: Aegolius acadicus
+  Local Status: Native
+  Order: Birds
+  Family: Owls
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Small mammals, particularly mice'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These smaller owls will typically make two separate meals out of a single
+    mouse.
+- Common Name: Yellow-bellied Sapsucker
+  Align: ''
+  Scientific Name: Sphyrapicus varius
+  Local Status: Native
+  Order: Birds
+  Family: Woodpeckers
+  Text 1 Heading: Habitat
+  Text 1 Body: Forest edges
+  Text 2 Heading: Diet
+  Text 2 Body: Tree sap
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Sapsuckers get their sap by tapping holes into maple trees, very similarly
+    to how we humans collect maple syrup.
+- Common Name: Red-bellied Woodpecker
+  Align: '0.6'
+  Scientific Name: Melanerpes carolinus
+  Local Status: Native
+  Order: Birds
+  Family: Woodpeckers
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, suburban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, nuts, seeds, fruit'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their sticky, barbed tongue extends almost 2 inches past the end of their
+    beak.
+- Common Name: Downy Woodpecker
+  Align: ''
+  Scientific Name: Dryobates pubescens
+  Local Status: Native
+  Order: Birds
+  Family: Woodpeckers
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, orchards, parks, suburban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, berries, acorns, grain'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Drumming against a tree isn't actually part of woodpeckers' feeding
+    behavior; instead, it's their version of singing.
+- Common Name: Northern Flicker
+  Align: '0.6'
+  Scientific Name: Colaptes auratus
+  Local Status: Native
+  Order: Birds
+  Family: Woodpeckers
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forest edges, fields, parks, suburban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects (especially ants), fruit, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Instead of hammering on trees, this particular woodpecker prefers to use its
+    long tongue to eat ants off the ground.
+- Common Name: Pileated Woodpecker
+  Align: ''
+  Scientific Name: Dryocopus pileatus
+  Local Status: Native
+  Order: Birds
+  Family: Woodpeckers
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, suburban areas'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Carpenter ants; sometimes other ants, insects, fruit, nuts'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These large woodpeckers can create holes large enough to break small trees
+    in half.
+- Common Name: Red-headed Woodpecker
+  Align: '0.6'
+  Scientific Name: Melanerpes erythrocephalus
+  Local Status: Native
+  Order: Birds
+  Family: Woodpeckers
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, burned areas, swamps, parks, roadsides'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, fruit, seeds'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They are known to store food - sometimes including live trapped insects - in
+    cracks in wood and bark.
+- Common Name: Alabama Bass
+  Align: '0.2'
+  Scientific Name: Micropterus henshalli
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crayfish, amphibians, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Labeled a "Predatory and Undesirable Species" in Virginia due to its
+    aggresive nature and ability to outcompete Largemouth and Smallmouth bass.
+- Common Name: Alewife
+  Align: ''
+  Scientific Name: Alosa pseudoharengus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Anadromous (lives in saltwater, spawns in freshwater)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Zooplankton, shrimp; sometimes crustaceans, smaller fish'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'Their name is said to refer to a female tavernkeeper, or "ale-wife".'
+- Common Name: American Shad
+  Align: ''
+  Scientific Name: Alosa sapidissima
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Anadromous (lives in saltwater, spawns in freshwater)'
+  Text 2 Heading: Diet
+  Text 2 Body: Shrimp; sometimes smaller fish (juveniles eat zooplankton and insect larvae)
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Known as "America's Founding Fish" due to their history as an important food
+    source for Indigenous Peoples and early colonists.
+- Common Name: Black Crappie
+  Align: '0.2'
+  Scientific Name: Pomoxis nigromaculatus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Insects, smaller fish'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They tend to lay their eggs near submerged structures such as tree stumps,
+    brush, or boat docks.
+- Common Name: Blue Catfish
+  Align: '0.6'
+  Scientific Name: Ictalurus furcatus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Freshwater, benthic (lays on the bottom of a body of water)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crayfish, mollusks, plants'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    They are nocturnal, staying in dark holes in the riverbed during the day and
+    emerging at night.
+- Common Name: Blueback Herring
+  Align: ''
+  Scientific Name: Alosa aestivalis
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Anadromous (lives in saltwater, spawns in freshwater)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Zooplankton, shrimp, crustaceans, smaller fish'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'These fish have sharp, spiny scales, or "scutes", along their underside.'
+- Common Name: Bluegill
+  Align: '0.7'
+  Scientific Name: Lepomis macrochirus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Generalist - insects, crustaceans, worms, smaller fish'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A type of sunfish, these fish will linger near the water's surface to stay
+    warm in the sun.
+- Common Name: Channel Catfish
+  Align: '0.0'
+  Scientific Name: Ictalurus punctatus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Freshwater, benthic (lays on the bottom of a body of water)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Omnivorous - crustaceans, smaller fish, amphibians; sometimes small mammals'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These catfish have taste buds all over their body, particularly on their
+    whisker-like "barbels".
+- Common Name: Common Carp
+  Align: '0.9'
+  Scientific Name: Cyprinus carpio
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Freshwater, benthic (lays on the bottom of a body of water)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Omnivorous - worms, small crustaceans, fish eggs, mussels, seeds, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Carp feed by sifting through mud, consuming just about anything that comes
+    up in the process.
+- Common Name: Flathead Catfish
+  Align: '0.6'
+  Scientific Name: Pylodictis olivaris
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Freshwater, benthic (lays on the bottom of a body of water)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish; juveniles feed on insects, crayfish'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'A female lays, on average, 100,000 eggs in a clutch.'
+- Common Name: Gizzard Shad
+  Align: ''
+  Scientific Name: Dorosoma cepedianum
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater or brackish water
+  Text 2 Heading: Diet
+  Text 2 Body: 'Zooplankton, detritus'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This fish does in fact have a "gizzard", an organ that helps it grind and
+    break down food.
+- Common Name: Largemouth Bass
+  Align: '0.9'
+  Scientific Name: Micropterus nigricans
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crayfish, amphibians, insects'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    True to its name, the Largemouth Bass can open its mouth wider than its
+    head.
+- Common Name: Pumpkinseed
+  Align: '0.2'
+  Scientific Name: Lepomis gibbosus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Crustaceans, insects, mollusks'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This tiny fish features an "eye spot" that fools predators into thinking
+    it's a much larger fish.
+- Common Name: Redear Sunfish
+  Align: ''
+  Scientific Name: Lepomis microlophus
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: Mollusks
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A special set of teeth enables them to crunch snail shells, hence the local
+    nickname "shallcrackers".
+- Common Name: Smallmouth Bass
+  Align: '0.3'
+  Scientific Name: Micropterus dolomieu
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crayfish, amphibians; sometimes small mammals'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    These fish are extremely popular among anglers for their ability to put up a
+    serious fight when hooked.
+- Common Name: Striped Bass
+  Align: '0.3'
+  Scientific Name: Morone saxatilis
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Anadromous (lives in saltwater, spawns in freshwater)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, particularly shad, alewife and herring'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The largest Striped Bass ever recorded was caught in 1896 and weighed a
+    whopping 124 pounds (56 kg).
+- Common Name: White Perch
+  Align: '0.2'
+  Scientific Name: Morone americana
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Anadromous (lives in saltwater, spawns in freshwater)'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crustaceans, insects, worms, plants, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    A female can lay over 150,000 eggs in a clutch; often, multiple males will
+    work to fertilize them all.
+- Common Name: Yellow Perch
+  Align: '0.8'
+  Scientific Name: Perca flavescens
+  Local Status: Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crustaceans; juveniles feed on zooplankton'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their eggs are laid in jelly-like strands that get draped around submerged
+    structures or weeds.
+- Common Name: Western Honey Bee
+  Align: ''
+  Scientific Name: Apis mellifera
+  Local Status: Native
+  Order: Insects
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Grasslands, forests, farms, gardens'
+  Text 2 Heading: Diet
+  Text 2 Body: 'Nectar, pollen'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: 'A bee hive may have as many as 50,000 individual bees living inside.'
+- Common Name: Eastern Tiger Swallowtail
+  Align: ''
+  Scientific Name: Papilio glaucus
+  Local Status: Native
+  Order: Insects
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: 'Forests, fields, gardens'
+  Text 2 Heading: Diet
+  Text 2 Body: Nectar
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    The first-ever known drawing of a butterfly in North America was of an
+    eastern tiger swallowtail, drawn by John White in 1587 during a Virginia
+    expedition. It's now the state insect of Virginia.
+- Common Name: Eastern Hercules Beetle
+  Align: ''
+  Scientific Name: Dynastes tityus
+  Local Status: Native
+  Order: Insects
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: 'Fruit, sap; larvae eat rotting wood'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    This beetle can supposedly lift and carry up to 850 times its own body
+    weight.
+- Common Name: American Dagger Moth
+  Align: ''
+  Scientific Name: Acronicta americana
+  Local Status: Native
+  Order: Insects
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Forests
+  Text 2 Heading: Diet
+  Text 2 Body: Leaves
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    It's unknown why moths circle around artificial lights; one hypothesis is
+    that they mistake them for the moon and try to navigate against them.
+- Common Name: Bufflehead
+  Align: ''
+  Scientific Name: Bucephala albeola
+  Local Status: Non-Native
+  Order: Birds
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Canvasback
+  Align: ''
+  Scientific Name: Aythya valisineria
+  Local Status: Non-Native
+  Order: Birds
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Red-breasted Merganser
+  Align: ''
+  Scientific Name: Mergus serrator
+  Local Status: Non-Native
+  Order: Birds
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Snow Goose
+  Align: ''
+  Scientific Name: Anser caerulescens
+  Local Status: Non-Native
+  Order: Birds
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Migrant Warbler
+  Align: ''
+  Scientific Name: Setophaga virens
+  Local Status: Non-Native
+  Order: Birds
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Walleye
+  Align: ''
+  Scientific Name: Sander vitreus
+  Local Status: Non-Native
+  Order: Fish
+  Family: ''
+  Text 1 Heading: Habitat
+  Text 1 Body: Freshwater
+  Text 2 Heading: Diet
+  Text 2 Body: 'Smaller fish, crayfish, amphibians, insects, etc.'
+  Text 3 Heading: Fun Fact
+  Text 3 Body: >-
+    Their name comes from their eyes, which are opaque in appearance thanks to a
+    layer of tissue called "tapetum lucidum" that enhances low-light vision.
+- Common Name: Monarch Butterfly
+  Align: ''
+  Scientific Name: Danaus plexippus
+  Local Status: Non-Native
+  Order: Insects
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Spotted Lantern Fly
+  Align: ''
+  Scientific Name: Lycorma delicatula
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Asian Lady Beetle
+  Align: ''
+  Scientific Name: Harmonia axyridis
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Emerald Ash Borer
+  Align: ''
+  Scientific Name: Agrilus planipennis
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Asian Clam
+  Align: ''
+  Scientific Name: Corbicula fluminea
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Sericea Lespedeza
+  Align: ''
+  Scientific Name: Lespedeza cuneata
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Autumn Olive
+  Align: ''
+  Scientific Name: Elaeagnus umbellata
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Japanese Stilt Grass
+  Align: ''
+  Scientific Name: Microstegium vimineum
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
+- Common Name: Chinese Privet
+  Align: ''
+  Scientific Name: Ligustrum sinense
+  Local Status: Invasive
+  Order: ''
+  Family: ''
+  Text 1 Heading: ''
+  Text 1 Body: ''
+  Text 2 Heading: ''
+  Text 2 Body: ''
+  Text 3 Heading: ''
+  Text 3 Body: ''
