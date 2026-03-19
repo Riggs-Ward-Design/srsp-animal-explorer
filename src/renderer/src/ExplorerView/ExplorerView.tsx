@@ -2,6 +2,7 @@ import './ExplorerView.css'
 import NavBar from '../NavBar/NavBar'
 import { ReactElement } from 'react'
 import { DataModel, FolderNode, ItemNode } from '../_lib/dataModel'
+import { getChildren, getNode, getParentPath } from '../_lib/dataModelUtility'
 import { useDataModel } from '../_lib/useDataModel'
 import ExplorerCarousel from '../ExplorerCarousel/ExplorerCarousel'
 import DirectionalTransitions from '../rwd-library/DirectionalTransitions/DirectionalTransitions'
@@ -26,7 +27,7 @@ const ExplorerView = (props: ExplorerViewProps): ReactElement => {
     return `${p[0]} ${p[p.length - 1]}`
   }
 
-  const pathForCarousel = node.nodeType == 'folder' ? path : props.dataModel.getParentPath(path)
+  const pathForCarousel = node.nodeType == 'folder' ? path : getParentPath(path)
 
   return (
     <div className="explorer-view">
@@ -36,8 +37,8 @@ const ExplorerView = (props: ExplorerViewProps): ReactElement => {
           options={{ duration: 0.35 }}
         >
           <ExplorerCarousel
-            entries={props.dataModel.getChildren(node.nodeType === 'folder' ? node : parentNode)}
-            openFolderNode={props.dataModel.getNode(pathForCarousel) as FolderNode}
+            entries={getChildren(node.nodeType === 'folder' ? node : parentNode)}
+            openFolderNode={getNode(props.dataModel.content, pathForCarousel) as FolderNode}
             openItemNode={node.nodeType === 'item' ? (node as ItemNode) : undefined}
             focusedChildName={lastChildName}
             title={getFolderLabel(pathForCarousel)}
@@ -47,7 +48,7 @@ const ExplorerView = (props: ExplorerViewProps): ReactElement => {
       </div>
 
       <NavBar
-        upLabel={canGoUp ? getFolderLabel(props.dataModel.getParentPath(path)) : undefined}
+        upLabel={canGoUp ? getFolderLabel(getParentPath(path)) : undefined}
         onMoveUp={canGoUp ? up : undefined}
         onMoveBack={canGoToPrev ? prev : undefined}
         onMoveNext={canGoToNext ? next : undefined}

@@ -1,5 +1,6 @@
 import { useCallback, useMemo, useState } from 'react'
 import type { DataModel, FolderNode, Node } from './dataModel'
+import { getNode, getParentPath, getSiblingPath } from './dataModelUtility'
 
 /*
 
@@ -47,14 +48,14 @@ export function useDataModel(ctx: DataModel) {
   const [path, setPath] = useState<string[]>([])
   const [lastChildName, setLastChildName] = useState<string | undefined>(undefined)
 
-  const node = useMemo<Node>(() => ctx.getNode(path) ?? ctx.content, [ctx, path])
+  const node = useMemo<Node>(() => getNode(ctx.content, path) ?? ctx.content, [ctx, path])
 
-  const parentPath = useMemo(() => (path.length === 0 ? [] : ctx.getParentPath(path)), [ctx, path])
+  const parentPath = useMemo(() => (path.length === 0 ? [] : getParentPath(path)), [ctx, path])
 
   const parentNode = useMemo<FolderNode>(() => {
     if (node.nodeType === 'folder') return node
 
-    const parent = ctx.getNode(parentPath)
+    const parent = getNode(ctx.content, parentPath)
     if (parent?.nodeType === 'folder') return parent
 
     return ctx.content
@@ -72,18 +73,20 @@ export function useDataModel(ctx: DataModel) {
 
   const canGoUp = path.length > 0
   const canGoToPrev =
-    node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, -1)!)?.nodeType === 'item'
+    node.nodeType === 'item' &&
+    getNode(ctx.content, getSiblingPath(ctx.content, path, -1)!)?.nodeType === 'item'
   const canGoToNext =
-    node.nodeType === 'item' && ctx.getNode(ctx.getSiblingPath(path, 1)!)?.nodeType === 'item'
+    node.nodeType === 'item' &&
+    getNode(ctx.content, getSiblingPath(ctx.content, path, 1)!)?.nodeType === 'item'
 
   const up = useCallback(() => {
     setPath((p) => {
       setLastChildName(p[p.length - 1])
-      return ctx.getParentPath(p)
+      return getParentPath(p)
     })
   }, [ctx])
-  const prev = useCallback(() => setPath((p) => ctx.getSiblingPath(p, -1) ?? p), [ctx])
-  const next = useCallback(() => setPath((p) => ctx.getSiblingPath(p, 1) ?? p), [ctx])
+  const prev = useCallback(() => setPath((p) => getSiblingPath(ctx.content, p, -1) ?? p), [ctx])
+  const next = useCallback(() => setPath((p) => getSiblingPath(ctx.content, p, 1) ?? p), [ctx])
 
   return {
     path,

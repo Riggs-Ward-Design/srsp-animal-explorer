@@ -1,21 +1,33 @@
 import MainView from './MainView/MainView'
 import { ReactElement, useMemo } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
-import contentCSV from './_assets/srsp animal facts.csv?raw'
+// import contentCSV from './_assets/srsp animal facts.csv?raw'
+import contentYAML from './_assets/srsp animal facts.yaml?raw'
 
 function App(): ReactElement {
   //
-  const SECONDS_BEFORE_IDLE_TIMEOUT = 30
+  const SECONDS_BEFORE_IDLE_TIMEOUT = 300
 
-  const dataModel = useMemo(() => DataModel.fromCsv(contentCSV), [])
+  // const dataModel = useMemo(() => DataModel.fromCsv(contentCSV), [])
+  const dataModel = useMemo(() => DataModel.fromYaml(contentYAML), [])
 
   // SINGLE
 
   return (
-      <div style={{ position: "absolute", inset: 0, display: 'flex', alignItems: "center", justifyContent: "center" }}>
-          <div style={{width: '100%', height: '100%'}}><MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT}/></div>
+    <div
+      style={{
+        position: 'absolute',
+        inset: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
+      <div style={{ width: '100%', height: '100%' }}>
+        <MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT} />
       </div>
-  );
+    </div>
+  )
 
   // QUAD
 

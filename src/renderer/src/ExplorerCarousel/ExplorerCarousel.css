@@ -43,8 +43,8 @@
 }
 
 .carousel-button {
-  width: 220px;
-  height: 140px;
+  width: 20.25vw;
+  aspect-ratio: 11/7;
   box-sizing: border-box;
   display: flex;
 }

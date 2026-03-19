@@ -1,3 +1,5 @@
+import jsYaml from 'js-yaml'
+
 export type TextEntry = {
   heading: string
   body: string
@@ -58,6 +60,8 @@ const setChildSorted = (parent: FolderNode, child: Node) => {
   parent.children = rebuildChildrenSorted(parent.children)
 }
 
+const FOLDER_PREFIX = 'Folder!'
+
 export class DataModel {
   public readonly content: FolderNode
 
@@ -67,6 +71,15 @@ export class DataModel {
 
   public constructor(json: string) {
     this.content = JSON.parse(json) as FolderNode
+  }
+
+  public static fromYaml(yaml: string): DataModel {
+    const doc = jsYaml.load(yaml) as YamlList | null
+    if (!Array.isArray(doc)) return DataModel.empty()
+
+    const root = createRoot()
+    walkYamlList(root, doc, [])
+    return new DataModel(JSON.stringify(root))
   }
 
   public static fromCsv(csv: string): DataModel {
@@ -151,44 +164,6 @@ export class DataModel {
     return new DataModel(JSON.stringify(root))
   }
 
-  public getNode(path: readonly string[]): Node | undefined {
-    if (!path) return undefined
-
-    let n: Node = this.content
-
-    for (const seg of path) {
-      if (n.nodeType !== 'folder') return undefined
-      n = n.children[seg]
-      if (!n) return undefined
-    }
-
-    return n
-  }
-
-  public getChildren(folder: FolderNode): Node[] {
-    return Object.values(folder.children)
-  }
-
-  public getSiblingPath(p: readonly string[], dir: -1 | 1): string[] | undefined {
-    if (p.length === 0) return undefined
-
-    const parentPath = this.getParentPath(p)
-    const parent = this.getNode(parentPath)
-    if (parent?.nodeType !== 'folder') return undefined
-
-    const siblings = Object.keys(parent.children)
-    const index = siblings.indexOf(p[p.length - 1])
-    const nextIndex = index + dir
-
-    if (nextIndex < 0 || nextIndex >= siblings.length) return undefined
-
-    return [...parentPath, siblings[nextIndex]]
-  }
-
-  public getParentPath(p: readonly string[]): string[] {
-    if (p.length === 0) return [...p]
-    return p.slice(0, -1)
-  }
 }
 
 function ensureFolderAtPath(root: FolderNode, path: readonly string[]): FolderNode {
@@ -264,4 +239,76 @@ function parseCsv(csv: string): string[][] {
   rows.push(row)
 
   return rows
+}
+
+// ---------------------------------------------------------------------------
+// YAML parsing helpers
+// ---------------------------------------------------------------------------
+
+type YamlEntry = Record<string, YamlList | null>
+type YamlList = YamlEntry[]
+
+function parseItemKey(key: string): { commonName: string; scientificName: string } {
+  const match = key.match(/^(.+?)\s*\(([^)]+)\)\s*$/)
+  if (match) return { commonName: match[1].trim(), scientificName: match[2].trim() }
+  return { commonName: key.trim(), scientificName: '' }
+}
+
+function walkYamlList(
+  parent: FolderNode,
+  list: YamlList,
+  folderPath: string[]
+): void {
+  for (const entry of list) {
+    const key = Object.keys(entry)[0]
+    const children = entry[key]
+
+    if (key.startsWith(FOLDER_PREFIX)) {
+      const folderName = key.slice(FOLDER_PREFIX.length)
+      const folder = ensureFolderAtPath(parent, [folderName])
+      walkYamlList(folder, children ?? [], [...folderPath, folderName])
+    } else {
+      const { commonName, scientificName } = parseItemKey(key)
+      if (!commonName) continue
+
+      const texts: TextEntry[] = []
+      let align: number | undefined
+
+      if (Array.isArray(children)) {
+        for (const child of children) {
+          const childKey = Object.keys(child)[0]
+          if (childKey === 'settings') {
+            const settings = child[childKey] as YamlList | null
+            if (Array.isArray(settings)) {
+              for (const s of settings) {
+                if ('align' in s) {
+                  const raw = parseFloat(String(s['align']))
+                  if (!isNaN(raw)) align = Math.max(0, Math.min(1, raw))
+                }
+              }
+            }
+          } else {
+            const body = String(child[childKey] ?? '').replace('/', '/\u200B')
+            texts.push({ heading: childKey, body })
+          }
+        }
+      }
+
+      const item: Item = {
+        commonName,
+        scientificName,
+        texts,
+        localStatus: folderPath[0] ?? '',
+        order: folderPath[1],
+        family: folderPath[2],
+        align
+      }
+
+      setChildSorted(parent, {
+        nodeType: 'item',
+        name: item.commonName,
+        item
+      })
+    }
+  }
 }

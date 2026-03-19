@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run typecheck:*)"
+      "Bash(npm run typecheck:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(cp \"src/renderer/src/_assets/srsp animal facts.yaml\" /tmp/yaml_before.yaml)",
+      "Read(//tmp/**)",
+      "Bash(grep \"Fun Fact:.*'': ''\" \"src/renderer/src/_assets/srsp animal facts.yaml\")",
+      "Bash(npm ls:*)"
     ]
   }
 }
