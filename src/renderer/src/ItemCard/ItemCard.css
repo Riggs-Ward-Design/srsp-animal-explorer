@@ -1,7 +1,7 @@
 .item-card {
   display: flex;
   background-color: var(--color-white);
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25vw 0.25vw 0.75vw 0 rgba(0, 0, 0, 0.2);
 }
 
 .item-card-image {
@@ -10,58 +10,42 @@
 
 .item-card-content {
   flex: 1;
-  margin: 2rem;
+  margin: 3vw;
 
-  display: grid;
-  grid-column-gap: 2rem;
-  grid-template-columns: 1fr 1.2fr;
-  grid-template-rows: auto 1fr 1fr;
-  grid-template-areas:
-    'name    name'
-    'habitat fun'
-    'diet    fun';
+  display: flex;
+  flex-direction: column;
 
   color: var(--color-green);
 }
 
 .name {
-  grid-area: name;
-  margin-bottom: 1rem;
-}
-.habitat {
-  grid-area: habitat;
-}
-.diet {
-  grid-area: diet;
-}
-.fun {
-  grid-area: fun;
+  margin-bottom: 1.5vw;
 }
 
 .item-card h1 {
   font-family: 'Meursault', serif;
   font-weight: 400;
-  font-size: 1.75rem;
+  font-size: 2.5vw;
   margin-top: 0;
-  margin-bottom: -0.25rem;
+  margin-bottom: -0.25vw;
 }
 
 .sci-name {
   font-family: 'Meursault', serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.5vw;
   white-space: nowrap;
 }
 
 .explorer-content h2 {
   font-family: 'Meursault', serif;
   font-weight: 400;
-  font-size: 1.25rem;
-  margin: 0 0 -1rem;
+  font-size: 1.75vw;
+  margin: 0 0 -1.5vw;
 }
 
 .explorer-content p {
-  font-size: 11pt;
+  font-size: 1.25vw;
   text-wrap: pretty;
 }

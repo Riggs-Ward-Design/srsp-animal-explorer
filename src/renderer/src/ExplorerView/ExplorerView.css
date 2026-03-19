@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 4.5vw;
   background: var(--color-light-blue);
   overflow: hidden;
 }
@@ -26,7 +26,7 @@
   width: 300%;
   height: 300%;
   background-image: url('../_assets/pawprint.svg');
-  background-size: 160px 160px;
+  background-size: 14.75vw 14.75vw;
   background-repeat: repeat;
   opacity: 0.02;
   animation: diagonal-scroll 5s linear infinite;
@@ -44,7 +44,7 @@
     transform: rotate(45deg) translate(0, 0);
   }
   to {
-    transform: rotate(45deg) translate(0px, -160px);
+    transform: rotate(45deg) translate(0px, -14.75vw);
   }
 }
 
@@ -52,7 +52,7 @@
   color: var(--color-green);
   font-family: 'Meursault', serif;
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 3.25vw;
   line-height: 1.25;
-  margin: -1rem 0 1rem 0;
+  margin: -1.5vw 0 1.5vw 0;
 }
