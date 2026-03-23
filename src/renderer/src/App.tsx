@@ -1,14 +1,12 @@
 import MainView from './MainView/MainView'
 import { ReactElement, useMemo } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
-// import contentCSV from './_assets/srsp animal facts.csv?raw'
 import contentYAML from './_assets/srsp animal facts.yaml?raw'
 
 function App(): ReactElement {
   //
-  const SECONDS_BEFORE_IDLE_TIMEOUT = 300
+  const SECONDS_BEFORE_IDLE_TIMEOUT = 60
 
-  // const dataModel = useMemo(() => DataModel.fromCsv(contentCSV), [])
   const dataModel = useMemo(() => DataModel.fromYaml(contentYAML), [])
 
   // SINGLE

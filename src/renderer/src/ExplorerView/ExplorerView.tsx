@@ -9,7 +9,6 @@ import DirectionalTransitions from '../rwd-library/DirectionalTransitions/Direct
 
 interface ExplorerViewProps {
   dataModel: DataModel
-  idleTimerPosition?: number
   onReset?: () => void
 }
 
@@ -53,7 +52,6 @@ const ExplorerView = (props: ExplorerViewProps): ReactElement => {
         onMoveBack={canGoToPrev ? prev : undefined}
         onMoveNext={canGoToNext ? next : undefined}
         onReset={props.onReset}
-        idleTimerPosition={props.idleTimerPosition}
       />
     </div>
   )

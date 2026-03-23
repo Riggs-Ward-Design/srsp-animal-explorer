@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from 'framer-motion'
 import './NavBar.css'
 import { ReactElement, useState } from 'react'
 
@@ -8,7 +7,6 @@ interface NavBarProps {
   onMoveBack?: () => void
   onMoveNext?: () => void
   onReset?: () => void
-  idleTimerPosition?: number
 }
 
 const NavBar = (props: NavBarProps): ReactElement => {
@@ -23,8 +21,6 @@ const NavBar = (props: NavBarProps): ReactElement => {
       setUpLabel(props.upLabel.replace('Learn About', ''))
     }
   }
-
-  const isIdleSoon = props.idleTimerPosition && props.idleTimerPosition <= 5
 
   return (
     <div className="nav-bar">
@@ -63,50 +59,17 @@ const NavBar = (props: NavBarProps): ReactElement => {
         </div>
       </div>
 
-      <AnimatePresence mode="popLayout">
-        {!isIdleSoon && (
-          <motion.div
-            key="reset"
-            onClick={props.onReset}
-            className="nav-bar-button"
-            style={{
-              justifyContent: 'right'
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            Reset
-          </motion.div>
-        )}
-
-        {isIdleSoon && (
-          <motion.div
-            key="idle-warning"
-            className="nav-bar-button idle-warning"
-            style={{
-              justifyContent: 'right'
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 1 } }}
-            exit={{ opacity: 0 }}
-          >
-            <motion.span
-              style={{ display: 'inline-block' }}
-              initial={{
-                maskImage: 'linear-gradient(90deg, black, black)',
-                maskSize: '0% 100%',
-                maskPosition: 'right',
-                maskRepeat: 'no-repeat'
-              }}
-              animate={{ maskSize: '100% 100%' }}
-              transition={{ maskSize: { duration: 1, ease: 'easeInOut' } }}
-            >
-              {`Going to sleep in ${props.idleTimerPosition}...`}
-            </motion.span>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className="nav-bar-button"
+        onClick={props.onReset}
+        style={{
+          justifyContent: 'right',
+          opacity: props.onReset ? 1 : 0,
+          transition: fadeTransition
+        }}
+      >
+        Reset
+      </div>
     </div>
   )
 }

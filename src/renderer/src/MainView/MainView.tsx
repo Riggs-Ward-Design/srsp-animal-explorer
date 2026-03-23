@@ -4,6 +4,7 @@
 
 import ExplorerView from '../ExplorerView/ExplorerView'
 import AttractScreen from '../AttractScreen/AttractScreen'
+import IdleWarningOverlay from '../IdleWarningOverlay/IdleWarningOverlay'
 import { useIdleTimer } from 'react-idle-timer'
 import { ReactElement, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -56,19 +57,11 @@ function MainView(props: MainViewProps): ReactElement {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{
-              duration: isActive ? 0.25 : 4.0
-            }}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%'
-            }}
+            transition={{ duration: 0.25 }}
+            style={{ position: 'absolute', inset: 0 }}
           >
             <ExplorerView
               dataModel={props.dataModel}
-              idleTimerPosition={remainingTime}
               onReset={() => setIsActive(false)}
             />
           </motion.div>
@@ -78,20 +71,15 @@ function MainView(props: MainViewProps): ReactElement {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{
-              duration: isActive ? 0.25 : 4.0
-            }}
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%'
-            }}
+            transition={{ duration: 0.25 }}
+            style={{ position: 'absolute', inset: 0 }}
           >
             <AttractScreen />
           </motion.div>
         )}
       </AnimatePresence>
+
+      <IdleWarningOverlay remainingTime={remainingTime} />
     </div>
   )
 }
