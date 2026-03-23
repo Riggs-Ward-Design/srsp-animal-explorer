@@ -25,7 +25,8 @@ function MainView(props: MainViewProps): ReactElement {
     element: container ?? undefined,
     onIdle: () => setIsActive(false),
     onAction: () => setIsActive(true),
-    timeout: props.timeout * 1000
+    timeout: props.timeout * 1000,
+    events: ['click']
   })
 
   // Update remaining time every 100ms
