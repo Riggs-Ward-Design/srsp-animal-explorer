@@ -29,7 +29,7 @@ const IdleWarningOverlay = ({
   //
   warningThreshold++
   const show = remainingTime > 0 && remainingTime < warningThreshold
-  const bgOpacity = remainingTime <= 1 ? 1.0 : 0.75
+  const bgOpacity = remainingTime <= 1 ? 1.0 : 0.85
   const isSleeping = remainingTime === 0
 
   return (
