@@ -100,6 +100,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
           >
             {pages.map((page, pageIndex) => (
               <div className="carousel-page" key={`page:${pageIndex}`}>
+                <div className="carousel-page-inner">
                 {page.map((n) => {
                   const isOnCurrentPage = pageIndex === currentButtonsPage
 
@@ -144,6 +145,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
                     </div>
                   )
                 })}
+                </div>
               </div>
             ))}
           </div>

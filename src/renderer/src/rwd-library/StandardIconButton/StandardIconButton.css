@@ -9,8 +9,8 @@
   align-items: center;
   justify-content: center;
 
-  gap: 1vw;
-  font-size: 1.25vw;
+  gap: 10px;
+  font-size: 10pt;
 }
 
 .standard-icon-button:hover {

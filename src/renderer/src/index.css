@@ -14,13 +14,13 @@
 }
 
 .rounded {
-  border-radius: 3vw;
+  border-radius: 32px;
   overflow: hidden;
 }
 /* noinspection CssUnknownProperty */
 @supports (corner-shape: squircle) {
   .rounded {
-    border-radius: 6vw;
+    border-radius: 64px;
     corner-shape: squircle;
   }
 }

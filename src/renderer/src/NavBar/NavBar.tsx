@@ -40,7 +40,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
         {`< ${upLabel}`}
       </div>
 
-      <div style={{ display: 'flex', gap: '4.5vw', height: '100%', fontSize: '1.75vw' }}>
+      <div style={{ display: 'flex', gap: '48px', height: '100%', fontSize: '1.25rem' }}>
         <div
           className="nav-bar-button"
           onClick={props.onMoveBack}

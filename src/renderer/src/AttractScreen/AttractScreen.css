@@ -25,13 +25,13 @@
 }
 
 .attract-screen h1 {
-  font-size: 6vw;
+  font-size: 400%;
   font-weight: 400;
-  margin-bottom: 1.5vw;
+  margin-bottom: 1rem;
 }
 
 .attract-screen h2 {
-  font-size: 2.25vw;
+  font-size: 150%;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
