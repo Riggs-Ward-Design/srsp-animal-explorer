@@ -14,7 +14,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 5cqw;
   background: var(--color-light-blue);
   overflow: hidden;
 }
@@ -52,7 +52,7 @@
   color: var(--color-green);
   font-family: 'Meursault', serif;
   font-weight: 400;
-  font-size: 2.25rem;
+  font-size: 3.75cqw;
   line-height: 1.25;
-  margin: -1rem 0 1rem 0;
+  margin: -1.75cqw 0 1.75cqw 0;
 }

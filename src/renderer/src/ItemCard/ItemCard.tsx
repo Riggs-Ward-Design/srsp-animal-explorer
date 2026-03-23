@@ -51,7 +51,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
     <motion.div
       layoutId={'image-' + id}
       style={{
-        borderRadius: '32px',
+        borderRadius: '48px',
         overflow: 'hidden',
         flexBasis: !open ? '100%' : '70%',
         position: 'relative'
@@ -87,7 +87,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
       className={props.className + ' item-card'}
       style={{
         ...props.style,
-        borderRadius: '32px',
+        borderRadius: '48px',
         overflow: 'hidden',
         zIndex: elevated ? 10 : 0
       }}

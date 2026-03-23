@@ -14,15 +14,8 @@
 }
 
 .rounded {
-  border-radius: 32px;
+  border-radius: 48px;
   overflow: hidden;
-}
-/* noinspection CssUnknownProperty */
-@supports (corner-shape: squircle) {
-  .rounded {
-    border-radius: 64px;
-    corner-shape: squircle;
-  }
 }
 
 @font-face {

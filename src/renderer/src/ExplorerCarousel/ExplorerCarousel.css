@@ -1,6 +1,6 @@
 .carousel {
   position: absolute;
-  inset: 3rem;
+  inset: 5cqw;
 
   display: flex;
   flex-direction: column;
@@ -34,23 +34,23 @@
 }
 
 .carousel-page-inner {
-  max-width: calc(220px * 3 + 16px * 2);
+  max-width: calc(23cqw * 3 + 1.75cqw * 2);
   display: flex;
   flex-wrap: wrap;
   place-content: center;
-  gap: 16px;
+  gap: 1.75cqw;
 }
 
 .carousel-button-area {
-  width: 2rem;
+  width: 3.25cqw;
   height: 100%;
   display: flex;
   place-items: center;
 }
 
 .carousel-button {
-  width: 220px;
-  height: 140px;
+  width: 23cqw;
+  height: 14.5cqw;
   box-sizing: border-box;
   display: flex;
 }
@@ -69,7 +69,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 1.75cqw;
   font-family: 'Meursault', serif;
   color: var(--color-green);
   font-weight: 500;
@@ -86,14 +86,14 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: calc(100% + 1.5rem);
+  top: calc(100% + 2.5cqw);
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 1.25cqw;
 }
 
 .carousel-dot {
-  width: 8px;
+  width: 0.75cqw;
   aspect-ratio: 1;
   border-radius: 50%;
   border: none;

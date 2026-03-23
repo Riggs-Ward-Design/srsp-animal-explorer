@@ -62,10 +62,7 @@ function MainView(props: MainViewProps): ReactElement {
             transition={{ duration: 0.25 }}
             style={{ position: 'absolute', inset: 0 }}
           >
-            <ExplorerView
-              dataModel={props.dataModel}
-              onReset={() => setIsActive(false)}
-            />
+            <ExplorerView dataModel={props.dataModel} onReset={() => setIsActive(false)} />
           </motion.div>
         ) : (
           <motion.div
