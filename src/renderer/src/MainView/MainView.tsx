@@ -9,6 +9,7 @@ import { useIdleTimer } from 'react-idle-timer'
 import { ReactElement, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { DataModel } from '@renderer/_lib/dataModel'
+import './MainView.css'
 
 interface MainViewProps {
   dataModel: DataModel
@@ -42,6 +43,7 @@ function MainView(props: MainViewProps): ReactElement {
 
   return (
     <div
+      className="main-view"
       ref={setContainer}
       style={{
         position: 'relative',

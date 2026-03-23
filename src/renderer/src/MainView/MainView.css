@@ -1,2 +1,6 @@
 .FourUserApp {
 }
+
+.main-view {
+  container-type: inline-size;
+}

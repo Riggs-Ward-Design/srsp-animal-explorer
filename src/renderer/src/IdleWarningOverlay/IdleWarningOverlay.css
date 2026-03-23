@@ -14,7 +14,7 @@
 .idle-warning-overlay-label {
   font-family: 'Meursault', serif;
   font-style: oblique;
-  font-size: 200%;
+  font-size: 3.3cqw;
   font-weight: 400;
   color: var(--color-white);
   letter-spacing: 0.02em;
