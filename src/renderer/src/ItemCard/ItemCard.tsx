@@ -53,8 +53,9 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
       style={{
         borderRadius: '48px',
         overflow: 'hidden',
-        flexBasis: !open ? '100%' : '70%',
-        position: 'relative'
+        flexBasis: !open ? '100%' : '62%',
+        position: 'relative',
+        boxShadow: '2px 2px 4px 0 rgba(0, 0, 0, 0.1)'
       }}
     >
       <div
