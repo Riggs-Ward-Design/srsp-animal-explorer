@@ -26,10 +26,15 @@ function MainView(props: MainViewProps): ReactElement {
   const idleTimer = useIdleTimer({
     element: container ?? undefined,
     onIdle: () => setIsActive(false),
-    onAction: () => setIsActive(true),
     timeout: props.timeout * 1000,
-    events: ['click']
+    events: ['click'],
+    startManually: true
   })
+
+  const activate = (): void => {
+    setIsActive(true)
+    idleTimer.start()
+  }
 
   // Update remaining time every 100ms
   useEffect(() => {
@@ -73,7 +78,7 @@ function MainView(props: MainViewProps): ReactElement {
             transition={{ duration: 0.25 }}
             style={{ position: 'absolute', inset: 0 }}
           >
-            <AttractScreen />
+            <AttractScreen onActivate={activate} />
           </motion.div>
         )}
       </AnimatePresence>

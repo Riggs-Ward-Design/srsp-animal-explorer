@@ -3,4 +3,5 @@
 
 .main-view {
   container-type: inline-size;
+  overflow: hidden;
 }

@@ -1,7 +1,7 @@
 .folder-button-contents {
   flex: 1;
 
-  padding: 2cqw 5.25cqw;
+  padding: 2cqw 4cqw;
 
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
 
   /*For animal icons*/
   flex-direction: column;
-  gap: 1.25cqw;
+  gap: 1cqw;
 
   background: var(--color-orange);
   color: var(--color-white);
@@ -19,7 +19,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  font-size: 1.5cqw;
+  font-size: 1.375cqw;
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.5;

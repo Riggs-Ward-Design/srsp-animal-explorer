@@ -7,10 +7,14 @@ import './AttractScreen.css'
 import Shimmer from '../rwd-library/Shimmer/Shimmer'
 import { ReactElement } from 'react'
 
-const AttractScreen = (): ReactElement => {
+interface AttractScreenProps {
+  onActivate: () => void
+}
+
+const AttractScreen = ({ onActivate }: AttractScreenProps): ReactElement => {
   //
   return (
-    <div className="attract-screen">
+    <div className="attract-screen" onClick={onActivate}>
       <motion.div
         className="attract-screen-titles-wrapper"
         initial={{ scale: 0.9 }}

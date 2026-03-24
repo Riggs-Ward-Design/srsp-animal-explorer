@@ -29,7 +29,7 @@
   background-size: 160px 160px;
   background-repeat: repeat;
   opacity: 0.02;
-  animation: diagonal-scroll 5s linear infinite;
+  animation: diagonal-scroll reverse 5s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
