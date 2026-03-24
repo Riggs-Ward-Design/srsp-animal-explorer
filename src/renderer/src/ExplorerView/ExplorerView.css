@@ -10,11 +10,6 @@
 .explorer-content {
   position: relative;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5cqw;
   background: var(--color-light-blue);
   overflow: hidden;
 }
@@ -35,7 +30,6 @@
 }
 
 .explorer-content > * {
-  position: relative;
   z-index: 1;
 }
 
