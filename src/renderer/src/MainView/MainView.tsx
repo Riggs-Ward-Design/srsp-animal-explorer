@@ -4,10 +4,8 @@
 
 import ExplorerView from '../ExplorerView/ExplorerView'
 import AttractScreen from '../AttractScreen/AttractScreen'
-import IdleWarningOverlay from '../IdleWarningOverlay/IdleWarningOverlay'
-import { useIdleTimer } from 'react-idle-timer'
-import { ReactElement, useEffect, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import ContentWithTimeout from '../rwd-library/ContentWithTimeout/ContentWithTimeout'
+import { ReactElement } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
 import './MainView.css'
 
@@ -19,37 +17,9 @@ interface MainViewProps {
 
 function MainView(props: MainViewProps): ReactElement {
   //
-  const [isActive, setIsActive] = useState(false)
-  const [remainingTime, setRemainingTime] = useState(props.timeout)
-  const [container, setContainer] = useState<HTMLDivElement | null>(null)
-
-  const idleTimer = useIdleTimer({
-    element: container ?? undefined,
-    onIdle: () => setIsActive(false),
-    timeout: props.timeout * 1000,
-    events: ['click'],
-    startManually: true
-  })
-
-  const activate = (): void => {
-    setIsActive(true)
-    idleTimer.start()
-  }
-
-  // Update remaining time every 100ms
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const remaining = idleTimer.getRemainingTime()
-      setRemainingTime(Math.ceil(remaining / 1000)) // Convert to seconds
-    }, 100)
-
-    return () => clearInterval(interval)
-  }, [idleTimer])
-
   return (
     <div
       className="main-view"
-      ref={setContainer}
       style={{
         position: 'relative',
         width: '100%',
@@ -57,33 +27,20 @@ function MainView(props: MainViewProps): ReactElement {
         rotate: props.flipped ? '180deg' : '0deg'
       }}
     >
-      <AnimatePresence mode={'popLayout'}>
-        {isActive ? (
-          <motion.div
-            key="explorer"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            style={{ position: 'absolute', inset: 0 }}
-          >
-            <ExplorerView dataModel={props.dataModel} onReset={() => setIsActive(false)} />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="attract"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            style={{ position: 'absolute', inset: 0 }}
-          >
-            <AttractScreen onActivate={activate} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <IdleWarningOverlay remainingTime={remainingTime} />
+      <ContentWithTimeout
+        timeout={props.timeout}
+        attractView={<AttractScreen />}
+        contentView={(onReset) => <ExplorerView dataModel={props.dataModel} onReset={onReset} />}
+        idleWarningModal={{
+          background: 'var(--color-green)',
+          backgroundOpacity: 0.85,
+          textStyle: {
+            fontFamily: "'Meursault', serif",
+            fontStyle: 'oblique',
+            fontSize: '2.5cqw'
+          }
+        }}
+      />
     </div>
   )
 }
