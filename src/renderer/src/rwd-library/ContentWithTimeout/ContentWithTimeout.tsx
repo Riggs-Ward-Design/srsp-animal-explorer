@@ -125,7 +125,7 @@ function ContentWithTimeout(props: ContentWithTimeoutProps): ReactElement {
             className="cwt-idle-warning-modal"
             custom={isIdle}
             initial={{ opacity: 0 }}
-            animate={{ opacity: warningOpacity, transition: { duration: 0.5 } }}
+            animate={{ opacity: warningOpacity, transition: { duration: 1 } }}
             exit="hidden"
             variants={{
               hidden: (idle: boolean) => ({
