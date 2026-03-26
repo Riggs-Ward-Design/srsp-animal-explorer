@@ -12,7 +12,7 @@
                 - Did You Know?: Gray foxes are adept climbers and will use trees in order to escape enemies.
                 - settings:
                     - align: '0.8'
-                
+
             - Red Fox (Vulpes vulpes):
                 - Habitat: Forests, farms, urban edges.
                 - Diet: Mostly rabbits and mice, plus fruits and insects.
@@ -34,16 +34,16 @@
             - Did You Know?: Big brown bats can eat up to one third their body weight in insects on a single night.
             - settings:
                 - align: '0.3'
-            
+
         - Bobcat (Lynx rufus floridanus):
             - Habitat: Forests, mountains, other areas with rugged terrain.
-            - Diet: Small animals, particularly rodents.
+            - Diet: Small animals, particularly rodents. Their favorite is rabbit.
             - Did You Know?: To stay as silent as possible while hunting, a bobcat will place its back feet in the exact same spot as their front foot just stepped.
 
         - Coyote (Canis latrans):
             - Habitat: Hills, forests, brushy areas.
             - Diet: Just about anything - mammals, insects, fruits, etc.
-            - Did You Know?: Coyotes and badgers are known to often hunt together as partners.
+            - Did You Know?: DNA studies of eastern coyotes show a genetic makeup of only 64% "coyote". The rest of their DNA is made of 13% gray wolf, 13% eastern wolf, and 10% domestic dog.
 
         - Eastern Chipmunk (Tamias striatus fisheri):
             - Habitat: Forests, brushlands, logs, stone walls.
@@ -51,24 +51,24 @@
             - Did You Know?: Eastern chipmunks hibernate through the cold season, going underground in mid-November and emerging early February.
             - settings:
                 - align: '0.2'
-            
+
         - Eastern Deer Mouse (Peromyscus maniculatus):
             - Habitat: Herbaceous vegetation.
             - Diet: Seeds, fruit, insects.
             - Did You Know?: A deer mouse's tail makes up more than half of its entire length and features a pencil-shaped tip.
             - settings:
                 - align: '0.6'
-            
+
         - Eastern Gray Squirrel (Sciurus carolinensis carolinensis):
             - Habitat: Forests, parks, backyards.
             - Diet: Seeds, fruit, insects.
             - Did You Know?: Gray squirrels have many different calls to communicate and can live for up to 6 years in the wild.
             - settings:
                 - align: '0.3'
-            
+
         - Northern Raccoon (Procyon lotor lotor):
             - Habitat: Forests, cities, parks.
-            - Diet: Extremely omnivorous - invertebrates, vertebrates, plants.
+            - Diet: Omnivorous - invertebrates, vertebrates, plants.
             - Did You Know?: Raccoons are highly intelligent animals and can remember solutions to tasks for at least three years.
 
         - Northern River Otter (Lontra canadensis lataxina):
@@ -82,7 +82,7 @@
             - Did You Know?: Flying squirrels exhibit a unique phenomenon where their fur glows fluorescent pink under ultraviolet (UV) light. Scientists theorize this is because they occupy low-light environments with more UV wavelengths and that the fluorescence could play a role in communication between individuals or camouflage from predators.
             - settings:
                 - align: '0.4'
-            
+
         - Striped Skunk (Mephitis mephitis mephitis):
             - Habitat: Fields, forest edges.
             - Diet: Insects, small animals, fruit.
@@ -99,14 +99,14 @@
             - Did You Know?: When white-tailed deer run away from danger, the visible white of their tails acts as an alert to other deer.
             - settings:
                 - align: '0.9'
-            
+
         - Woodchuck or Groundhog (Marmota monax):
             - Habitat: Open woods, fields, brush.
             - Diet: Wild grass, vegetation.
             - Did You Know?: You wouldn't know it from looking at them, but woodchucks/groundhogs are actually excellent swimmers and decent climbers.
             - settings:
                 - align: '0.3'
-            
+
     - Folder!Amphibians:
 
         - Folder!Frogs:
@@ -127,7 +127,7 @@
                 - Did You Know?: Cope's gray treefrogs are highly freeze tolerant, able to survive temperatures as low as 18°F (-8°C).
                 - settings:
                     - align: '0.3'
-                
+
             - Eastern American Toad (Anaxyrus americanus americanus):
                 - Habitat: Woods, grasslands, yards.
                 - Diet: Insects, worms, snails.
@@ -139,14 +139,14 @@
                 - Did You Know?: An Eastern cricket frog can leap up to 3 feet in a single jump to evade predators.
                 - settings:
                     - align: '0.7'
-                
+
             - Eastern Narrow-mouthed Toad (Gastrophryne carolinensis):
                 - Habitat: Woods, marshes.
                 - Diet: Insects, mostly ants.
                 - Did You Know?: Don't touch your face after handling one - their skin secretion causes a violent burning sensation in the eyes.
                 - settings:
                     - align: '0.4'
-                
+
             - Eastern Spadefoot (Scaphiopus holbrookii):
                 - Habitat: Forests and other areas with loose soil.
                 - Diet: Insects.
@@ -158,14 +158,14 @@
                 - Did You Know?: The male Fowler's toad's mating call happens to also attract other males. Males also have a special "release call" for when another male tries to mate by mistake.
                 - settings:
                     - align: '0.4'
-                
+
             - Green Treefrog (Dryophytes cinereus):
                 - Habitat: Bodies of water near vegetation.
                 - Diet: Insects.
                 - Did You Know?: During mating season, males will eavesdrop on each other's mating calls in order to get a head start on approaching females.
                 - settings:
                     - align: '0.6'
-                
+
             - Gray Treefrog (Dryophytes versicolor):
                 - Habitat: Trees, mossy fences.
                 - Diet: Roaches, earthworms, and other invertebrates.
@@ -177,7 +177,7 @@
                 - Did You Know?: This species mates nearly year-round, breeding in all months except September.
                 - settings:
                     - align: '0.7'
-                
+
             - Pickerel Frog (Lithobates palustris):
                 - Habitat: Cold, clear streams.
                 - Diet: Insects, spiders.
@@ -201,35 +201,35 @@
                 - Did You Know?: Mothers of this species will wrap their bodies around their egg cluster, collecting a pool of water for the eggs to hatch in.
                 - settings:
                     - align: '0.7'
-                
+
             - Red-spotted Newt (Notophthalmus viridescens viridescens):
                 - Habitat: Pools, wetlands, quiet streams.
                 - Diet: Insects, crustaceans, young amphibians, frog eggs.
                 - Did You Know?: Their bright coloring serves as a warning to predators of the poisonous tetrodotoxin secreted through their skin.
                 - settings:
                     - align: '0.4'
-                
+
             - Spotted Salamander (Ambystoma maculatum):
                 - Habitat: Forests with ponds.
                 - Diet: Earthworms, slugs, insects, etc.
                 - Did You Know?: These salamanders have a long lifespan, with many living for 20 years and some even living for 30.
                 - settings:
                     - align: '0.4'
-                
+
             - Three-lined Salamander (Eurycea guttolineata):
                 - Habitat: Forested floodplains, ditches.
                 - Diet: Snails, snail eggs, insects, spiders.
                 - Did You Know?: When threatened, they respond by curling up their body, tucking their head, and waving their tail.
                 - settings:
                     - align: '0.2'
-                
+
             - White-spotted Slimy Salamander (Plethodon cylindraceus):
                 - Habitat: Forests.
                 - Diet: Ants, centipedes, slugs, earthworms.
                 - Did You Know?: This species of salamander is unique in that it lays its eggs on land, skipping the typical aquatic larval stage that most amphibians share.
                 - settings:
                     - align: '0.8'
-                
+
     - Folder!Reptiles:
 
         - Folder!Lizards:
@@ -240,48 +240,48 @@
                 - Did You Know?: When caught by a predator, a skink is able to disconnect its entire tail in order to escape.
                 - settings:
                     - align: '0.4'
-                
+
             - Broad-headed Skink (Plestiodon laticeps):
                 - Habitat: Open forested areas.
                 - Diet: Insects, insect larvae, gastropods, spiders.
                 - Did You Know?: During mating season, females will emit a pheromone from their tail that males can track by flicking their tongue.
                 - settings:
                     - align: '0.1'
-                
+
             - Eastern Fence Lizard (Sceloporus undulatus):
                 - Habitat: Open pine woods.
                 - Diet: Ants, grasshoppers, other insects.
                 - Did You Know?: These lizards exhibit a behavior called "jiggling" - a short series of head bobs that generally indicates arousal.
                 - settings:
                     - align: '0.0'
-                
+
             - Eastern Six-lined Racerunner (Aspidoscelis sexlineata sexlineata):
                 - Habitat: Grasslands, woodlands, floodplains.
                 - Diet: Insects, especially termites.
-                - Did You Know?: They're shy and extremely quick - able to dart away at speeds up to 18 mph (29 kmh):.
+                - Did You Know?: They're shy and extremely quick - able to dart away at speeds up to 18 mph (29 kmh).
                 - settings:
                     - align: '0.7'
-                
+
         - Folder!Snakes:
 
             - Eastern Copperhead (Agkistrodon contortrix):
                 - Habitat: Deciduous forest and mixed woodlands.
                 - Diet: Cicadas, caterpillars, lizards, voles, mice, etc.
-                - Did You Know?: This snake can vibrate its tail more than 40 times a second, more than almost any other non-rattlesnake species.
+                - Did You Know?: This snake can vibrate its tail more than 40 times a second, more than almost any other non-rattlesnake species. This snake is one of our native venomous species.
                 - settings:
                     - align: '0.3'
-                
+
             - Eastern Gartersnake (Thamnophis sirtalis sirtalis):
                 - Habitat: Forests, grasslands, with moisture nearby.
                 - Diet: Earthworms, frogs, etc.
                 - Did You Know?: Juveniles can strike at predators with so much force that their entire body leaves the ground.
                 - settings:
                     - align: '0.2'
-                
+
             - Eastern Hog-nosed Snake (Heterodon platirhinos):
                 - Habitat: Forests and fields with sandy soil.
                 - Diet: Toads.
-                - Did You Know?: Generally docile, this snake will elaborately feign its own death if provoked.
+                - Did You Know?: This snake can mimic venomous snake behaviors such as flattening its head and hissing, but is not venomous to humans. Generally docile, this snake will elaborately feign its own death if provoked.
 
             - Eastern Kingsnake (Lampropeltis getula):
                 - Habitat: Forests, fields, swamps, marshes, creeks.
@@ -289,7 +289,7 @@
                 - Did You Know?: These snakes are known for hunting and killing other snakes, including venomous ones, hence the name “king”.
                 - settings:
                     - align: '0.7'
-                
+
             - Central Ratsnake (Pantherophis alleghaniensis):
                 - Habitat: Forests, wetlands, urban areas.
                 - Diet: Rodents, birds, eggs.
@@ -301,7 +301,7 @@
                 - Did You Know?: When in danger, this snake can give off a bad smell, defecate, and even throw up its last meal. If it resorts to biting the attacker, its saliva contains a substance that prevents blood from clotting.
                 - settings:
                     - align: '0.4'
-                
+
             - Eastern Wormsnake (Carphophis amoenus amoenus):
                 - Habitat: Forests and wooded habitats with soft soil.
                 - Diet: Worms.
@@ -313,21 +313,21 @@
                 - Did You Know?: Despite the word "constrictor" in their Latin name, these snakes kill prey by pinning them down and swallowing them alive.
                 - settings:
                     - align: '0.7'
-                
+
             - Northern Ring-necked Snake (Diadophis punctatus edwardsii):
                 - Habitat: Forests, urban areas.
                 - Diet: Worms, salamanders, lizards.
                 - Did You Know?: Instead of biting, these snakes release foul-smelling feces when caught.
                 - settings:
                     - align: '0.4'
-                
+
             - Northern Rough Greensnake (Opheodrys aestivus):
                 - Habitat: Trees, shrubs lining ponds.
                 - Diet: Insects.
                 - Did You Know?: At night, these snakes are found sleeping coiled in the branches of trees.
                 - settings:
                     - align: '0.8'
-                
+
             - Red Cornsnake (Pantherophis guttatus):
                 - Habitat: Hardwood forests.
                 - Diet: Rodents.
@@ -339,7 +339,7 @@
                 - Habitat: Rocky areas, fields, and on the edge of the forest.
                 - Diet: Rodents, birds, eggs, and lizards, as well as other snakes.
                 - Did You Know?: According to legend, people thought this snake sucked milk from cows.
-                
+
         - Folder!Turtles:
 
             - Eastern Musk Turtle (Sternotherus odoratus):
@@ -348,14 +348,14 @@
                 - Did You Know?: Also called "stinkpots", these turtles discharge a foul-smelling odor when disturbed.
                 - settings:
                     - align: '0.6'
-                
+
             - Eastern Painted Turtle (Chrysemys picta picta):
                 - Habitat: Ponds, lakes, swamps, rivers, marshes.
                 - Diet: Insects, fish, algae, etc.
                 - Did You Know?: Adult Eastern Painted Turtles go dormant underwater during the winter, and can survive months without food or air-derived oxygen.
                 - settings:
                     - align: '0.4'
-                
+
             - Eastern River Cooter (Pseudemys concinna concinna):
                 - Habitat: Rivers; occasionally lakes, ponds.
                 - Diet: Aquatic plants, algae.
@@ -367,7 +367,7 @@
                 - Did You Know?: The family of the snapping turtle - Chelydrids - have been around for millions of years, and were here when the dinosaurs roamed!
                 - settings:
                     - align: '0.6'
-                
+
             - Southeastern Mud Turtle (Kinosternon subrubrum subrubrum):
                 - Habitat: Ponds, lakes, swamps, rivers, marshes.
                 - Diet: Insects, snails, crustaceans, frogs, aquatic plants.
@@ -384,7 +384,7 @@
                 - Habitat: Slow rivers, swamps, marshes, wetlands, and ponds.
                 - Diet: Hatchlings are carnivorous and feed on insects, spiders, crustaceans, and tadpoles. Adult diets contain leaves, stems, roots, fruits, larger invertebrates, small fish, tadpoles, and frogs.
                 - Did You Know?: These turtles got their name from how quickly they slide into the water when disturbed.
-                
+
     - Folder!Birds:
 
         - Folder!Wading Birds:
@@ -395,28 +395,28 @@
                 - Did You Know?: They have excellent photoreceptors, allowing them to hunt at nighttime.
                 - settings:
                     - align: '0.6'
-                
+
             - Great Egret (Ardea alba):
                 - Habitat: Marshes, tidal flats, shallow wetlands.
                 - Diet: Fish; sometimes frogs, insects, crustaceans.
                 - Did You Know?: Their large wings, flapping twice per second, can propel them at around 25 mph (40 kmh):.
                 - settings:
                     - align: '0.6'
-                
+
             - Yellow-crowned Night Heron (Nyctanassa violacea):
                 - Habitat: Coastal wetlands, mangroves, swamps.
                 - Diet: Crustaceans; sometimes fish, insects.
                 - Did You Know?: These herons don't mind human company and can often be found nesting on neighborhood rooftops.
                 - settings:
                     - align: '0.2'
-                
+
             - Green Heron (Butorides virescens):
                 - Habitat: Coastal and inland wetlands, ponds, lakes.
                 - Diet: Fish; sometimes frogs, aquatic insects, worms, rodents.
                 - Did You Know?: Green Herons can actually use tools, turning bread crusts and insects into fishing lures.
                 - settings:
                     - align: '0.2'
-                
+
         - Folder!Cormorants:
 
             - Double-crested Cormorant (Nannopterum auritum):
@@ -425,16 +425,16 @@
                 - Did You Know?: Mother cormorants will collect water in their mouths to bring home to their chicks.
                 - settings:
                     - align: '0.3'
-                
+
         - Folder!Hummingbirds:
 
             - Ruby-throated Hummingbird (Archilochus colubris):
                 - Habitat: Deciduous woodlands, meadows, backyards.
                 - Diet: Flower nectar; sometimes small insects.
-                - Did You Know?: This bird migrates, and can cover thousands of miles. With their wings beating over 50 times per second, the longest stretch of their migratory flight is 500 miles across the Gulf of Mexico, which can take them 20 hours to complete.
+                - Did You Know?: The Ruby-throated Hummingbird migrates thousands of miles each year, including a remarkable 500-mile nonstop flight across the Gulf of Mexico that can last up to 20 hours. Before the crossing, it builds up fat reserves for fuel. Once back on land, it must feed every 10–15 minutes to sustain its rapid 50+ wingbeats per second.
                 - settings:
                     - align: '0.7'
-                
+
         - Folder!Pigeons And Doves:
 
             - Mourning Dove (Zenaida macroura):
@@ -443,14 +443,14 @@
                 - Did You Know?: They feed by searching the ground for seeds, typically collecting them in a pocket of the esophagus to be eaten later.
                 - settings:
                     - align: '0.4'
-                
+
             - Eurasian Collared-Dove (Streptopelia decaocto):
                 - Habitat: Cities and suburbs.
                 - Diet: Seeds, grain.
                 - Did You Know?: One of the few bird species that can use their beaks as a straw to drink water.
                 - settings:
                     - align: '0.3'
-                
+
         - Folder!Ducks And Geese:
 
             - Canada Goose (Branta canadensis):
@@ -459,21 +459,21 @@
                 - Did You Know?: Famous for their migration patterns, Canada geese sometimes fly as far as 900 miles (1500 km) northward to molt.
                 - settings:
                     - align: '0.3'
-                
+
             - Wood Duck (Aix sponsa):
                 - Habitat: Forests, marshes, rivers, beaver ponds.
                 - Diet: Seeds, fruit; sometimes insects.
                 - Did You Know?: A rare duck species with strong claws, mainly used to grip and perch on tree branches.
                 - settings:
                     - align: '0.9'
-                
+
             - Northern Shoveler (Spatula clypeata):
                 - Habitat: Marshes, lakes, estuaries.
                 - Diet: Small crustaceans, seeds.
-                - Did You Know?: The comb-like nature of their bills allows them to scoop water and filter out crustaceans and seeds to eat.
+                - Did You Know?: Their wide spoon-shaped bill allows them to scoop water and filter out crustaceans and seeds to eat.
                 - settings:
                     - align: '0.6'
-                
+
             - Mallard (Anas platyrhynchos):
                 - Habitat: Lakes, ponds.
                 - Diet: Seeds, aquatic vegetation.
@@ -485,7 +485,7 @@
                 - Did You Know?: They can see underwater to hunt; their eyes can refract light differently underwater, and they have an extra set of clear goggle-like eyelids.
                 - settings:
                     - align: '0.2'
-                
+
         - Folder!Falcons:
 
             - Peregrine Falcon (Falco peregrinus):
@@ -494,59 +494,59 @@
                 - Did You Know?: When diving for prey, these falcons can exceed speeds of 200 mph.
                 - settings:
                     - align: '0.3'
-                
+
             - American Kestrel (Falco sparverius):
                 - Habitat: Open grassland and urban areas.
                 - Diet: Insects, rodents, smaller birds.
-                - Did You Know?: One of the smallest birds of prey; they themselves are also prey for larger hawks and owls.
+                - Did You Know?: One of the smallest birds of prey; they are also prey for larger hawks and owls.
                 - settings:
                     - align: '0.6'
-                
+
         - Folder!Song Birds:
 
             - Eastern Wood-Pewee (Contopus virens):
                 - Habitat: Forest edges.
                 - Diet: Small insects.
-                - Did You Know?: Known for their distinctive "pee-a-weee!" song, which they sing at all times of day.
+                - Did You Know?: Known for their distinctive "pee-a-wee!" song, which they sing at all times of day.
 
                 - settings:
                     - align: '0.2'
-                
+
             - White-eyed Vireo (Vireo griseus):
                 - Habitat: Scrub, overgrown pastures, forest.
                 - Diet: Insects and other arthropods.
                 - Did You Know?: They bathe by rubbing their body against dewy plants in the morning.
                 - settings:
                     - align: '0.6'
-                
+
             - Blue Jay (Cyanocitta cristata):
                 - Habitat: Forests, especially oak.
                 - Diet: Insects, nuts, seeds.
                 - Did You Know?: Highly intelligent birds, they have been known to mimic the call of the Red-Shouldered Hawk as either a warning or a deception tactic.
                 - settings:
                     - align: '0.4'
-                
+
             - American Crow (Corvus brachyrhynchos):
                 - Habitat: Woodlands, farms, urban areas.
                 - Diet: Grain, nuts, seeds, small animals.
                 - Did You Know?: Noted for their intelligence; studies have shown that they can remember people and identify them based on appearance.
                 - settings:
                     - align: '0.7'
-                
+
             - Carolina Chickadee (Poecile carolinensis):
                 - Habitat: Forests, swamps, urban areas.
                 - Diet: Insects, spiders, plants in wintertime.
                 - Did You Know?: They are territorial in the winter, living in flocks of 2-8 and defending their areas against other flocks.
                 - settings:
                     - align: '0.7'
-                
+
             - Tufted Titmouse (Baeolophus bicolor):
                 - Habitat: Forests, parks.
                 - Diet: Insects, seeds.
                 - Did You Know?: Known to incorporate animal hair into their nests, sourced from living animals such as squirrels, raccoons, and even humans.
                 - settings:
                     - align: '0.7'
-                
+
             - Tree Swallow (Tachycineta bicolor):
                 - Habitat: Fields, swamps, ponds.
                 - Diet: Insects; sometimes plants.
@@ -558,35 +558,35 @@
                 - Did You Know?: Native Americans often hung up empty gourds for the Purple Martin. As a result, Purple Martins in eastern North America now nest almost exclusively in birdhouses and manmade structures.
                 - settings:
                     - align: '0.7'
-                
+
             - White-breasted Nuthatch (Sitta carolinensis):
                 - Habitat: Forests, usually deciduous.
                 - Diet: Insects; sometimes nuts, seeds.
                 - Did You Know?: Known to hoard seeds for the winter by stuffing them into gaps in tree bark.
                 - settings:
                     - align: '0.4'
-                
+
             - Brown Creeper (Certhia americana):
                 - Habitat: Forests.
                 - Diet: Insects, insect larvae.
                 - Did You Know?: Their bills are specially shaped for picking apart loose tree bark.
                 - settings:
                     - align: '0.3'
-                
+
             - Carolina Wren (Thryothorus ludovicianus):
                 - Habitat: Thickets, swamps, woods.
                 - Diet: Insects, spiders; sometimes snakes, frogs.
                 - Did You Know?: For their small size, they produce a startlingly loud song.
                 - settings:
                     - align: '0.4'
-                
+
             - Eastern Bluebird (Sialia sialis):
                 - Habitat: Open areas with trees.
                 - Diet: Insects in summer, fruit in winter.
                 - Did You Know?: Male bluebirds will bring material to make a nest, but females are typically responsible for building the nest and tending to the eggs.
                 - settings:
                     - align: '0.7'
-                
+
             - American Robin (Turdus migratorius):
                 - Habitat: Fields, forests, parks, etc.
                 - Diet: Worms, insects, snails, fruit.
@@ -608,28 +608,28 @@
                 - Did You Know?: Fiercely territorial, cardinals may be seen attacking their reflection in windows and mirrors during springtime.
                 - settings:
                     - align: '0.4'
-                
+
             - Indigo Bunting (Passerina cyanea):
                 - Habitat: Brush, forest edges.
                 - Diet: Seeds, berries, insects.
                 - Did You Know?: These birds actually have no blue pigment; instead, tiny structures in their feathers reflect blue light. They appear dark brown when not lit.
                 - settings:
                     - align: '0.3'
-                
+
             - Scarlet Tanager (Piranga olivacea):
                 - Habitat: Forests.
                 - Diet: Insects, fruit, flower buds.
-                - Did You Know?: Brown-headed Cowbirds sometimes insert their own eggs into Scarlet Tanager nests; the tanagers will raise the cowbird as one of their own.
+                - Did You Know?: Only the male bird is a bright scarlet color. The female of this species is an olive yellow.
                 - settings:
                     - align: '0.3'
-                
+
             - Summer Tanager (Piranga rubra):
                 - Habitat: Forests.
                 - Diet: Bees, wasps; sometimes other insects, fruit.
                 - Did You Know?: Before eating a bee or wasp, a Summer Tanager will rub its body against a branch to remove the stinger.
                 - settings:
                     - align: '0.3'
-                
+
             - Northern Mockingbird (Mimus polyglottos):
                 - Habitat: Hedges, thickets, suburban areas.
                 - Diet: Insects in summer, fruit in winter.
@@ -643,7 +643,7 @@
                 - Did You Know?: These birds time their egg hatching to occur before a full moon; during this time, they can hunt at night to better feed their little ones.
                 - settings:
                     - align: '0.3'
-                
+
         - Folder!Quail And Pheasants:
 
             - Wild Turkey (Meleagris gallopavo):
@@ -652,14 +652,14 @@
                 - Did You Know?: Originally from Mexico, this prized game bird's rich flavor comes from its wild nutty diet.
                 - settings:
                     - align: '0.6'
-                
+
             - Northern Bobwhite (Colinus virginianus):
                 - Habitat: Fields, grasslands, forests.
                 - Diet: Seeds, leaves; sometimes insects.
-                - Did You Know?: Hunting and agriculture have reduced Bobwhite population by 81% since the 1960s. They are now an important target for conservation efforts.
+                - Did You Know?: Hunting and agriculture have reduced the Bobwhite population by 81% since the 1960s. They are now an important target for conservation efforts.
                 - settings:
                     - align: '0.4'
-                
+
         - Folder!Vultures:
 
             - Turkey Vulture (Cathartes aura):
@@ -668,14 +668,14 @@
                 - Did You Know?: The Turkey Vulture's keen sense of smell allows it to locate carrion from far away, even from above a forest canopy.
                 - settings:
                     - align: '0.4'
-                
+
             - Black Vulture (Coragyps atratus):
                 - Habitat: Forests, roadsides.
                 - Diet: Carrion (already-dead animals).
                 - Did You Know?: Lacking a strong sense of smell, they mostly find carrion by following and overpowering the Turkey Vultures.
                 - settings:
                     - align: '0.7'
-                
+
         - Folder!Eagles And Hawks:
 
             - Osprey (Pandion haliaetus):
@@ -689,7 +689,7 @@
                 - Did You Know?: Famed hunters, these eagles have even been seen fighting off bears and coyotes.
                 - settings:
                     - align: '0.8'
-                
+
             - Bald Eagle (Haliaeetus leucocephalus):
                 - Habitat: Forests near water.
                 - Diet: Fish; sometimes birds, reptiles, amphibians, crabs, mammals.
@@ -706,13 +706,13 @@
                 - Did You Know?: If you've ever heard a majestic eagle scream in a movie or TV show, you've actually heard the call of the Red-Tailed Hawk.
                 - settings:
                     - align: '0.6'
-                
+
         - Folder!Owls:
 
             - American Barn Owl (Tyto furcata):
                 - Habitat: Grasslands, deserts, fields, suburban areas.
                 - Diet: Small mammals, particularly rodents.
-                - Did You Know?: These owls often roost in old, abandoned buildings. Coupled with their shriek vocalizations, many legends have developed around these owls. For example, South Texas and Mexico know them as lechuza, or shape-shifting witches that may bring ill omens.
+                - Did You Know?: These owls often roost in old, abandoned buildings. Coupled with their shriek vocalizations, many legends have developed around these owls. Locally, communities have been known to link the call of this owl to the underworld, death, or omens about the future.
 
             - Eastern Screech-Owl (Megascops asio):
                 - Habitat: Forests.
@@ -720,7 +720,7 @@
                 - Did You Know?: These owls dive for prey in a classic U shape - straight down, forward, straight up.
                 - settings:
                     - align: '0.2'
-                
+
             - Great Horned Owl (Bubo virginianus):
                 - Habitat: Forests, swamps, farmland.
                 - Diet: A large variety of mammals, birds, reptiles, amphibians, fish, etc.
@@ -728,21 +728,21 @@
 
                 - settings:
                     - align: '0.6'
-                
+
             - Barred Owl (Strix varia):
                 - Habitat: Forests near water.
                 - Diet: A large variety of mammals, birds, reptiles, amphibians, fish, etc.
                 - Did You Know?: This owl has a very recognizable call; it sounds like "who cooks for you? Who cooks for you all?"
                 - settings:
                     - align: '0.4'
-                
+
             - Northern Saw-whet Owl (Aegolius acadicus):
                 - Habitat: Forests.
                 - Diet: Small mammals, particularly mice.
                 - Did You Know?: These tiny owls weigh less than a stick of butter, and are very rare.
                 - settings:
                     - align: '0.7'
-                
+
         - Folder!Woodpeckers:
 
             - Yellow-bellied Sapsucker (Sphyrapicus varius):
@@ -753,14 +753,14 @@
             - Red-bellied Woodpecker (Melanerpes carolinus):
                 - Habitat: Forests, suburban areas.
                 - Diet: Insects, nuts, seeds, fruit.
-                - Did You Know?: Their sticky, barbed tongue extends almost 2 inches past the end of their beak.
+                - Did You Know?: Their sticky, barbed tongue extends almost 2 inches past the end of their beak, designed for pulling insects out of bark and wood.
                 - settings:
                     - align: '0.6'
-                
+
             - Downy Woodpecker (Dryobates pubescens):
                 - Habitat: Forests, orchards, parks, suburban areas.
                 - Diet: Insects, berries, acorns, grain.
-                - Did You Know?: Drumming against a tree isn't actually part of woodpeckers' feeding behavior; instead, it's their version of singing.
+                - Did You Know?: This woodpecker is the smallest in North America. The oldest known Downie was over 11 years old.
 
             - Northern Flicker (Colaptes auratus):
                 - Habitat: Forest edges, fields, parks, suburban areas.
@@ -768,7 +768,7 @@
                 - Did You Know?: Instead of hammering on trees, this particular woodpecker prefers to use its long tongue to eat ants off the ground.
                 - settings:
                     - align: '0.6'
-                
+
             - Pileated Woodpecker (Dryocopus pileatus):
                 - Habitat: Forests, suburban areas.
                 - Diet: Carpenter ants; sometimes other ants, insects, fruit, nuts.
@@ -780,7 +780,7 @@
                 - Did You Know?: They are known to store food - sometimes including live trapped insects - in cracks in wood and bark.
                 - settings:
                     - align: '0.6'
-                
+
     - Folder!Fish:
 
         - Alabama Bass (Micropterus henshalli):
@@ -789,7 +789,7 @@
             - Did You Know?: Labeled a "Predatory and Undesirable Species" in Virginia due to its aggressive nature and ability to outcompete Largemouth and Smallmouth bass.
             - settings:
                 - align: '0.2'
-            
+
         - Alewife (Alosa pseudoharengus):
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
             - Diet: Zooplankton, shrimp; sometimes crustaceans, smaller fish.
@@ -806,14 +806,14 @@
             - Did You Know?: They tend to lay their eggs near submerged structures such as tree stumps, brush, or boat docks.
             - settings:
                 - align: '0.2'
-            
+
         - Blue Catfish (Ictalurus furcatus):
             - Habitat: Freshwater, benthic (lays on the bottom of a body of water).
             - Diet: Smaller fish, crayfish, mollusks, plants.
             - Did You Know?: The largest Blue Catfish ever caught was captured in Buggs Island Lake. It was 143 pounds, 57 inches long, and 46 inches in girth.
             - settings:
                 - align: '0.6'
-            
+
         - Blueback Herring (Alosa aestivalis):
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
             - Diet: Zooplankton, shrimp, crustaceans, smaller fish.
@@ -825,28 +825,28 @@
             - Did You Know?: A type of sunfish, these fish will linger near the water's surface to stay warm in the sun.
             - settings:
                 - align: '0.7'
-            
+
         - Channel Catfish (Ictalurus punctatus):
             - Habitat: Freshwater, benthic (lays on the bottom of a body of water).
             - Diet: Omnivorous - crustaceans, smaller fish, amphibians; sometimes small mammals.
             - Did You Know?: These catfish have taste buds all over their body, particularly on their whisker-like "barbels".
             - settings:
                 - align: '0.0'
-            
+
         - Common Carp (Cyprinus carpio):
             - Habitat: Freshwater, benthic (lays on the bottom of a body of water).
             - Diet: Omnivorous - worms, small crustaceans, fish eggs, mussels, seeds, insects.
             - Did You Know?: Carp feed by sifting through mud, consuming just about anything that comes up in the process. These fish are considered pests.
             - settings:
                 - align: '0.9'
-            
+
         - Flathead Catfish (Pylodictis olivaris):
             - Habitat: Freshwater, benthic (lays on the bottom of a body of water).
             - Diet: Smaller fish; juveniles feed on insects, crayfish.
             - Did You Know?: A female lays, on average, 100,000 eggs in a clutch.
             - settings:
                 - align: '0.6'
-            
+
         - Gizzard Shad (Dorosoma cepedianum):
             - Habitat: Freshwater or brackish water.
             - Diet: Zooplankton, detritus.
@@ -858,14 +858,14 @@
             - Did You Know?: True to its name, the Largemouth Bass can open its mouth wider than its head.
             - settings:
                 - align: '0.9'
-            
+
         - Pumpkinseed (Lepomis gibbosus):
             - Habitat: Freshwater.
             - Diet: Crustaceans, insects, mollusks.
             - Did You Know?: This tiny fish features an "eye spot" that fools predators into thinking it's a much larger fish.
             - settings:
                 - align: '0.2'
-            
+
         - Redear Sunfish (Lepomis microlophus):
             - Habitat: Freshwater.
             - Diet: Mollusks.
@@ -877,7 +877,7 @@
             - Did You Know?: These fish are extremely popular among anglers for their ability to put up a serious fight when hooked.
             - settings:
                 - align: '0.3'
-            
+
         - Striped Bass (Morone saxatilis):
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
             - Diet: Smaller fish, particularly shad, alewife and herring.
@@ -889,21 +889,21 @@
             - Habitat: Freshwater.
             - Diet: Smaller fish, crayfish, amphibians, insects, etc.
             - Did You Know?: Their name comes from their eyes, which are opaque in appearance thanks to a layer of tissue called "tapetum lucidum" that enhances low-light vision.
-            
+
         - White Perch (Morone americana):
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
             - Diet: Smaller fish, crustaceans, insects, worms, plants, etc.
             - Did You Know?: A female can lay over 150,000 eggs in a clutch; often, multiple males will work to fertilize them all.
             - settings:
                 - align: '0.2'
-            
+
         - Yellow Perch (Perca flavescens):
             - Habitat: Freshwater.
             - Diet: Smaller fish, crustaceans; juveniles feed on zooplankton.
             - Did You Know?: Their eggs are laid in jelly-like strands that get draped around submerged structures or weeds.
             - settings:
                 - align: '0.8'
-            
+
     - Folder!Insects:
 
         - Western Honey Bee (Apis mellifera):
