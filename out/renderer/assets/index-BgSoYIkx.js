@@ -21497,7 +21497,7 @@ const ItemCard = (props) => {
               props.item.texts.map(({ heading, body }, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { style: { gridArea: ["habitat", "diet", "fun"][i] }, children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { children: [
                   heading,
-                  ":"
+                  /[.!?]$/.test(heading) ? "" : ":"
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: body })
               ] }, i))
