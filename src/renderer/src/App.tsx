@@ -1,6 +1,7 @@
 import MainView from './MainView/MainView'
-import { ReactElement, useMemo } from 'react'
+import { ReactElement, useEffect, useMemo } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
+import { logMissingOrUnusedImages } from '@renderer/_lib/assets'
 import contentYAML from './_assets/srsp animal facts.yaml?raw'
 
 function App(): ReactElement {
@@ -8,6 +9,7 @@ function App(): ReactElement {
   const SECONDS_BEFORE_IDLE_TIMEOUT = 60
 
   const dataModel = useMemo(() => DataModel.fromYaml(contentYAML), [])
+  useEffect(() => logMissingOrUnusedImages(dataModel.getAllItemNames()), [])
 
   // SINGLE
 

@@ -82,6 +82,16 @@ export class DataModel {
     return new DataModel(JSON.stringify(root))
   }
 
+  public getAllItemNames(): string[] {
+    const names: string[] = []
+    const walk = (node: Node): void => {
+      if (node.nodeType === 'item') names.push(node.item.commonName)
+      else Object.values(node.children).forEach(walk)
+    }
+    walk(this.content)
+    return names
+  }
+
   public static fromCsv(csv: string): DataModel {
     const rows = parseCsv(csv)
     if (rows.length === 0) return DataModel.empty()
