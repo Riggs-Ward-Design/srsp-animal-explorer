@@ -7,7 +7,8 @@
       "Bash(cp \"src/renderer/src/_assets/srsp animal facts.yaml\" /tmp/yaml_before.yaml)",
       "Read(//tmp/**)",
       "Bash(grep \"Fun Fact:.*'': ''\" \"src/renderer/src/_assets/srsp animal facts.yaml\")",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
