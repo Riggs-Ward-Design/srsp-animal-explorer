@@ -30,13 +30,9 @@ const FolderButton = (props: FolderButtonProps): ReactElement => {
     text = `Year-Round Residents`
     delayAppear = 1
   }
-  if (text === 'Non-Native') {
-    text = `Just Passing Through`
-    delayAppear = 2
-  }
   if (text === 'Invasive') {
     text = `I Don't Belong Here`
-    delayAppear = 3
+    delayAppear = 2
   }
 
   let animalIcon = ''
