@@ -1,0 +1,408 @@
+.explorer-view {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.explorer-content {
+  position: relative;
+  flex: 1;
+  background: var(--color-light-blue);
+  overflow: hidden;
+}
+
+.explorer-content::before {
+  content: '';
+  position: absolute;
+  inset: -100%;
+  width: 300%;
+  height: 300%;
+  background-image: url("data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2025.0.1,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20width='2500px'%20height='2000px'%20viewBox='0%200%202500%202000'%20style='enable-background:new%200%200%202500%202000;'%20xml:space='preserve'%3e%3cg%3e%3cpath%20d='M1831,1478.6c-21.4-201.4-252.2-443.3-416.4-591.9c-93.5-84.6-235.8-84.6-329.3,0c-164.2,148.6-395,390.5-416.4,591.9%20C651,1648,800,1787,968.5,1762.8c68.6-9.8,135.5-46.1,186.8-81.6c57-39.3,132.3-39.3,189.3,0c51.3,35.4,118.2,71.7,186.8,81.6%20C1700,1787,1849,1648,1831,1478.6z'/%3e%3cg%3e%3cellipse%20transform='matrix(0.993%20-0.1181%200.1181%200.993%20-56.3183%20118.1329)'%20cx='968.9'%20cy='534.4'%20rx='227.4'%20ry='300.9'/%3e%3cellipse%20transform='matrix(0.1181%20-0.993%200.993%200.1181%20819.6549%201991.693)'%20cx='1531.1'%20cy='534.4'%20rx='300.9'%20ry='227.4'/%3e%3c/g%3e%3cg%3e%3cellipse%20transform='matrix(0.3822%20-0.9241%200.9241%200.3822%20309.1049%202357.0142)'%20cx='1917.3'%20cy='947.3'%20rx='261.2'%20ry='197.4'/%3e%3cellipse%20transform='matrix(0.9241%20-0.3822%200.3822%200.9241%20-317.8157%20294.6205)'%20cx='582.7'%20cy='947.3'%20rx='197.4'%20ry='261.2'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  background-size: 160px 160px;
+  background-repeat: repeat;
+  opacity: 0.02;
+  animation: diagonal-scroll reverse 5s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.explorer-content > * {
+  z-index: 1;
+}
+
+@keyframes diagonal-scroll {
+  from {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  to {
+    transform: rotate(45deg) translate(0px, -160px);
+  }
+}
+
+.explorer-content h1 {
+  color: var(--color-green);
+  font-family: 'Meursault', serif;
+  font-weight: 400;
+  font-size: 3.75cqw;
+  line-height: 1.25;
+  margin: -1.75cqw 0 1.75cqw 0;
+}
+.nav-bar {
+  padding: 1.25cqw 3.25cqw;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  background-color: var(--color-green);
+  color: var(--color-white);
+
+  font-family: 'Meursault', serif;
+  font-size: 1.5cqw;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.nav-bar-button {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 1.25cqw;
+}
+
+.idle-warning {
+  text-transform: none;
+  font-style: oblique;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+.carousel {
+  position: absolute;
+  inset: 5cqw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-row {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.carousel-viewport {
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease;
+  will-change: transform;
+}
+
+.carousel-page {
+  position: relative;
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-page-inner {
+  max-width: calc(23cqw * 3 + 1.75cqw * 2);
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  gap: 1.75cqw;
+}
+
+.carousel-button-area {
+  width: 3.25cqw;
+  height: 100%;
+  display: flex;
+  place-items: center;
+}
+
+.carousel-button {
+  width: 20cqw;
+  aspect-ratio: 11/7;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.carousel-open-card {
+  position: absolute;
+  inset: 0;
+}
+
+.placeholder {
+  visibility: hidden;
+}
+
+.touch-prompt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.75cqw;
+  font-family: 'Meursault', serif;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+.carousel .standard-icon-button {
+  width: 250%;
+  margin: -75%;
+  color: var(--color-green);
+  z-index: 5;
+}
+
+.carousel-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 2.5cqw);
+  display: flex;
+  justify-content: center;
+  gap: 1.25cqw;
+}
+
+.carousel-dot {
+  width: 0.75cqw;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: var(--color-green);
+  opacity: 0.3;
+  transition: opacity 300ms;
+}
+
+.carousel-dot.active {
+  opacity: 1;
+}
+.standard-icon-button {
+  padding: 0;
+  border: 0;
+  background: 0;
+  aspect-ratio: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  font-size: 10pt;
+}
+
+.standard-icon-button:hover {
+  filter: contrast(50%);
+}
+
+.standard-icon-button:active {
+  filter: contrast(25%);
+}
+.folder-button-contents {
+  flex: 1;
+
+  padding: 2cqw 4cqw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  /*For animal icons*/
+  flex-direction: column;
+  gap: 1cqw;
+
+  background: var(--color-orange);
+  color: var(--color-white);
+
+  font-family: 'Meursault', serif;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 1.375cqw;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.folder-button-contents img {
+  height: 70%;
+}
+.item-card {
+  display: flex;
+  background-color: var(--color-white);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.item-card-image {
+  height: 100%;
+}
+
+.item-card-content {
+  flex: 1;
+  margin: 3.25cqw;
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--color-green);
+}
+
+.name {
+  margin-bottom: 1.75cqw;
+}
+
+.item-card h1 {
+  font-family: 'Meursault', serif;
+  font-weight: 400;
+  font-size: 2.5cqw;
+  margin-top: 0;
+  margin-bottom: -0.5cqw;
+}
+
+.sci-name {
+  font-family: 'Meursault', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25cqw;
+  white-space: nowrap;
+}
+
+.explorer-content h2 {
+  font-family: 'Meursault', serif;
+  font-weight: 400;
+  font-size: 1.75cqw;
+  margin: 0 0 -1.5cqw;
+}
+
+.explorer-content p {
+  font-size: 1.25cqw;
+  text-wrap: pretty;
+}
+.attract-screen {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+
+  padding: 5%;
+
+  background-image: url('./srsp-animal-explorer-attract-bg-D_4Vgwc-.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.attract-screen-titles-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Meursault', serif;
+  color: var(--color-white);
+}
+
+.attract-screen h1 {
+  font-size: 6.5cqw;
+  font-weight: 400;
+  margin-bottom: 1.75cqw;
+}
+
+.attract-screen h2 {
+  font-size: 2.5cqw;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.cwt-idle-warning-modal {
+  position: absolute;
+  inset: 0;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.25cqw;
+}
+.FourUserApp {
+}
+
+.main-view {
+  container-type: inline-size;
+  overflow: hidden;
+}
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  user-select: none;
+
+  --color-light-blue: hsl(214, 22%, 81%);
+  --color-green: hsl(70, 48%, 26%);
+  --color-orange: hsl(33, 56%, 51%);
+  --color-white: hsl(36, 22%, 95%);
+
+  font-family: 'Franklin Gothic', sans-serif;
+}
+
+.rounded {
+  border-radius: 48px;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Meursault';
+  font-weight: 100 900;
+  font-style: normal;
+  src: url('./Meursault%20VF-Bg5dlU_7.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Meursault';
+  font-weight: 100 900;
+  font-style: oblique 5deg;
+  src: url('./Meursault%20VF-Bg5dlU_7.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Franklin Gothic';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./Franklin%20Gothic%20URW%20Book-BRw6aM9A.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Franklin Gothic';
+  font-weight: 400;
+  font-style: italic;
+  src: url('./Franklin%20Gothic%20URW%20Book%20Italic-CSJ8bc-t.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Franklin Gothic';
+  font-weight: 600;
+  font-style: normal;
+  src: url('./Franklin%20Gothic%20URW%20Demi-kSH8honA.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Franklin Gothic';
+  font-weight: 600;
+  font-style: italic;
+  src: url('./Franklin%20Gothic%20URW%20Demi%20Italic-DA9h337a.otf') format('opentype');
+}
