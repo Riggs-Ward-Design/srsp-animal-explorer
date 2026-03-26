@@ -12,7 +12,7 @@ function createWindow(): void {
   win = new BrowserWindow({
     width: 1920,
     height: 1080,
-    fullscreen: !is.dev,
+    kiosk: !is.dev,
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       backgroundThrottling: false
