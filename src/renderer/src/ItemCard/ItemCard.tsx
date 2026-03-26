@@ -112,7 +112,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
 
             {props.item.texts.map(({ heading, body }, i) => (
               <section key={i} style={{ gridArea: ['habitat', 'diet', 'fun'][i] }}>
-                <h2>{heading}:</h2>
+                <h2>{heading}{/[.!?]$/.test(heading) ? '' : ':'}</h2>
                 <p>{body}</p>
               </section>
             ))}
