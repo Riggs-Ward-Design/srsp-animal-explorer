@@ -20625,8 +20625,8 @@ const __vite_glob_0_1 = "" + new URL("alabama-bass-vDwKFoeZ.jpg", import.meta.ur
 const __vite_glob_0_2 = "" + new URL("alewife-BQaEG_18.jpg", import.meta.url).href;
 const __vite_glob_0_3 = "" + new URL("american-barn-owl-Dhp_i4n_.jpg", import.meta.url).href;
 const __vite_glob_0_4 = "" + new URL("american-beaver-Bv2YRJSA.jpg", import.meta.url).href;
-const __vite_glob_0_5 = "" + new URL("american-black-bear-qLhsKC8I.jpg", import.meta.url).href;
-const __vite_glob_0_6 = "" + new URL("american-crow-VGGYH6_S.jpg", import.meta.url).href;
+const __vite_glob_0_5 = "" + new URL("american-black-bear-OA1kaOg7.jpg", import.meta.url).href;
+const __vite_glob_0_6 = "" + new URL("american-crow-DfcutglM.jpg", import.meta.url).href;
 const __vite_glob_0_7 = "" + new URL("american-dagger-moth-BXEepSJb.jpg", import.meta.url).href;
 const __vite_glob_0_8 = "" + new URL("american-kestrel-mC0NDuvM.jpg", import.meta.url).href;
 const __vite_glob_0_9 = "" + new URL("american-robin-CnkPvtUa.jpg", import.meta.url).href;
@@ -20644,7 +20644,7 @@ const __vite_glob_0_20 = "" + new URL("black-vulture-7Q3h2eek.jpg", import.meta.
 const __vite_glob_0_21 = "" + new URL("black-widow-CEURbu3E.jpg", import.meta.url).href;
 const __vite_glob_0_22 = "" + new URL("blue-catfish-fPey4lh5.jpg", import.meta.url).href;
 const __vite_glob_0_23 = "" + new URL("blue-jay-CLPjJtQY.jpg", import.meta.url).href;
-const __vite_glob_0_24 = "" + new URL("blueback-herring-bToHxNiv.jpg", import.meta.url).href;
+const __vite_glob_0_24 = "" + new URL("blueback-herring-DzMfWzj8.jpg", import.meta.url).href;
 const __vite_glob_0_25 = "" + new URL("bluegill-B8XyK41N.jpg", import.meta.url).href;
 const __vite_glob_0_26 = "" + new URL("bobcat-Cus5vSEq.jpg", import.meta.url).href;
 const __vite_glob_0_27 = "" + new URL("broad-headed-skink-unlu_Q8v.jpg", import.meta.url).href;
@@ -20692,7 +20692,7 @@ const __vite_glob_0_68 = "" + new URL("eastern-wood-pewee-BTj4KfrM.jpg", import.
 const __vite_glob_0_69 = "" + new URL("eastern-wormsnake-DHpaXQ1i.jpg", import.meta.url).href;
 const __vite_glob_0_70 = "" + new URL("emerald-ash-borer-O7p0WOiZ.jpg", import.meta.url).href;
 const __vite_glob_0_71 = "" + new URL("eurasian-collared-dove-CM0NSC9J.jpg", import.meta.url).href;
-const __vite_glob_0_72 = "" + new URL("flathead-catfish-DiMDpOGE.jpg", import.meta.url).href;
+const __vite_glob_0_72 = "" + new URL("flathead-catfish-CmN0fVTF.jpg", import.meta.url).href;
 const __vite_glob_0_73 = "" + new URL("fowler-s-toad-MlrXcxEV.jpg", import.meta.url).href;
 const __vite_glob_0_74 = "" + new URL("giant-water-bug-C8dTqBDk.jpg", import.meta.url).href;
 const __vite_glob_0_75 = "" + new URL("gizzard-shad-sPyTvGAp.jpg", import.meta.url).href;
@@ -26036,7 +26036,7 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
             - Bald Eagle (Haliaeetus leucocephalus):
                 - Habitat: Forests near water.
                 - Diet: Fish; sometimes birds, reptiles, amphibians, crabs, mammals.
-                - Did You Know?: Their association with American integrity is a bit ironic - Bald Eagles often steal their meals from ospreys and fish-eating mammals.
+                - Did You Know?: Bald Eagles often steal their meals from ospreys and fish-eating mammals.
 
             - Red-shouldered Hawk (Buteo lineatus):
                 - Habitat: Forests, swamps.
@@ -26125,13 +26125,6 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
                     - align: '0.6'
 
     - Folder!Fish:
-
-        - Alabama Bass (Micropterus henshalli):
-            - Habitat: Freshwater.
-            - Diet: Smaller fish, crayfish, amphibians, insects.
-            - Did You Know?: Labeled a "Predatory and Undesirable Species" in Virginia due to its aggressive nature and ability to outcompete Largemouth and Smallmouth bass.
-            - settings:
-                - align: '0.2'
 
         - Alewife (Alosa pseudoharengus):
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
@@ -26247,7 +26240,7 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
             - settings:
                 - align: '0.8'
 
-    - Folder!Insects:
+    - Folder!Insects & Arachnids:
 
         - Western Honey Bee (Apis mellifera):
             - Habitat: Grasslands, forests, farms, gardens.
@@ -26301,12 +26294,12 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
 
         - Eastern Buckmoth (Hemileuca maia):
             - Habitat: Scrub oak-pine sand barrens, oak woods, and urban oak trees.
-            - Diet: The caterpillars feed on several oaks (scrub oak, live oak, blackjack oak and dwarf chestnut oak). Adults do not feed at all!.
+            - Diet: The caterpillars feed on several oaks (scrub oak, live oak, blackjack oak and dwarf chestnut oak). Adults do not feed at all!
             - Did You Know?: The caterpillar is covered in spines which are attached to sacs of venom. If contacted, this venom can produce stinging, itching, inflammation, and occasionally nausea.
 
         - Rosy Maple Moth (Dryocampa rubicunda):
             - Habitat: Deciduous forests.
-            - Diet: Caterpillars eat from maple trees (red maple, sugar maple, and silver maple) and oak trees. Adults do not feed at all!.
+            - Diet: Caterpillars eat from maple trees (red maple, sugar maple, and silver maple) and oak trees. Adults do not feed at all!
             - Did You Know?: Believe it or not, their bold color is actually camouflage. Maple seed cases turn similarly pink and yellow.
 
         - Hummingbird Clearwing (Hemaris thysbe):
@@ -26316,7 +26309,7 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
 
         - Tiger Moth (Arctia caja):
             - Habitat: Open habitats, including gardens, damp meadows, fens, riverbanks, sand-dunes and open woodland.
-            - Diet: The larvae are generalist eaters, feeding on many different types of herbaceous plants. Their defensive toxic compounds are generated by eating foxglove, daisies, or pantago. Adults do not feed at all!.
+            - Diet: The larvae are generalist eaters, feeding on many different types of herbaceous plants. Their defensive toxic compounds are generated by eating foxglove, daisies, or pantago. Adults do not feed at all!
             - Did You Know?: Their strong coloration serves as a clear warning signal of their high toxicity.
 
         - Tobacco Hornworm (Manduca sexta):
@@ -26361,7 +26354,7 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
 
         - March Brown Mayfly (Maccaffertium vicarium):
             - Habitat: Nymphs prefer moderate or fast flowing water. Adults can be found in calmer water of trout streams and small rivers.
-            - Diet: Larvae eat algae, bacteria, and plant debris. Adults do not feed!.
+            - Diet: Larvae eat algae, bacteria, and plant debris. Adults do not feed!
             - Did You Know?: March browns are legendary in the fly-fishing community, often serving as the model for popular fishing lures.
 
         - Black Widow (Latrodectus mactans):
@@ -26374,35 +26367,47 @@ const contentYAML = `# NOTE: Best edited in a text editor like VSCode that allow
     - Spotted Lantern Fly (Lycorma delicatula):
         - Habitat & Spread: Widely varied temperate climates that have plenty of woody host plants. It often spreads by hitching on human-transferred items such as firewood, vehicles, clothing and shoes.
         - Impact: Spotted lantern flies tend to gather in large numbers while feeding, increasing the amount of damage inflicted on the host plant. They also secrete a sticky, sweet liquid that promotes the growth of sooty mold on the plant.
+        - How You Can Help: Check your vehicle, camping gear, and clothing for any egg masses and remove them before traveling. Report sightings to a park ranger if you find large numbers or egg masses.
 
     - Asian Lady Beetle (Harmonia axyridis):
         - Habitat & Spread: Found in forests, orchards, and gardens in the spring and summer. Will often migrate into a building for shelter during the winter months. Their lack of predators and very quick life cycle (3-6 weeks) allows them to spread quickly.
         - Impact: While outcompeting native species, asian lady beetles bite, infest buildings while sheltering from the winter, leave yellow stains and odours, and emit fluids that can be irritating to human skin and pets.
+        - How You Can Help: Once they’re inside a building, the easiest way to get them out again is sweeping or vacuuming! Seal any gaps in your structure with caulk to keep them from getting inside.
 
     - Emerald Ash Borer (Agrilus planipennis):
         - Habitat & Spread: Populates areas with Ash trees, from forests to urban settings. This insect hitchikes on ash products such as firewood and nursery plants.
         - Impact: Larvae feed on tissues just under the bark of Ash trees, preventing them from carrying nutrients up their trunks, and increasing the brittleness of branches causing them to break. The adult will eat the leaves of the Ash tree, destroying the canopy. Infestations will kill Ash trees in 3-5 years.
+        - How You Can Help: The Department of Forestry has a cost-share program to help property owners chemically protect their ash trees. If you have an ash tree on your property, contact the DOF to find out what to watch out for and how to help!
 
     - Asian Clam (Corbicula fluminea):
         - Habitat & Spread: Lives in rivers and streams, sometimes lakes or canals - well-oxygenated bodies of water. These clams self-fertilize and can produce tens of thousands of young annually, and mature in 3-6 months.  Young clams and larvae can be transported to new areas via mud and debris on boats, on fishing gear, or when used as bait.
         - Impact: The dense nature of their colonies pushes out native species, changing the balance of nutrients within the water. Too many clams will also overfilter waterways which can result in algae blooms. These clams will also clog and damage drainage systems and underwater hardware systems.
+        - How You Can Help: To help prevent spreading, make sure that you drain, clean, and dry your boating and fishing gear in between uses. This is especially important if you’re moving between different bodies of water. 
 
     - Sericea Lespedeza (Lespedeza cuneata):
         - Habitat & Spread: This plant thrives in many habitats, often gravitating to disturbed sunny and open areas. It produces many seeds - sometimes 1,000 per branch - that have long-term viability in the soil of up to 20 years. Its deep taproot can resprout a plant if any section of it is left in the ground.
         - Impact: In addition to overpowering the native seedbank by remaining active in the soil for decades, this plant also hogs water from neighboring plants. When branch counts in an area exceed around 350, an early 2000s study found that native plants were reduced by 70%.
+        - How You Can Help: Defeating this interloper takes time and consistency. A combination of consistent mowing and applying carefully targeted herbicide in the spring and summer over several years will help. So will planting competing native species after treatment.
 
     - Autumn Olive (Elaeagnus umbellata):
         - Habitat & Spread: This plant thrives in many habitats, often gravitating to disturbed sunny and open areas. It produces a prolific seed population of up to 200,000 per year, as well as 8 pounds of fruit which is eaten (and then dispersed) by animals. Attempting to cut it down spurs a growth in the roots, leading to more sprouts.
         - Impact: Its quick spreading habit and ability to thrive in poor soil allow it to crowd out native plants and reduce biodiversity. The nitrogen-fixing roots change the soil chemistry, further reducing the ability for neighboring native plants to thrive.
+        - How You Can Help: To fight autumn olive, don’t just cut it down, immediately apply herbicide to the entire root collar. You may need to repeat this process several times before achieving success.
 
     - Japanese Stilt Grass (Microstegium vimineum):
         - Habitat & Spread: This plant thrives disturbed moist and shaded areas. Each plant can produce up to 1,000 seeds that are lightweight and transport easily with human and animal activity, or by wind and water movement.
         - Impact: The sprawling habit of this grass quickly forms a dense groundcover, blocking other native plants from growing. Seeds remain viable for up to 5 years, meaning if the area is cleared, the seed bank in the soil can cause the grass to resprout and take over again.
+        - How You Can Help: The best way to tackle Japanese stilt grass is to pull up the entire plant late in the growing season, before it goes to seed. Because the seeds remain viable for so long, you may need to repeat this process for as many as seven years before you declare victory.
 
     - Chinese Privet (Ligustrum sinense):
         - Habitat & Spread: This plant grows in dense thickets in bottomland forests, along fencerows, or bordering wooded areas. It spreads both by seed and root suckers.
         - Impact: While crowding out native species, Chinese privet also does not offer much additional food benefit to wildlife. Its spread lowers plant diversity, reduces available food, and the shallow root system leads to a breakdown in soil structure, increasing the threat of erosion.
-`;
+        - How You Can Help: If you catch it early, Chinese privet can be pulled out by hand. For larger plants, the best strategy is to cut it down, and then apply a glyphosate herbicide directly to the stump. This way you can avoid harming nearby native species.
+
+    - Alabama Bass (Micropterus henshalli):
+        - Habitat & Spread: Freshwater.
+        - Impact: Labeled a "Predatory and Undesirable Species" in Virginia due to its aggressive nature and ability to outcompete Largemouth and Smallmouth bass.
+        - How You Can Help: If you think you might have caught an Alabama bass, take a picture of the fish, clip off a thumbnail-sized portion of one of the pelvic fins, and store the fin clip dry in an envelope. Then contact the Virginia Department of Wildlife Resources.`;
 function App() {
   const SECONDS_BEFORE_IDLE_TIMEOUT = 60;
   const dataModel = reactExports.useMemo(() => DataModel.fromYaml(contentYAML), []);
