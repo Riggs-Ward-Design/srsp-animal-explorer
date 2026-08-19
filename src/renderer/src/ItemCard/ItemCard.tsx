@@ -18,6 +18,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
   const fullImageUrl = findUrl(imageUrls, props.item.commonName)
   const bgPosition = `${(props.item.align ?? 0.5) * 100}% center`
   const id = `item:${props.item.commonName}`
+  const isInvasive = props.item.localStatus.trim().toLowerCase() === 'invasive'
 
   const [elevated, setElevated] = useState(true)
   const [lastIsOpen, setLastIsOpen] = useState(props.isOpen)
@@ -53,7 +54,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
       style={{
         borderRadius: '48px',
         overflow: 'hidden',
-        flexBasis: !open ? '100%' : '62%',
+        flexBasis: !open ? '100%' : isInvasive ? '40%' : '62%',
         position: 'relative',
         boxShadow: '2px 2px 4px 0 rgba(0, 0, 0, 0.1)'
       }}
@@ -112,7 +113,10 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
 
             {props.item.texts.map(({ heading, body }, i) => (
               <section key={i} style={{ gridArea: ['habitat', 'diet', 'fun'][i] }}>
-                <h2>{heading}{/[.!?]$/.test(heading) ? '' : ':'}</h2>
+                <h2>
+                  {heading}
+                  {/[.!?]$/.test(heading) ? '' : ':'}
+                </h2>
                 <p>{body}</p>
               </section>
             ))}

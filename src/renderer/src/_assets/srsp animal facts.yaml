@@ -1035,11 +1035,13 @@
         - Habitat & Spread: Populates areas with Ash trees, from forests to urban settings. This insect hitchikes on ash products such as firewood and nursery plants.
         - Impact: Larvae feed on tissues just under the bark of Ash trees, preventing them from carrying nutrients up their trunks, and increasing the brittleness of branches causing them to break. The adult will eat the leaves of the Ash tree, destroying the canopy. Infestations will kill Ash trees in 3-5 years.
         - How You Can Help: The Department of Forestry has a cost-share program to help property owners chemically protect their ash trees. If you have an ash tree on your property, contact the DOF to find out what to watch out for and how to help!
+        - settings:
+            - align: '0.3'
 
     - Asian Clam (Corbicula fluminea):
         - Habitat & Spread: Lives in rivers and streams, sometimes lakes or canals - well-oxygenated bodies of water. These clams self-fertilize and can produce tens of thousands of young annually, and mature in 3-6 months.  Young clams and larvae can be transported to new areas via mud and debris on boats, on fishing gear, or when used as bait.
         - Impact: The dense nature of their colonies pushes out native species, changing the balance of nutrients within the water. Too many clams will also overfilter waterways which can result in algae blooms. These clams will also clog and damage drainage systems and underwater hardware systems.
-        - How You Can Help: To help prevent spreading, make sure that you drain, clean, and dry your boating and fishing gear in between uses. This is especially important if you’re moving between different bodies of water. 
+        - How You Can Help: To help prevent spreading, make sure that you drain, clean, and dry your boating and fishing gear in between uses. This is especially important if you’re moving between different bodies of water.
 
     - Sericea Lespedeza (Lespedeza cuneata):
         - Habitat & Spread: This plant thrives in many habitats, often gravitating to disturbed sunny and open areas. It produces many seeds - sometimes 1,000 per branch - that have long-term viability in the soil of up to 20 years. Its deep taproot can resprout a plant if any section of it is left in the ground.
@@ -1065,3 +1067,5 @@
         - Habitat & Spread: Freshwater.
         - Impact: Labeled a "Predatory and Undesirable Species" in Virginia due to its aggressive nature and ability to outcompete Largemouth and Smallmouth bass.
         - How You Can Help: If you think you might have caught an Alabama bass, take a picture of the fish, clip off a thumbnail-sized portion of one of the pelvic fins, and store the fin clip dry in an envelope. Then contact the Virginia Department of Wildlife Resources.
+        - settings:
+          - align: '0.2'

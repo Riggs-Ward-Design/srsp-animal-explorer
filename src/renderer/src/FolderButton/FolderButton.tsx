@@ -38,10 +38,10 @@ const FolderButton = (props: FolderButtonProps): ReactElement => {
   let animalIcon = ''
   if (text === 'Fish') animalIcon = iconFish
   else if (text === 'Birds') animalIcon = iconBirds
-  else if (text === 'Insects') animalIcon = iconInsects
   else if (text === 'Mammals') animalIcon = iconMammals
   else if (text === 'Reptiles') animalIcon = iconReptiles
   else if (text === 'Amphibians') animalIcon = iconAmphibians
+  else if (text === 'Insects & Arachnids') animalIcon = iconInsects
 
   return (
     <motion.div
@@ -59,7 +59,7 @@ const FolderButton = (props: FolderButtonProps): ReactElement => {
     >
       <div className="folder-button-contents">
         {animalIcon !== '' && <img src={animalIcon} alt={`${text} Icon`} />}
-        {text}
+        <span>{text}</span>
       </div>
     </motion.div>
   )
