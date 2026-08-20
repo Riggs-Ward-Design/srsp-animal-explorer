@@ -373,6 +373,8 @@
                 - Habitat: Slow rivers, swamps, marshes, wetlands, and ponds.
                 - Diet: Hatchlings are carnivorous and feed on insects, spiders, crustaceans, and tadpoles. Adult diets contain leaves, stems, roots, fruits, larger invertebrates, small fish, tadpoles, and frogs.
                 - Did You Know?: These turtles got their name from how quickly they slide into the water when disturbed.
+                - settings:
+                    - align: '1.0'
 
     - Folder!Birds:
         - Folder!Wading Birds:
@@ -986,6 +988,8 @@
             - Habitat: Nymphs prefer moderate or fast flowing water. Adults can be found in calmer water of trout streams and small rivers.
             - Diet: Larvae eat algae, bacteria, and plant debris. Adults do not feed!
             - Did You Know?: March browns are legendary in the fly-fishing community, often serving as the model for popular fishing lures.
+            - settings:
+                - align: '0.0'
 
         - Black Widow (Latrodectus mactans):
             - Habitat: Close to the ground in dark, sheltered areas. This can be old wood, plastic containers, stacked materials, garbage bins, among others.
