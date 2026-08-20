@@ -60,6 +60,14 @@
   inset: 0;
 }
 
+.carousel-attribution {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1cqw);
+  font-size: 1cqw;
+  color: var(--color-green);
+}
+
 .placeholder {
   visibility: hidden;
 }

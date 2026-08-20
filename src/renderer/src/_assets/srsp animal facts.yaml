@@ -215,6 +215,7 @@
                 - Did You Know?: When threatened, they respond by curling up their body, tucking their head, and waving their tail.
                 - settings:
                     - align: '0.2'
+                    - attribution: Photograph by Evan Grimes, February 28, 2021, iNaturalist.
 
             - White-spotted Slimy Salamander (Plethodon cylindraceus):
                 - Habitat: Forests.
@@ -768,6 +769,8 @@
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
             - Diet: Shrimp; sometimes smaller fish (juveniles eat zooplankton and insect larvae).
             - Did You Know?: Known as "America's Founding Fish" due to their history as an important food source for Indigenous Peoples and early colonists.
+            - settings:
+                - attribution: Photograph by Michael Stein, September 2023, iNaturalist.
 
         - Black Crappie (Pomoxis nigromaculatus):
             - Habitat: Freshwater.
@@ -908,6 +911,8 @@
             - Habitat: Open grassy areas including native prairies, fields, barrens, and meadows.
             - Diet: Caterpillars feed on perennial grasses (little bluestem, blue grama, and bent grass). The adults like flower nectar, especially from blazing star, but also thistles, asters, teasel, and others.
             - Did You Know?: Males of this species look for mates by perching on high stems and chasing after other insects as they fly by.
+            - settings:
+                - attribution: Photograph by Peter Waycik, August 22, 2020, iNaturalist.
 
         - Coral Hairstreak (Satyrium titus):
             - Habitat: Open weedy and shrubby areas or wood edges.
@@ -953,6 +958,8 @@
             - Habitat: Hardwood forests, forest edges, and suburban wooded areas with deciduous trees.
             - Diet: Larvae eat a variety of woody and herbaceous plants. Adults likely feed on nectar, though there is minimal record of specific plants.
             - Did You Know?: The Latin “astrologana” actually means astrology; this little moth lives up to both names with its delicately spotted wings.
+            - settings:
+                - attribution: Photograph by Scott Morris, June 4, 2023, iNaturalist.
 
         - Luna Moth (Actias luna):
             - Habitat: Deciduous hardwood forests.
@@ -990,6 +997,7 @@
             - Did You Know?: March browns are legendary in the fly-fishing community, often serving as the model for popular fishing lures.
             - settings:
                 - align: '0.0'
+                - attribution: Photograph by Richard Bartz, Jan 8, 2008.
 
         - Black Widow (Latrodectus mactans):
             - Habitat: Close to the ground in dark, sheltered areas. This can be old wood, plastic containers, stacked materials, garbage bins, among others.
@@ -1045,3 +1053,4 @@
         - How You Can Help: If you think you might have caught an Alabama bass, take a picture of the fish, clip off a thumbnail-sized portion of one of the pelvic fins, and store the fin clip dry in an envelope. Then contact the Virginia Department of Wildlife Resources.
         - settings:
             - align: '0.2'
+            - attribution: Photograph by Landon Ray, Sep 8, 2025, iNaturalist.

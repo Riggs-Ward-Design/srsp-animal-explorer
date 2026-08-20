@@ -13,6 +13,7 @@ export type Item = {
   order?: string
   family?: string
   align?: number
+  attribution?: string
 }
 
 export type FolderNode = {
@@ -118,6 +119,7 @@ export class DataModel {
     const iOrder = idx('order')
     const iFamily = idx('family')
     const iAlign = idx('align')
+    const iAttribution = idx('attribution')
 
     // Collect all "Text N Heading" / "Text N Body" column index pairs (N = 1, 2, 3, …)
     const textPairs: { iHeading: number; iBody: number }[] = []
@@ -159,7 +161,8 @@ export class DataModel {
         localStatus,
         order,
         family: get(iFamily) || undefined,
-        align
+        align,
+        attribution: get(iAttribution) || undefined
       }
 
       const path: string[] = [localStatus]
@@ -282,6 +285,7 @@ function walkYamlList(parent: FolderNode, list: YamlList, folderPath: string[]):
 
       const texts: TextEntry[] = []
       let align: number | undefined
+      let attribution: string | undefined
 
       if (Array.isArray(children)) {
         for (const child of children) {
@@ -293,6 +297,10 @@ function walkYamlList(parent: FolderNode, list: YamlList, folderPath: string[]):
                 if ('align' in s) {
                   const raw = parseFloat(String(s['align']))
                   if (!isNaN(raw)) align = Math.max(0, Math.min(1, raw))
+                }
+                if ('attribution' in s) {
+                  const raw = String(s['attribution'] ?? '').trim()
+                  if (raw.length > 0) attribution = raw
                 }
               }
             }
@@ -310,7 +318,8 @@ function walkYamlList(parent: FolderNode, list: YamlList, folderPath: string[]):
         localStatus: folderPath[0] ?? '',
         order: folderPath[1],
         family: folderPath[2],
-        align
+        align,
+        attribution
       }
 
       setChildSorted(parent, {

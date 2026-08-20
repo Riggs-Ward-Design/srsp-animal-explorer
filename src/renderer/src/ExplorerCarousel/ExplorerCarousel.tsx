@@ -4,7 +4,7 @@ import FolderButton from '../FolderButton/FolderButton'
 import type { Node, ItemNode, FolderNode } from '../_lib/dataModel'
 import { ReactElement, useMemo, useState } from 'react'
 import ItemCard from '../ItemCard/ItemCard'
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 
 interface ExplorerCarouselProps {
   entries: Node[]
@@ -203,6 +203,20 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
           className="carousel-open-card"
         />
       )}
+
+      <AnimatePresence>
+        {props.openItemNode?.item.attribution && (
+          <motion.div
+            key={`attribution:${props.openItemNode.name}`}
+            className="carousel-attribution"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {props.openItemNode.item.attribution}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
