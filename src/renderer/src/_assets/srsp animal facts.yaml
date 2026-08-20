@@ -1,9 +1,7 @@
 # NOTE: Best edited in a text editor like VSCode that allows expanding/collapsing of indented sections.
 
 - Folder!Native:
-
     - Folder!Mammals:
-
         - Common Gray Fox (Urocyon cinereoargenteus):
             - Habitat: Upland woods, swamps.
             - Diet: Small animals in winter/spring; insects and fruit in summer/fall.
@@ -106,9 +104,7 @@
                 - align: '0.3'
 
     - Folder!Amphibians:
-
         - Folder!Frogs:
-
             - North American Bullfrog (Lithobates catesbeianus):
                 - Habitat: Ponds, swamps, lakes.
                 - Diet: Aquatic animals (including tadpoles) and insects.
@@ -192,7 +188,6 @@
                 - Did You Know?: The Latin name, "crucifer", means "cross-bearing" and refers to the cross-shaped pattern on its back.
 
         - Folder!Salamanders:
-
             - Marbled Salamander (Ambystoma opacum):
                 - Habitat: Mature deciduous forests.
                 - Diet: Millipedes, centipedes, insects, spiders, snails.
@@ -229,9 +224,7 @@
                     - align: '0.8'
 
     - Folder!Reptiles:
-
         - Folder!Lizards:
-
             - Common Five-lined Skink (Plestiodon fasciatus):
                 - Habitat: Forests near fresh water.
                 - Diet: Insects, spiders.
@@ -261,7 +254,6 @@
                     - align: '0.7'
 
         - Folder!Snakes:
-
             - Eastern Copperhead (Agkistrodon contortrix):
                 - Habitat: Deciduous forest and mixed woodlands.
                 - Diet: Cicadas, caterpillars, lizards, voles, mice, etc.
@@ -333,13 +325,12 @@
                 - settings:
                     - align: '0.4'
 
-            - Milksnake (Lampropeltis triangulum):
+            - Eastern Milksnake (Lampropeltis triangulum):
                 - Habitat: Rocky areas, fields, and on the edge of the forest.
                 - Diet: Rodents, birds, eggs, and lizards, as well as other snakes.
                 - Did You Know?: According to legend, people thought this snake sucked milk from cows.
 
         - Folder!Turtles:
-
             - Eastern Musk Turtle (Sternotherus odoratus):
                 - Habitat: Ponds, lakes, swamps, rivers, marshes.
                 - Diet: Seeds, insects, crayfish, snails.
@@ -384,9 +375,7 @@
                 - Did You Know?: These turtles got their name from how quickly they slide into the water when disturbed.
 
     - Folder!Birds:
-
         - Folder!Wading Birds:
-
             - Great Blue Heron (Ardea herodias):
                 - Habitat: Freshwater and coastal wetlands, marshes.
                 - Diet: Fish; sometimes amphibians, reptiles, small mammals.
@@ -416,7 +405,6 @@
                     - align: '0.2'
 
         - Folder!Cormorants:
-
             - Double-crested Cormorant (Nannopterum auritum):
                 - Habitat: Lakes, rivers, ponds.
                 - Diet: Fish.
@@ -425,7 +413,6 @@
                     - align: '0.3'
 
         - Folder!Hummingbirds:
-
             - Ruby-throated Hummingbird (Archilochus colubris):
                 - Habitat: Deciduous woodlands, meadows, backyards.
                 - Diet: Flower nectar; sometimes small insects.
@@ -434,7 +421,6 @@
                     - align: '0.7'
 
         - Folder!Pigeons And Doves:
-
             - Mourning Dove (Zenaida macroura):
                 - Habitat: Fields, forest edges.
                 - Diet: Seeds.
@@ -450,7 +436,6 @@
                     - align: '0.3'
 
         - Folder!Ducks And Geese:
-
             - Canada Goose (Branta canadensis):
                 - Habitat: Parks, lawns, golf courses.
                 - Diet: Grass, seeds and berries.
@@ -485,7 +470,6 @@
                     - align: '0.2'
 
         - Folder!Falcons:
-
             - Peregrine Falcon (Falco peregrinus):
                 - Habitat: Cliffs, mountains, shorelines.
                 - Diet: Smaller birds.
@@ -501,7 +485,6 @@
                     - align: '0.6'
 
         - Folder!Song Birds:
-
             - Eastern Wood-Pewee (Contopus virens):
                 - Habitat: Forest edges.
                 - Diet: Small insects.
@@ -634,7 +617,6 @@
                 - Did You Know?: Mockingbirds mimic the sounds of other birds; a male mockingbird can learn up to 200 different songs.
 
         - Folder!Nightjars:
-
             - Eastern Whip-poor-will (Antrostomus vociferus):
                 - Habitat: Forest edges.
                 - Diet: Insects.
@@ -643,7 +625,6 @@
                     - align: '0.3'
 
         - Folder!Quail And Pheasants:
-
             - Wild Turkey (Meleagris gallopavo):
                 - Habitat: Open forests.
                 - Diet: Nuts, seeds, plants.
@@ -659,7 +640,6 @@
                     - align: '0.4'
 
         - Folder!Vultures:
-
             - Turkey Vulture (Cathartes aura):
                 - Habitat: Farmland, forests, roadsides.
                 - Diet: Carrion (already-dead animals).
@@ -675,7 +655,6 @@
                     - align: '0.7'
 
         - Folder!Eagles And Hawks:
-
             - Osprey (Pandion haliaetus):
                 - Habitat: Shorelines.
                 - Diet: Fish.
@@ -706,7 +685,6 @@
                     - align: '0.6'
 
         - Folder!Owls:
-
             - American Barn Owl (Tyto furcata):
                 - Habitat: Grasslands, deserts, fields, suburban areas.
                 - Diet: Small mammals, particularly rodents.
@@ -742,7 +720,6 @@
                     - align: '0.7'
 
         - Folder!Woodpeckers:
-
             - Yellow-bellied Sapsucker (Sphyrapicus varius):
                 - Habitat: Forest edges.
                 - Diet: Tree sap.
@@ -780,7 +757,6 @@
                     - align: '0.6'
 
     - Folder!Fish:
-
         - Alewife (Alosa pseudoharengus):
             - Habitat: Anadromous (lives in saltwater, spawns in freshwater).
             - Diet: Zooplankton, shrimp; sometimes crustaceans, smaller fish.
@@ -896,7 +872,6 @@
                 - align: '0.8'
 
     - Folder!Insects & Arachnids:
-
         - Western Honey Bee (Apis mellifera):
             - Habitat: Grasslands, forests, farms, gardens.
             - Diet: Nectar, pollen.
@@ -1018,7 +993,6 @@
             - Did You Know?: Females are known to eat the male after mating, which is how they earned the name 'widow'.
 
 - Folder!Invasive:
-
     - Spotted Lantern Fly (Lycorma delicatula):
         - Habitat & Spread: Widely varied temperate climates that have plenty of woody host plants. It often spreads by hitching on human-transferred items such as firewood, vehicles, clothing and shoes.
         - Impact: Spotted lantern flies tend to gather in large numbers while feeding, increasing the amount of damage inflicted on the host plant. They also secrete a sticky, sweet liquid that promotes the growth of sooty mold on the plant.
@@ -1066,4 +1040,4 @@
         - Impact: Labeled a "Predatory and Undesirable Species" in Virginia due to its aggressive nature and ability to outcompete Largemouth and Smallmouth bass.
         - How You Can Help: If you think you might have caught an Alabama bass, take a picture of the fish, clip off a thumbnail-sized portion of one of the pelvic fins, and store the fin clip dry in an envelope. Then contact the Virginia Department of Wildlife Resources.
         - settings:
-          - align: '0.2'
+            - align: '0.2'

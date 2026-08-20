@@ -177,7 +177,6 @@ export class DataModel {
 
     return new DataModel(JSON.stringify(root))
   }
-
 }
 
 function ensureFolderAtPath(root: FolderNode, path: readonly string[]): FolderNode {
@@ -268,11 +267,7 @@ function parseItemKey(key: string): { commonName: string; scientificName: string
   return { commonName: key.trim(), scientificName: '' }
 }
 
-function walkYamlList(
-  parent: FolderNode,
-  list: YamlList,
-  folderPath: string[]
-): void {
+function walkYamlList(parent: FolderNode, list: YamlList, folderPath: string[]): void {
   for (const entry of list) {
     const key = Object.keys(entry)[0]
     const children = entry[key]

@@ -14,8 +14,19 @@ interface ExplorerViewProps {
 
 const ExplorerView = (props: ExplorerViewProps): ReactElement => {
   //
-  const { path, node, parentNode, lastChildName, push, canGoUp, canGoToPrev, canGoToNext, up, prev, next } =
-    useDataModel(props.dataModel)
+  const {
+    path,
+    node,
+    parentNode,
+    lastChildName,
+    push,
+    canGoUp,
+    canGoToPrev,
+    canGoToNext,
+    up,
+    prev,
+    next
+  } = useDataModel(props.dataModel)
 
   const getFolderLabel = (p: string[]): string => {
     if (p.length === 0) return 'Who Lives Here?'
