@@ -54,7 +54,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
       style={{
         borderRadius: '48px',
         overflow: 'hidden',
-        flexBasis: !open ? '100%' : isInvasive ? '40%' : '62%',
+        flexBasis: !open ? '100%' : isInvasive ? '55%' : '62%',
         position: 'relative',
         boxShadow: '2px 2px 4px 0 rgba(0, 0, 0, 0.1)'
       }}
@@ -86,7 +86,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
     <motion.div
       layoutId={id}
       onClick={props.onClick}
-      className={props.className + ' item-card'}
+      className={props.className + ' item-card' + (isInvasive ? ' item-card-invasive' : '')}
       style={{
         ...props.style,
         borderRadius: '48px',

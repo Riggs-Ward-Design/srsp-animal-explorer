@@ -45,7 +45,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
             transition: fadeTransition
           }}
         >
-          {`< Back`}
+          {`< Previous`}
         </div>
         <div
           className="nav-bar-button"

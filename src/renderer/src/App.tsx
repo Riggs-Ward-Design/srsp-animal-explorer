@@ -6,7 +6,7 @@ import contentYAML from './_assets/srsp animal facts.yaml?raw'
 
 function App(): ReactElement {
   //
-  const SECONDS_BEFORE_IDLE_TIMEOUT = 60
+  const SECONDS_BEFORE_IDLE_TIMEOUT = 600
 
   const dataModel = useMemo(() => DataModel.fromYaml(contentYAML), [])
   useEffect(() => logMissingOrUnusedImages(dataModel.getAllItemNames()), [])

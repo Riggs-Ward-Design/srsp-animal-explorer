@@ -40,6 +40,10 @@ const compareNodes = (a: Node, b: Node) => {
     return a.nodeType === 'folder' ? -1 : 1
   }
 
+  if (a.nodeType === 'item' && b.nodeType === 'item') {
+    return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+  }
+
   return 0
 }
 

@@ -4,19 +4,17 @@
 
     - Folder!Mammals:
 
-        - Folder!Foxes:
+        - Common Gray Fox (Urocyon cinereoargenteus):
+            - Habitat: Upland woods, swamps.
+            - Diet: Small animals in winter/spring; insects and fruit in summer/fall.
+            - Did You Know?: Gray foxes are adept climbers and will use trees in order to escape enemies.
+            - settings:
+                - align: '0.8'
 
-            - Common Gray Fox (Urocyon cinereoargenteus):
-                - Habitat: Upland woods, swamps.
-                - Diet: Small animals in winter/spring; insects and fruit in summer/fall.
-                - Did You Know?: Gray foxes are adept climbers and will use trees in order to escape enemies.
-                - settings:
-                    - align: '0.8'
-
-            - Red Fox (Vulpes vulpes):
-                - Habitat: Forests, farms, urban edges.
-                - Diet: Mostly rabbits and mice, plus fruits and insects.
-                - Did You Know?: Red foxes will occasionally capture moles and give them to their pups as playthings.
+        - Red Fox (Vulpes vulpes):
+            - Habitat: Forests, farms, urban edges.
+            - Diet: Mostly rabbits and mice, plus fruits and insects.
+            - Did You Know?: Red foxes will occasionally capture moles and give them to their pups as playthings.
 
         - American Beaver (Castor canadensis):
             - Habitat: Dams built in streams.
@@ -1027,39 +1025,39 @@
         - How You Can Help: Check your vehicle, camping gear, and clothing for any egg masses and remove them before traveling. Report sightings to a park ranger if you find large numbers or egg masses.
 
     - Asian Lady Beetle (Harmonia axyridis):
-        - Habitat & Spread: Found in forests, orchards, and gardens in the spring and summer. Will often migrate into a building for shelter during the winter months. Their lack of predators and very quick life cycle (3-6 weeks) allows them to spread quickly.
+        - Habitat & Spread: Forests, orchards, and gardens in the spring and summer. Will often migrate into a building for shelter during the winter months. Their lack of predators and very quick life cycle (3-6 weeks) allows them to spread quickly.
         - Impact: While outcompeting native species, asian lady beetles bite, infest buildings while sheltering from the winter, leave yellow stains and odours, and emit fluids that can be irritating to human skin and pets.
         - How You Can Help: Once they’re inside a building, the easiest way to get them out again is sweeping or vacuuming! Seal any gaps in your structure with caulk to keep them from getting inside.
 
     - Emerald Ash Borer (Agrilus planipennis):
-        - Habitat & Spread: Populates areas with Ash trees, from forests to urban settings. This insect hitchikes on ash products such as firewood and nursery plants.
-        - Impact: Larvae feed on tissues just under the bark of Ash trees, preventing them from carrying nutrients up their trunks, and increasing the brittleness of branches causing them to break. The adult will eat the leaves of the Ash tree, destroying the canopy. Infestations will kill Ash trees in 3-5 years.
+        - Habitat & Spread: Areas with Ash trees, from forests to urban settings. This insect hitchikes on ash products such as firewood and nursery plants.
+        - Impact: Larvae feed on tissues under the bark of Ash trees, preventing them from carrying nutrients up their trunks and causing the branches to break due to brittleness. Adults eat the leaves of the Ash tree, destroying the canopy. Infestations will kill Ash trees in 3-5 years.
         - How You Can Help: The Department of Forestry has a cost-share program to help property owners chemically protect their ash trees. If you have an ash tree on your property, contact the DOF to find out what to watch out for and how to help!
         - settings:
             - align: '0.3'
 
     - Asian Clam (Corbicula fluminea):
-        - Habitat & Spread: Lives in rivers and streams, sometimes lakes or canals - well-oxygenated bodies of water. These clams self-fertilize and can produce tens of thousands of young annually, and mature in 3-6 months.  Young clams and larvae can be transported to new areas via mud and debris on boats, on fishing gear, or when used as bait.
-        - Impact: The dense nature of their colonies pushes out native species, changing the balance of nutrients within the water. Too many clams will also overfilter waterways which can result in algae blooms. These clams will also clog and damage drainage systems and underwater hardware systems.
+        - Habitat & Spread: Rivers and streams, sometimes lakes or canals - well-oxygenated bodies of water. These clams produce tens of thousands of young annually.  Young clams and larvae can be transported to new areas via mud and debris on boats, on fishing gear, or when used as bait.
+        - Impact: Their dense colonies push out native species, changing the balance of nutrients in the water. Too many clams can also overfilter waterways, resulting in algae blooms, and can damage drainage systems and underwater hardware systems.
         - How You Can Help: To help prevent spreading, make sure that you drain, clean, and dry your boating and fishing gear in between uses. This is especially important if you’re moving between different bodies of water.
 
     - Sericea Lespedeza (Lespedeza cuneata):
-        - Habitat & Spread: This plant thrives in many habitats, often gravitating to disturbed sunny and open areas. It produces many seeds - sometimes 1,000 per branch - that have long-term viability in the soil of up to 20 years. Its deep taproot can resprout a plant if any section of it is left in the ground.
-        - Impact: In addition to overpowering the native seedbank by remaining active in the soil for decades, this plant also hogs water from neighboring plants. When branch counts in an area exceed around 350, an early 2000s study found that native plants were reduced by 70%.
+        - Habitat & Spread: This versitile plant often grows in disturbed sunny and open areas. It can produce up to 1,000 seeds per branch, and seeds can last in the soil for up to 20 years. Its deep taproot can resprout a plant if any part of it is left in the ground.
+        - Impact: This plant hogs water from neighboring plants, and its long-lasting seeds overpower the native seedbank. An early 2000s study found that branch counts over 250 reduced native plants by 70%.
         - How You Can Help: Defeating this interloper takes time and consistency. A combination of consistent mowing and applying carefully targeted herbicide in the spring and summer over several years will help. So will planting competing native species after treatment.
 
     - Autumn Olive (Elaeagnus umbellata):
-        - Habitat & Spread: This plant thrives in many habitats, often gravitating to disturbed sunny and open areas. It produces a prolific seed population of up to 200,000 per year, as well as 8 pounds of fruit which is eaten (and then dispersed) by animals. Attempting to cut it down spurs a growth in the roots, leading to more sprouts.
+        - Habitat & Spread: This versitile plant often grows in disturbed sunny and open areas. It can produce up to 200,000 seeds per year, as well as 8 pounds of fruit which is eaten (and then dispersed) by animals. Attempting to cut it down spurs a growth in the roots, leading to more sprouts.
         - Impact: Its quick spreading habit and ability to thrive in poor soil allow it to crowd out native plants and reduce biodiversity. The nitrogen-fixing roots change the soil chemistry, further reducing the ability for neighboring native plants to thrive.
         - How You Can Help: To fight autumn olive, don’t just cut it down, immediately apply herbicide to the entire root collar. You may need to repeat this process several times before achieving success.
 
     - Japanese Stilt Grass (Microstegium vimineum):
-        - Habitat & Spread: This plant thrives disturbed moist and shaded areas. Each plant can produce up to 1,000 seeds that are lightweight and transport easily with human and animal activity, or by wind and water movement.
+        - Habitat & Spread: Disturbed moist and shaded areas. Each plant can produce up to 1,000 seeds that are lightweight and transport easily with human and animal activity, or by wind and water movement.
         - Impact: The sprawling habit of this grass quickly forms a dense groundcover, blocking other native plants from growing. Seeds remain viable for up to 5 years, meaning if the area is cleared, the seed bank in the soil can cause the grass to resprout and take over again.
         - How You Can Help: The best way to tackle Japanese stilt grass is to pull up the entire plant late in the growing season, before it goes to seed. Because the seeds remain viable for so long, you may need to repeat this process for as many as seven years before you declare victory.
 
     - Chinese Privet (Ligustrum sinense):
-        - Habitat & Spread: This plant grows in dense thickets in bottomland forests, along fencerows, or bordering wooded areas. It spreads both by seed and root suckers.
+        - Habitat & Spread: Dense thickets in bottomland forests, along fencerows, or bordering wooded areas. It spreads both by seed and root suckers.
         - Impact: While crowding out native species, Chinese privet also does not offer much additional food benefit to wildlife. Its spread lowers plant diversity, reduces available food, and the shallow root system leads to a breakdown in soil structure, increasing the threat of erosion.
         - How You Can Help: If you catch it early, Chinese privet can be pulled out by hand. For larger plants, the best strategy is to cut it down, and then apply a glyphosate herbicide directly to the stump. This way you can avoid harming nearby native species.
 
