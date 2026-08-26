@@ -2,20 +2,8 @@
 
 - Folder!Native:
     - Folder!Mammals:
-        - Common Gray Fox (Urocyon cinereoargenteus):
-            - Habitat: Upland woods, swamps.
-            - Diet: Small animals in winter/spring; insects and fruit in summer/fall.
-            - Did You Know?: Gray foxes are adept climbers and will use trees in order to escape enemies.
-            - settings:
-                - align: '0.8'
-
-        - Red Fox (Vulpes vulpes):
-            - Habitat: Forests, farms, urban edges.
-            - Diet: Mostly rabbits and mice, plus fruits and insects.
-            - Did You Know?: Red foxes will occasionally capture moles and give them to their pups as playthings.
-
         - American Beaver (Castor canadensis):
-            - Habitat: Dams built in streams.
+            - Habitat: Dams built in streams and lakes.
             - Diet: Herbs, bark, twigs.
             - Did You Know?: The beavers' dams are built not just for shelter, but also to store caches of food for the winter.
 
@@ -31,10 +19,17 @@
             - settings:
                 - align: '0.3'
 
-        - Bobcat (Lynx rufus floridanus):
+        - Bobcat (Lynx rufus rufus):
             - Habitat: Forests, mountains, other areas with rugged terrain.
             - Diet: Small animals, particularly rodents. Their favorite is rabbit.
             - Did You Know?: To stay as silent as possible while hunting, a bobcat will place its back feet in the exact same spot as their front foot just stepped.
+
+        - Common Gray Fox (Urocyon cinereoargenteus):
+            - Habitat: Upland woods, swamps.
+            - Diet: Small animals in winter/spring; insects and fruit in summer/fall.
+            - Did You Know?: Gray foxes are adept climbers and will use trees in order to escape enemies.
+            - settings:
+                - align: '0.8'
 
         - Coyote (Canis latrans):
             - Habitat: Hills, forests, brushy areas.
@@ -71,6 +66,11 @@
             - Habitat: Inland waterways and coasts.
             - Diet: Fish and other small aquatic animals.
             - Did You Know?: An otter's den will have multiple tunnel openings and allow access to both land and water.
+
+        - Red Fox (Vulpes vulpes):
+            - Habitat: Forests, farms, urban edges.
+            - Diet: Mostly rabbits and mice, plus fruits and insects.
+            - Did You Know?: Red foxes will occasionally capture moles and give them to their pups as playthings.
 
         - Southern Flying Squirrel (Glaucomys volans saturatus):
             - Habitat: Heavily wooded areas near water.
@@ -389,7 +389,7 @@
             - Great Egret (Ardea alba):
                 - Habitat: Marshes, tidal flats, shallow wetlands.
                 - Diet: Fish; sometimes frogs, insects, crustaceans.
-                - Did You Know?: Their large wings, flapping twice per second, can propel them at around 25 mph (40 kmh):.
+                - Did You Know?: Their large wings, flapping twice per second, can propel them at around 25 mph (40 km/h).
                 - settings:
                     - align: '0.6'
 
@@ -449,7 +449,7 @@
             - Wood Duck (Aix sponsa):
                 - Habitat: Forests, marshes, rivers, beaver ponds.
                 - Diet: Seeds, fruit; sometimes insects.
-                - Did You Know?: A rare duck species with strong claws, mainly used to grip and perch on tree branches.
+                - Did You Know?: A unique duck species with strong claws, mainly used to grip and perch on tree branches.
                 - settings:
                     - align: '0.9'
 
@@ -631,7 +631,7 @@
             - Wild Turkey (Meleagris gallopavo):
                 - Habitat: Open forests.
                 - Diet: Nuts, seeds, plants.
-                - Did You Know?: Originally from Mexico, this prized game bird's rich flavor comes from its wild nutty diet.
+                - Did You Know?: Indigenous peoples of North America domesticated turkeys centuries before explorers transported them back to Europe in the 1500s where they became popular for their rich flavor cause by their wild nutty diet.
                 - settings:
                     - align: '0.6'
 

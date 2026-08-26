@@ -2,7 +2,7 @@
   "name": "srsp-animal-explorer",
   "description": "SRSP Animal Explorer",
   "author": "Riggs Ward Design",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./out/main/index.js",
   "type": "module",
   "scripts": {
