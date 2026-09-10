@@ -14,6 +14,13 @@
   font-family: 'Franklin Gothic', sans-serif;
 }
 
+/* Nothing here is ever panned, pinched, or double-tapped. Letting the browser
+   consider those gestures lets one finger's gesture arbitration swallow another
+   finger's tap. */
+* {
+  touch-action: manipulation;
+}
+
 .rounded {
   border-radius: 48px;
   overflow: hidden;

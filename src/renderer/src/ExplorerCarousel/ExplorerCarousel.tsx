@@ -82,7 +82,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
         <div className="carousel-button-area">
           {canPageLeft && (
             <StandardIconButton
-              onClick={() => setCurrentPage((p) => p - 1)}
+              onPointerDown={() => setCurrentPage((p) => p - 1)}
               style={{
                 opacity: !props.openItemNode ? 1 : FADE_OPACITY,
                 pointerEvents: !props.openItemNode ? 'auto' : 'none',
@@ -110,7 +110,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
                         className="carousel-button"
                         key={`folder:${n.name}`}
                         node={n}
-                        onClick={() => props.push(n.name)}
+                        onPointerDown={() => props.push(n.name)}
                         style={{
                           opacity: isOnCurrentPage ? 1 : 0,
                           pointerEvents: isOnCurrentPage ? 'auto' : 'none',
@@ -128,7 +128,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
                         <ItemCard
                           item={n.item}
                           isOpen={false}
-                          onClick={() => props.push(n.name)}
+                          onPointerDown={() => props.push(n.name)}
                           className="carousel-button"
                           style={{
                             opacity: isOnCurrentPage ? (!props.openItemNode ? 1 : FADE_OPACITY) : 0,
@@ -164,7 +164,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
         <div className="carousel-button-area">
           {canPageRight && (
             <StandardIconButton
-              onClick={() => setCurrentPage((p) => p + 1)}
+              onPointerDown={() => setCurrentPage((p) => p + 1)}
               style={{
                 opacity: !props.openItemNode ? 1 : FADE_OPACITY,
                 pointerEvents: !props.openItemNode ? 'auto' : 'none',
@@ -188,7 +188,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
               <button
                 key={i}
                 className={`carousel-dot${i === currentButtonsPage ? ' active' : ''}`}
-                onClick={() => setCurrentPage(i)}
+                onPointerDown={() => setCurrentPage(i)}
               />
             ))}
           </div>

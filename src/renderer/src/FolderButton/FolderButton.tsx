@@ -12,7 +12,7 @@ import iconAmphibians from '../_assets/animal icons/animal icons_Amphibian.svg'
 
 interface FolderButtonProps {
   node?: Node
-  onClick?: () => void
+  onPointerDown?: () => void
   className?: string
   style?: CSSProperties
 }
@@ -46,7 +46,7 @@ const FolderButton = (props: FolderButtonProps): ReactElement => {
   return (
     <motion.div
       className={props.className + ' rounded'}
-      onClick={props.onClick}
+      onPointerDown={props.onPointerDown}
       initial={{
         opacity: 0,
         pointerEvents: 'none'

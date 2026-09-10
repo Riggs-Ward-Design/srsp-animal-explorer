@@ -81,6 +81,7 @@
   font-family: 'Meursault', serif;
   color: var(--color-green);
   font-weight: 500;
+  font-size: 1.5cqw;
 }
 
 .carousel .standard-icon-button {

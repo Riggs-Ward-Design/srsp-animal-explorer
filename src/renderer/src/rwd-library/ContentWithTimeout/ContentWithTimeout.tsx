@@ -47,7 +47,10 @@ function ContentWithTimeout(props: ContentWithTimeoutProps): ReactElement {
       idleTimer.pause()
     },
     timeout: props.timeout * 1000,
-    events: ['click'],
+    // Pointer events, not clicks: a browser synthesizes a `click` only for the
+    // first finger on screen, so on a multi-touch surface a tap made while
+    // another finger is already down never produces one.
+    events: ['pointerdown'],
     startManually: true
   })
 
@@ -111,7 +114,7 @@ function ContentWithTimeout(props: ContentWithTimeoutProps): ReactElement {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             style={{ position: 'absolute', inset: 0 }}
-            onClick={activate}
+            onPointerDown={activate}
           >
             {props.attractView}
           </motion.div>

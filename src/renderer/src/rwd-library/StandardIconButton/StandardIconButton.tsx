@@ -5,7 +5,7 @@ import './StandardIconButton.css'
 export interface ButtonProps {
   iconName: IconName
   label?: string
-  onClick: React.MouseEventHandler<HTMLDivElement>
+  onPointerDown: React.PointerEventHandler<HTMLDivElement>
   className?: string
   style?: React.CSSProperties
   iconStyle?: IconStyle
@@ -17,7 +17,7 @@ export interface ButtonProps {
  * Props:
  * - `iconName` (IconName, optional): Name of the icon to display inside the button.
  * - `label` (string, optional) Content for the button label.
- * - `onClick` (() => void): Function to be called when the button is clicked.
+ * - `onPointerDown` (() => void): Function to be called when the button is pressed.
  * - `className` (string, optional): CSS class for styling the button. Defaults to `"button"`.
  * - `style` (React.CSSProperties, optional): Inline styles for the button.
  * - `iconStyle` (IconStyle, optional): Style of the icon.
@@ -25,7 +25,7 @@ export interface ButtonProps {
 
 function StandardIconButton(props: ButtonProps): ReactElement {
   return (
-    <div className={'standard-icon-button'} onClick={props.onClick} style={props.style}>
+    <div className={'standard-icon-button'} onPointerDown={props.onPointerDown} style={props.style}>
       {props.iconName && <StandardIcon iconName={props.iconName} iconStyle={props.iconStyle} />}
       {props.label}
     </div>

@@ -26,7 +26,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
     <div className="nav-bar">
       <div
         className="nav-bar-button"
-        onClick={props.onMoveUp}
+        onPointerDown={props.onMoveUp}
         style={{
           justifyContent: 'left',
           opacity: props.onMoveUp ? 1 : 0,
@@ -39,7 +39,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
       <div style={{ display: 'flex', gap: '48px', height: '100%', fontSize: '1.25rem' }}>
         <div
           className="nav-bar-button"
-          onClick={props.onMoveBack}
+          onPointerDown={props.onMoveBack}
           style={{
             opacity: props.onMoveBack ? 1 : 0,
             transition: fadeTransition
@@ -49,7 +49,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
         </div>
         <div
           className="nav-bar-button"
-          onClick={props.onMoveNext}
+          onPointerDown={props.onMoveNext}
           style={{
             opacity: props.onMoveNext ? 1 : 0,
             transition: fadeTransition
@@ -61,7 +61,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
 
       <div
         className="nav-bar-button"
-        onClick={props.onReset}
+        onPointerDown={props.onReset}
         style={{
           justifyContent: 'right',
           opacity: props.onReset ? 1 : 0,
