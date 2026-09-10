@@ -24,19 +24,20 @@ const NavBar = (props: NavBarProps): ReactElement => {
 
   return (
     <div className="nav-bar">
-      <div
-        className="nav-bar-button"
-        onPointerDown={props.onMoveUp}
-        style={{
-          justifyContent: 'left',
-          opacity: props.onMoveUp ? 1 : 0,
-          transition: fadeTransition
-        }}
-      >
-        {`< ${upLabel}`}
+      <div className="nav-bar-group nav-bar-group-left">
+        <div
+          className="nav-bar-button"
+          onPointerDown={props.onMoveUp}
+          style={{
+            opacity: props.onMoveUp ? 1 : 0,
+            transition: fadeTransition
+          }}
+        >
+          {`< ${upLabel}`}
+        </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '48px', height: '100%', fontSize: '1.25rem' }}>
+      <div className="nav-bar-group nav-bar-group-center">
         <div
           className="nav-bar-button"
           onPointerDown={props.onMoveBack}
@@ -59,16 +60,17 @@ const NavBar = (props: NavBarProps): ReactElement => {
         </div>
       </div>
 
-      <div
-        className="nav-bar-button"
-        onPointerDown={props.onReset}
-        style={{
-          justifyContent: 'right',
-          opacity: props.onReset ? 1 : 0,
-          transition: fadeTransition
-        }}
-      >
-        Reset
+      <div className="nav-bar-group nav-bar-group-right">
+        <div
+          className="nav-bar-button"
+          onPointerDown={props.onReset}
+          style={{
+            opacity: props.onReset ? 1 : 0,
+            transition: fadeTransition
+          }}
+        >
+          Reset
+        </div>
       </div>
     </div>
   )
