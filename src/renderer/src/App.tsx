@@ -1,35 +1,36 @@
 import MainView from './MainView/MainView'
 import { ReactElement, useEffect, useMemo } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
+import { useConfig } from '@renderer/_lib/appConfig'
 import { logMissingOrUnusedImages } from '@renderer/_lib/assets'
 import contentYAML from './_assets/srsp animal facts.yaml?raw'
 
 function App(): ReactElement {
   //
-  const SECONDS_BEFORE_IDLE_TIMEOUT = 60
+  const config = useConfig()
+  const timeout = Math.max(1, config.get('timeToIdle', 60))
+  const quadMode = config.get('quadMode', true)
 
   const dataModel = useMemo(() => DataModel.fromYaml(contentYAML), [])
   useEffect(() => logMissingOrUnusedImages(dataModel.getAllItemNames()), [])
 
-  // SINGLE
-
-  // return (
-  //   <div
-  //     style={{
-  //       position: 'absolute',
-  //       inset: 0,
-  //       display: 'flex',
-  //       alignItems: 'center',
-  //       justifyContent: 'center'
-  //     }}
-  //   >
-  //     <div style={{ width: '100%', height: '100%' }}>
-  //       <MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT} />
-  //     </div>
-  //   </div>
-  // )
-
-  // QUAD
+  if (!quadMode) {
+    return (
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+      >
+        <div style={{ width: '100%', height: '100%' }}>
+          <MainView dataModel={dataModel} timeout={timeout} />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -43,10 +44,10 @@ function App(): ReactElement {
         backgroundColor: '#737d50'
       }}
     >
-      <MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT} flipped />
-      <MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT} flipped />
-      <MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT} />
-      <MainView dataModel={dataModel} timeout={SECONDS_BEFORE_IDLE_TIMEOUT} />
+      <MainView dataModel={dataModel} timeout={timeout} flipped />
+      <MainView dataModel={dataModel} timeout={timeout} flipped />
+      <MainView dataModel={dataModel} timeout={timeout} />
+      <MainView dataModel={dataModel} timeout={timeout} />
     </div>
   )
 }

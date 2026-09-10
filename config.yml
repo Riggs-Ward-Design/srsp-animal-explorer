@@ -1,0 +1,14 @@
+# Monitor to open on, 0-based; -1 leaves it to the OS.
+display:
+  build: -1
+  dev: 3
+
+# Seconds of inactivity before a quadrant returns to the attract screen.
+timeToIdle:
+  build: 60
+  dev: 60
+
+# Four rotated instances in a 2x2 grid, or one full-screen instance.
+quadMode:
+  build: true
+  dev: true

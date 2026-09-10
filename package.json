@@ -13,13 +13,15 @@
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
     "dev": "electron-vite dev",
-    "build": "npm run typecheck && electron-vite build && electron-builder",
+    "dev:window": "cross-env KIOSK_WINDOWED=1 electron-vite dev",
+    "build": "npm run typecheck && electron-vite build && electron-builder && npm run config:stage",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
-    "build:win": "npm run build && electron-builder --win",
+    "build:win": "npm run build && electron-builder --win && npm run config:stage",
     "build:mac": "electron-vite build && electron-builder --mac",
     "build:linux": "electron-vite build && electron-builder --linux",
-    "yamlUtility": "tsx src/renderer/src/_lib/yamlUtility.ts"
+    "yamlUtility": "tsx src/renderer/src/_lib/yamlUtility.ts",
+    "config:stage": "node scripts/stageConfig.mjs"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
@@ -38,6 +40,7 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "cross-env": "^10.1.0",
     "electron": "^39.2.6",
     "electron-builder": "^26.0.12",
     "electron-vite": "^5.0.0",
@@ -50,6 +53,7 @@
     "react-dom": "^19.2.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vite": "^7.2.6"
+    "vite": "^7.2.6",
+    "yaml": "^2.9.0"
   }
 }

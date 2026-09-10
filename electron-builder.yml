@@ -9,6 +9,9 @@ files:
   - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  # Staged beside the exe by scripts/stageConfig.mjs; the bundled copy is never read.
+  - '!config.yml'
+  - '!scripts'
 asarUnpack:
   - resources/**
 win:
