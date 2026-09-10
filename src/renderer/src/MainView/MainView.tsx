@@ -5,6 +5,7 @@
 import ExplorerView from '../ExplorerView/ExplorerView'
 import AttractScreen from '../AttractScreen/AttractScreen'
 import ContentWithTimeout from '../rwd-library/ContentWithTimeout/ContentWithTimeout'
+import FlippableSurface from '../rwd-library/FlippableSurface/FlippableSurface'
 import { ReactElement } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
 import './MainView.css'
@@ -18,13 +19,13 @@ interface MainViewProps {
 function MainView(props: MainViewProps): ReactElement {
   //
   return (
-    <div
+    <FlippableSurface
       className="main-view"
+      flipped={props.flipped}
       style={{
         position: 'relative',
         width: '100%',
-        height: '100%',
-        rotate: props.flipped ? '180deg' : '0deg'
+        height: '100%'
       }}
     >
       <ContentWithTimeout
@@ -41,7 +42,7 @@ function MainView(props: MainViewProps): ReactElement {
           }
         }}
       />
-    </div>
+    </FlippableSurface>
   )
 }
 
