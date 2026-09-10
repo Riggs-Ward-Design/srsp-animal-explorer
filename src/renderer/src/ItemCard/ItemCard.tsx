@@ -7,7 +7,7 @@ import { findUrl, imageUrls, thumbUrls } from '../_lib/assets'
 interface ItemCardProps {
   item: Item
   isOpen: boolean
-  onClick?: () => void
+  onPointerDown?: () => void
   className?: string
   style?: CSSProperties
 }
@@ -85,7 +85,7 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
   return (
     <motion.div
       layoutId={id}
-      onClick={props.onClick}
+      onPointerDown={props.onPointerDown}
       className={props.className + ' item-card' + (isInvasive ? ' item-card-invasive' : '')}
       style={{
         ...props.style,
