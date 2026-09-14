@@ -42,7 +42,7 @@ function createWindow(): void {
     // height and leaves the UI off the base aspect ratio.
     useContentSize: true,
     backgroundColor: '#000000',
-    ...(is.dev ? { fullscreen: !windowed } : { kiosk: true }),
+    ...(is.dev ? { fullscreen: !windowed } : { kiosk: true, fullscreen: true }),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
       backgroundThrottling: false
