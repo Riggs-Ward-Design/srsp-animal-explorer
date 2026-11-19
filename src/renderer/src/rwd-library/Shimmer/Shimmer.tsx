@@ -44,7 +44,10 @@ function Shimmer(props: ShimmerProps): ReactElement {
     WebkitBackgroundClip: 'text',
     backgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
-    animation: shouldAnimate ? `${keyframeName} ${frequency}s linear infinite` : 'none',
+    animationName: shouldAnimate ? keyframeName : 'none',
+    animationDuration: `${frequency}s`,
+    animationTimingFunction: 'linear',
+    animationIterationCount: 'infinite',
     animationDelay: `${frequency}s`
   }
 
