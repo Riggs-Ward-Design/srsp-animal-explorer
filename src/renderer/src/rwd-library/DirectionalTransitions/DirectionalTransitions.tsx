@@ -1,5 +1,6 @@
-import { AnimatePresence, motion, useIsPresent, type Variants } from 'framer-motion'
+import { AnimatePresence, motion, type Variants } from 'framer-motion'
 import { ReactElement, type ReactNode, useState } from 'react'
+import { useLockUntilReleased } from '../InputLock/useInputLock'
 
 type TransitionType =
   | 'fade'
@@ -106,26 +107,23 @@ interface PanelProps {
   custom: TransitionType
 }
 
-// Must be the direct child of AnimatePresence so useIsPresent reflects this panel.
-// Non-interactive from mount until its enter animation completes, and from the moment it starts exiting.
+// Holds the input lock from mount until its enter animation completes.
 const Panel = ({ children, variants, custom }: PanelProps): ReactElement => {
-  const isPresent = useIsPresent()
-  const [settled, setSettled] = useState(false)
+  const release = useLockUntilReleased()
 
   return (
     <motion.div
       style={{
         width: '100%',
         height: '100%',
-        position: 'absolute',
-        pointerEvents: isPresent && settled ? 'auto' : 'none'
+        position: 'absolute'
       }}
       variants={variants}
       custom={custom}
       initial={'initial'}
       animate={'animate'}
       exit={'exit'}
-      onAnimationComplete={() => setSettled(true)}
+      onAnimationComplete={release}
     >
       {children}
     </motion.div>

@@ -1,5 +1,6 @@
 import './NavBar.css'
 import { ReactElement, useState } from 'react'
+import { BYPASS_INPUT_LOCK } from '../rwd-library/InputLock/useInputLock'
 
 interface NavBarProps {
   upLabel?: string
@@ -63,6 +64,7 @@ const NavBar = (props: NavBarProps): ReactElement => {
       <div className="nav-bar-group nav-bar-group-right">
         <div
           className="nav-bar-button"
+          {...{ [BYPASS_INPUT_LOCK]: '' }}
           onPointerDown={props.onReset}
           style={{
             opacity: props.onReset ? 1 : 0,

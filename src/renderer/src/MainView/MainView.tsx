@@ -6,6 +6,7 @@ import ExplorerView from '../ExplorerView/ExplorerView'
 import AttractScreen from '../AttractScreen/AttractScreen'
 import ContentWithTimeout from '../rwd-library/ContentWithTimeout/ContentWithTimeout'
 import FlippableSurface from '../rwd-library/FlippableSurface/FlippableSurface'
+import InputLock from '../rwd-library/InputLock/InputLock'
 import { ReactElement } from 'react'
 import { DataModel } from '@renderer/_lib/dataModel'
 import './MainView.css'
@@ -28,20 +29,22 @@ function MainView(props: MainViewProps): ReactElement {
         height: '100%'
       }}
     >
-      <ContentWithTimeout
-        timeout={props.timeout}
-        attractView={<AttractScreen />}
-        contentView={(onReset) => <ExplorerView dataModel={props.dataModel} onReset={onReset} />}
-        idleWarningModal={{
-          background: 'var(--color-green)',
-          backgroundOpacity: 0.85,
-          textStyle: {
-            fontFamily: "'Meursault', serif",
-            fontStyle: 'oblique',
-            fontSize: '2.5cqw'
-          }
-        }}
-      />
+      <InputLock>
+        <ContentWithTimeout
+          timeout={props.timeout}
+          attractView={<AttractScreen />}
+          contentView={(onReset) => <ExplorerView dataModel={props.dataModel} onReset={onReset} />}
+          idleWarningModal={{
+            background: 'var(--color-green)',
+            backgroundOpacity: 0.85,
+            textStyle: {
+              fontFamily: "'Meursault', serif",
+              fontStyle: 'oblique',
+              fontSize: '2.5cqw'
+            }
+          }}
+        />
+      </InputLock>
     </FlippableSurface>
   )
 }

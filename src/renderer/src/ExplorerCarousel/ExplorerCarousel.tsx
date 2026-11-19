@@ -2,7 +2,7 @@ import './ExplorerCarousel.css'
 import StandardIconButton from '../rwd-library/StandardIconButton/StandardIconButton'
 import FolderButton from '../FolderButton/FolderButton'
 import type { Node, ItemNode, FolderNode } from '../_lib/dataModel'
-import { ReactElement, useEffect, useMemo, useState } from 'react'
+import { ReactElement, useMemo, useState } from 'react'
 import ItemCard from '../ItemCard/ItemCard'
 import { AnimatePresence, motion } from 'motion/react'
 

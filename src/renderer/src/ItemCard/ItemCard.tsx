@@ -1,6 +1,7 @@
 import './ItemCard.css'
 import type { Item } from '../_lib/dataModel'
-import { type CSSProperties, type ReactElement, useEffect, useState } from 'react'
+import { type CSSProperties, type ReactElement, useEffect, useRef, useState } from 'react'
+import { type ReleaseLock, useInputLock } from '../rwd-library/InputLock/useInputLock'
 import { AnimatePresence, motion } from 'framer-motion'
 import { findUrl, imageUrls, thumbUrls } from '../_lib/assets'
 
@@ -34,7 +35,13 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
     return () => clearTimeout(t)
   }, [props.isOpen])
 
-  const [layoutAnimating, setLayoutAnimating] = useState(false)
+  const { lock } = useInputLock()
+  const releaseLayoutLock = useRef<ReleaseLock | undefined>(undefined)
+  const endLayoutLock = (): void => {
+    releaseLayoutLock.current?.()
+    releaseLayoutLock.current = undefined
+  }
+  useEffect(() => endLayoutLock, [])
 
   const [loadedUrl, setLoadedUrl] = useState<string | undefined>(undefined)
 
@@ -88,15 +95,17 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
     <motion.div
       layoutId={id}
       onPointerDown={props.onPointerDown}
-      onLayoutAnimationStart={() => setLayoutAnimating(true)}
-      onLayoutAnimationComplete={() => setLayoutAnimating(false)}
+      onLayoutAnimationStart={() => {
+        endLayoutLock()
+        releaseLayoutLock.current = lock()
+      }}
+      onLayoutAnimationComplete={endLayoutLock}
       className={props.className + ' item-card' + (isInvasive ? ' item-card-invasive' : '')}
       style={{
         ...props.style,
         borderRadius: '48px',
         overflow: 'hidden',
-        zIndex: elevated ? 10 : 0,
-        pointerEvents: layoutAnimating ? 'none' : props.style?.pointerEvents
+        zIndex: elevated ? 10 : 0
       }}
     >
       {!props.isOpen && imageContent(false)}
