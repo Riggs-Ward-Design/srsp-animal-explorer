@@ -2,7 +2,7 @@ import './ExplorerCarousel.css'
 import StandardIconButton from '../rwd-library/StandardIconButton/StandardIconButton'
 import FolderButton from '../FolderButton/FolderButton'
 import type { Node, ItemNode, FolderNode } from '../_lib/dataModel'
-import { ReactElement, useMemo, useState } from 'react'
+import { ReactElement, useEffect, useMemo, useState } from 'react'
 import ItemCard from '../ItemCard/ItemCard'
 import { AnimatePresence, motion } from 'motion/react'
 
@@ -38,7 +38,6 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
   const [currentPage, setCurrentPage] = useState(() =>
     initialPage(props.entries, props.focusedChildName)
   )
-  const [prevFolderName, setPrevFolderName] = useState(props.openFolderNode.name)
   const [lastOpenItem, setLastOpenItem] = useState(props.openItemNode)
 
   if (lastOpenItem !== props.openItemNode) {
@@ -49,16 +48,6 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
     }
   }
 
-  if (prevFolderName !== props.openFolderNode.name) {
-    setPrevFolderName(props.openFolderNode.name)
-    if (props.focusedChildName) {
-      const index = props.entries.findIndex((n) => n.name === props.focusedChildName)
-      setCurrentPage(index >= 0 ? Math.floor(index / PAGE_SIZE) : 0)
-    } else {
-      setCurrentPage(0)
-    }
-  }
-
   const pages = useMemo(() => chunk(props.entries, PAGE_SIZE), [props.entries])
 
   const currentButtonsPage = Math.max(0, Math.min(currentPage, pages.length - 1))
@@ -66,7 +55,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
   const canPageRight = pages.length > 1 && currentButtonsPage < pages.length - 1
 
   return (
-    <div key={`carousel-${props.openFolderNode.name}`} className="carousel">
+    <div className="carousel">
       {props.title && (
         <h1
           style={{
@@ -79,6 +68,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
       )}
 
       <div className="carousel-row">
+
         <div className="carousel-button-area">
           {canPageLeft && (
             <StandardIconButton
@@ -101,50 +91,55 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
             {pages.map((page, pageIndex) => (
               <div className="carousel-page" key={`page:${pageIndex}`}>
                 <div className="carousel-page-inner">
-                {page.map((n) => {
-                  const isOnCurrentPage = pageIndex === currentButtonsPage
+                  {page.map((n) => {
+                    const isOnCurrentPage = pageIndex === currentButtonsPage
 
-                  if (n.nodeType === 'folder') {
-                    return (
-                      <FolderButton
-                        className="carousel-button"
-                        key={`folder:${n.name}`}
-                        node={n}
-                        onPointerDown={() => props.push(n.name)}
-                        style={{
-                          opacity: isOnCurrentPage ? 1 : 0,
-                          pointerEvents: isOnCurrentPage ? 'auto' : 'none',
-                          transition: 'opacity 500ms'
-                        }}
-                      />
-                    )
-                  }
-
-                  const isOpen = props.openItemNode === n
-
-                  return (
-                    <div key={`item-wrap:${n.name}`} style={{ display: 'contents' }}>
-                      {!isOpen && (
-                        <ItemCard
-                          item={n.item}
-                          isOpen={false}
-                          onPointerDown={() => props.push(n.name)}
+                    if (n.nodeType === 'folder') {
+                      return (
+                        <FolderButton
                           className="carousel-button"
+                          key={`folder:${n.name}`}
+                          node={n}
+                          onPointerDown={() => props.push(n.name)}
                           style={{
-                            opacity: isOnCurrentPage ? (!props.openItemNode ? 1 : FADE_OPACITY) : 0,
-                            pointerEvents: isOnCurrentPage
-                              ? !props.openItemNode
-                                ? 'auto'
-                                : 'none'
-                              : 'none',
+                            opacity: isOnCurrentPage ? 1 : 0,
+                            pointerEvents: isOnCurrentPage ? 'auto' : 'none',
                             transition: 'opacity 500ms'
                           }}
                         />
-                      )}
-                      {isOpen && <div className="carousel-button placeholder" />}
-                    </div>
-                  )
-                })}
+                      )
+                    }
+
+                    const itemIsOpened = props.openItemNode === n
+
+                    return (
+                      <div key={`item-wrap:${n.name}`} style={{ display: 'contents' }}>
+                        {itemIsOpened ? (
+                          <div className="carousel-button placeholder" />
+                        ) : (
+                          <ItemCard
+                            item={n.item}
+                            isOpen={false}
+                            onPointerDown={() => props.push(n.name)}
+                            className="carousel-button"
+                            style={{
+                              opacity: isOnCurrentPage
+                                ? !props.openItemNode
+                                  ? 1
+                                  : FADE_OPACITY
+                                : 0,
+                              pointerEvents: isOnCurrentPage
+                                ? !props.openItemNode
+                                  ? 'auto'
+                                  : 'none'
+                                : 'none',
+                              transition: 'opacity 500ms'
+                            }}
+                          />
+                        )}
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             ))}
@@ -193,6 +188,7 @@ const ExplorerCarousel = (props: ExplorerCarouselProps): ReactElement => {
             ))}
           </div>
         )}
+
       </div>
 
       {props.openItemNode && (

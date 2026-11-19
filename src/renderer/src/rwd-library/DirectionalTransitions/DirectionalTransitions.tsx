@@ -100,14 +100,43 @@ function getTransitionTypeFromPositions(prev: Coords3D, current: Coords3D): Tran
   return 'fade'
 }
 
+interface PanelProps {
+  children?: ReactNode
+  variants: Variants
+  custom: TransitionType
+}
+
+// Must be the direct child of AnimatePresence so useIsPresent reflects this panel.
+// Non-interactive from mount until its enter animation completes, and from the moment it starts exiting.
+const Panel = ({ children, variants, custom }: PanelProps): ReactElement => {
+  const isPresent = useIsPresent()
+  const [settled, setSettled] = useState(false)
+
+  return (
+    <motion.div
+      style={{
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        pointerEvents: isPresent && settled ? 'auto' : 'none'
+      }}
+      variants={variants}
+      custom={custom}
+      initial={'initial'}
+      animate={'animate'}
+      exit={'exit'}
+      onAnimationComplete={() => setSettled(true)}
+    >
+      {children}
+    </motion.div>
+  )
+}
+
 const DirectionalTransitions = ({
   children,
   currentPosition,
   options
 }: DirectionalTransitionsProps): ReactElement => {
-  const [clickable, setClickable] = useState<boolean>(true)
-  const isPresent = useIsPresent()
-
   const pos = currentPosition
 
   const variants = {
@@ -130,28 +159,9 @@ const DirectionalTransitions = ({
 
   return (
     <AnimatePresence mode="popLayout" custom={transitionType}>
-      <motion.div
-        key={`panel-${pos.x},${pos.y},${pos.z}`}
-        style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          pointerEvents: clickable ? 'auto' : 'none'
-        }}
-        variants={variants}
-        custom={transitionType}
-        initial={'initial'}
-        animate={'animate'}
-        exit={'exit'}
-        onAnimationStart={() => {
-          setClickable(false)
-        }}
-        onAnimationComplete={() => {
-          if (isPresent) setClickable(true)
-        }}
-      >
+      <Panel key={`panel-${pos.x},${pos.y},${pos.z}`} variants={variants} custom={transitionType}>
         {children}
-      </motion.div>
+      </Panel>
     </AnimatePresence>
   )
 }

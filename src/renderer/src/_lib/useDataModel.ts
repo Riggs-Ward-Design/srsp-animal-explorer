@@ -44,9 +44,26 @@ next()
 
  */
 
+const validPrefix = (root: FolderNode, p: readonly string[]): string[] => {
+  const valid: string[] = []
+  let n: Node = root
+  for (const seg of p) {
+    if (n.nodeType !== 'folder' || !n.children[seg]) break
+    n = n.children[seg]
+    valid.push(seg)
+  }
+  return valid
+}
+
 export function useDataModel(ctx: DataModel) {
   const [path, setPath] = useState<string[]>([])
   const [lastChildName, setLastChildName] = useState<string | undefined>(undefined)
+  const [prevCtx, setPrevCtx] = useState(ctx)
+
+  if (prevCtx !== ctx) {
+    setPrevCtx(ctx)
+    setPath((p) => validPrefix(ctx.content, p))
+  }
 
   const node = useMemo<Node>(() => getNode(ctx.content, path) ?? ctx.content, [ctx, path])
 
@@ -61,14 +78,29 @@ export function useDataModel(ctx: DataModel) {
     return ctx.content
   }, [ctx, node, parentPath])
 
+  // A push is only valid against the path it was rendered for. If the path has already moved
+  // (a second tap in the same frame, or a tap on a stale panel), the path is left unchanged.
   const push = useCallback(
     (label: string) => {
-      if (node.nodeType === 'folder') {
-        setLastChildName(undefined)
-        setPath((p) => [...p, label])
+      const folder = getNode(ctx.content, path)
+      if (folder?.nodeType !== 'folder' || !folder.children[label]) {
+        console.warn('push rejected: not a child of the current folder', { path, label })
+        return
       }
+      setPath((p) => {
+        if (p !== path) {
+          console.warn('push rejected: path changed before it applied', {
+            from: path,
+            now: p,
+            label
+          })
+          return p
+        }
+        return [...path, label]
+      })
+      setLastChildName(undefined)
     },
-    [node]
+    [ctx, path]
   )
 
   const canGoUp = path.length > 0

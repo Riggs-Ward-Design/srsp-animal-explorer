@@ -34,6 +34,8 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
     return () => clearTimeout(t)
   }, [props.isOpen])
 
+  const [layoutAnimating, setLayoutAnimating] = useState(false)
+
   const [loadedUrl, setLoadedUrl] = useState<string | undefined>(undefined)
 
   useEffect(() => {
@@ -86,12 +88,15 @@ const ItemCard = (props: ItemCardProps): ReactElement => {
     <motion.div
       layoutId={id}
       onPointerDown={props.onPointerDown}
+      onLayoutAnimationStart={() => setLayoutAnimating(true)}
+      onLayoutAnimationComplete={() => setLayoutAnimating(false)}
       className={props.className + ' item-card' + (isInvasive ? ' item-card-invasive' : '')}
       style={{
         ...props.style,
         borderRadius: '48px',
         overflow: 'hidden',
-        zIndex: elevated ? 10 : 0
+        zIndex: elevated ? 10 : 0,
+        pointerEvents: layoutAnimating ? 'none' : props.style?.pointerEvents
       }}
     >
       {!props.isOpen && imageContent(false)}

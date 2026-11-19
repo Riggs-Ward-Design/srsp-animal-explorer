@@ -1,8 +1,8 @@
 import './ExplorerView.css'
 import NavBar from '../NavBar/NavBar'
 import { ReactElement } from 'react'
-import { DataModel, FolderNode, ItemNode } from '../_lib/dataModel'
-import { getChildren, getNode, getParentPath } from '../_lib/dataModelUtility'
+import { DataModel, ItemNode } from '../_lib/dataModel'
+import { getChildren, getParentPath } from '../_lib/dataModelUtility'
 import { useDataModel } from '../_lib/useDataModel'
 import ExplorerCarousel from '../ExplorerCarousel/ExplorerCarousel'
 import DirectionalTransitions from '../rwd-library/DirectionalTransitions/DirectionalTransitions'
@@ -47,8 +47,9 @@ const ExplorerView = (props: ExplorerViewProps): ReactElement => {
           options={{ duration: 0.35 }}
         >
           <ExplorerCarousel
-            entries={getChildren(node.nodeType === 'folder' ? node : parentNode)}
-            openFolderNode={getNode(props.dataModel.content, pathForCarousel) as FolderNode}
+            key={pathForCarousel.join('/')}
+            entries={getChildren(parentNode)}
+            openFolderNode={parentNode}
             openItemNode={node.nodeType === 'item' ? (node as ItemNode) : undefined}
             focusedChildName={lastChildName}
             title={getFolderLabel(pathForCarousel)}
